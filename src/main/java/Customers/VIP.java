@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class VIP implements Serializable {
     private static final long serialVersionUID = System.currentTimeMillis();
     private Member memberRef;
-    private Double DiscountRate = 0.1;
+    private double DiscountRate = 0.1;
     /**
      * VIP Constructor as an upgrade from Member
      * @param member Existing Member class
@@ -23,7 +23,7 @@ public class VIP implements Serializable {
         this.memberRef = new Member(customer, newName, newPhone);
     }
 
-    public Double getDiscountRate() {
+    public double getDiscountRate() {
         return DiscountRate;
     }
 

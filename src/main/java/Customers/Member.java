@@ -7,8 +7,8 @@ public class Member implements Serializable {
     private final Customer customerRef;
     private String Name;
     private String Phone;
-    private Integer Point;
-    private Boolean Status;
+    private int Point;
+    private boolean Status;
 
     /**
      * Member constructor
