@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Member implements Serializable {
     private static final long serialVersionUID = System.currentTimeMillis();
-    private Customer customerRef;
+    private final Customer customerRef;
     private String Name;
     private String Phone;
     private Integer Point;
