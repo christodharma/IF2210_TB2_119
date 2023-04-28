@@ -1,13 +1,23 @@
 package Customers;
 
-public class Member extends Customer{
-    protected String Name;
-    protected String Phone;
-    protected Integer Point;
-    protected Boolean Status;
+import java.io.Serializable;
 
-    public Member(String newID, String newName, String newPhone){
-        super(newID);
+public class Member implements Serializable {
+    private static final long serialVersionUID = System.currentTimeMillis();
+    private Customer customerRef;
+    private String Name;
+    private String Phone;
+    private Integer Point;
+    private Boolean Status;
+
+    /**
+     * Member constructor
+     * @param customer Existing Customer class
+     * @param newName Desired Member name
+     * @param newPhone Desired Member phone number
+     */
+    public Member(Customer customer, String newName, String newPhone){
+        this.customerRef = customer;
         this.Name = newName;
         this.Phone = newPhone;
         this.Point = 0;
@@ -33,9 +43,7 @@ public class Member extends Customer{
         Name = name;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
+    public void setPhone(String phone) { Phone = phone; }
 
     public void setPoint(Integer point) {
         Point = point;

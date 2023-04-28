@@ -3,7 +3,8 @@ package Customers;
 import java.io.Serializable;
 
 public class Customer implements Serializable {
-    protected String ID;
+    private static final long serialVersionUID = System.currentTimeMillis();
+    private String ID;
 
     public Customer(String newID){
         this.ID = newID;
