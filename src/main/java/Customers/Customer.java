@@ -1,19 +1,24 @@
 package Customers;
 
+import lombok.*;
+
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+@Setter
+
+public class Customer extends Membership implements Serializable {
     private static final long serialVersionUID = System.currentTimeMillis();
-    private String ID;
-
-    public Customer(String newID){
-        this.ID = newID;
+    private final String ID;
+    public static int customerNo = 0;
+    //need to be changed to current customer count in database instead
+    public Customer()
+    {
+        this.ID = String.valueOf(customerNo);
+        customerNo++;
     }
-
-    public String getID() {
+    @Override
+    public String getID()
+    {
         return ID;
-    }
-    public void setID(String customerID) {
-        ID = customerID;
     }
 }

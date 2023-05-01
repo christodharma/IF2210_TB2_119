@@ -1,18 +1,19 @@
 package Customers;
 
 import java.io.Serializable;
+import lombok.*;
 
-public class VIP implements Serializable {
+@Getter
+@Setter
+@RequiredArgsConstructor
+public class VIP extends Membership implements Serializable {
     private static final long serialVersionUID = System.currentTimeMillis();
-    private Member memberRef;
-    private double DiscountRate = 0.1;
     /**
-     * VIP Constructor as an upgrade from Member
-     * @param member Existing Member class
-     * */
-    public VIP(Member member){
-        this.memberRef = member;
-    }
+     * @param memberRef reference to existing Member class
+     */
+    private final Member memberRef;
+    private double DiscountRate = 0.1;
+
     /**
      * VIP Constructor as a new Member simultaneously
      * @param customer Existing Customer class
@@ -22,12 +23,9 @@ public class VIP implements Serializable {
     public VIP(Customer customer, String newName, String newPhone){
         this.memberRef = new Member(customer, newName, newPhone);
     }
-
-    public double getDiscountRate() {
-        return DiscountRate;
-    }
-
-    public void setDiscountRate(Double discountRate) {
-        DiscountRate = discountRate;
+    @Override
+    public String getID()
+    {
+        return memberRef.getCustomerRef().getID();
     }
 }
