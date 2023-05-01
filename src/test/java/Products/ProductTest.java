@@ -8,8 +8,8 @@ class ProductTest {
     @Test
     public void ProductInstantiation()
     {
-        Product Milk = new Product("0", "Milk", 15000);
+        Product Milk = new Product("0", "Milk", 15000, 10);
         assertEquals("Milk", Milk.getName(), "Name is not Milk");
-        assertEquals(0, Milk.getStockQuantity(), "Stock isn't 0");
+        assertEquals(10, Milk.getStockQuantity(), "Stock isn't 0");
     }
 }

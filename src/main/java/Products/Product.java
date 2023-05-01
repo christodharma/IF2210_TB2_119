@@ -1,6 +1,7 @@
 package Products;
 
 import lombok.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 
@@ -8,7 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Product implements Serializable {
+public class Product implements Serializable{
     private static final long serialVersionUID = System.currentTimeMillis();
     /**
      * @param ID Required ID for product
@@ -24,9 +25,12 @@ public class Product implements Serializable {
     public void addStockQuantity(int many){
         StockQuantity+=many;
     }
-    public void subtractStockQuantity(int many){
+    public boolean subtractStockQuantity(int many){
         if (StockQuantity>=many){
             StockQuantity-=many;
+            return true;
+        } else {
+            return false;
         }
     }
 }
