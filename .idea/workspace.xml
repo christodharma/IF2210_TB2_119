@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/Customers/VIPTest.java" afterDir="false" />
@@ -13,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/VIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/VIP.java" afterDir="false" />
@@ -66,6 +68,32 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="oop.tubes2" />
+      <recent name="Products" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MainTest">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="oop.tubes2" />
+      <option name="MAIN_CLASS_NAME" value="oop.tubes2.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -126,6 +154,15 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
           <option name="PATTERN" value="Customers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
@@ -138,8 +175,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductTest.getID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="VIPTest.createVIPFromMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductTest" />
+      <option name="METHOD_NAME" value="getID" />
+      <option name="TEST_OBJECT" value="method" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Customers.*" />
@@ -154,6 +202,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.ProductTest" />
+        <item itemvalue="JUnit.ProductTest.getID" />
+      </list>
+    </recent_temporary>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VIPTest" />
