@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/VIPTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/oop/tubes2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/oop/tubes2/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/VIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/VIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/oop/tubes2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/oop/tubes2/MainTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,50 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3770115"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3770115&quot;
+  &lt;component name=&quot;PropertiesComponent&quot;&gt;{
+  &amp;quot;keyToString&amp;quot;: {
+    &amp;quot;RunOnceActivity.OpenProjectViewOnStart&amp;quot;: &amp;quot;true&amp;quot;,
+    &amp;quot;RunOnceActivity.ShowReadmeOnStart&amp;quot;: &amp;quot;true&amp;quot;,
+    &amp;quot;project.structure.last.edited&amp;quot;: &amp;quot;Modules&amp;quot;,
+    &amp;quot;project.structure.proportion&amp;quot;: &amp;quot;0.0&amp;quot;,
+    &amp;quot;project.structure.side.proportion&amp;quot;: &amp;quot;0.0&amp;quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="oop.tubes2" />
-      <recent name="Products" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.MainTest">
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oop.tubes2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="oop.tubes2" />
-      <option name="MAIN_CLASS_NAME" value="oop.tubes2.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -103,34 +72,24 @@
       <recent name="oop.tubes2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VIPTest">
-    <configuration name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductTest">
+    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Customers.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.MemberTest" />
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberTest.validCustomerRef" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.MemberTest" />
-      <option name="METHOD_NAME" value="validCustomerRef" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="ProductTest.getID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,15 +117,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="Customers" />
       <option name="MAIN_CLASS_NAME" value="Customers.VIPTest" />
       <option name="METHOD_NAME" value="createVIPFromCustomer" />
@@ -175,22 +125,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTest.getID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="VIPTest.createVIPFromMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Products.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductTest" />
-      <option name="METHOD_NAME" value="getID" />
-      <option name="TEST_OBJECT" value="method" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,22 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest" />
         <item itemvalue="JUnit.ProductTest" />
         <item itemvalue="JUnit.ProductTest.getID" />
       </list>
     </recent_temporary>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.VIPTest" />
-        <item itemvalue="JUnit.VIPTest.createVIPFromMember" />
-        <item itemvalue="JUnit.VIPTest.createVIPFromCustomer" />
-        <item itemvalue="JUnit.MemberTest" />
-        <item itemvalue="JUnit.MemberTest.validCustomerRef" />
-      </list>
-    </recent_temporary>
   </component>
-}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
