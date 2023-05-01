@@ -3,24 +3,28 @@ package Database;
 import Products.Product;
 import lombok.NonNull;
 
+import java.io.IOException;
 import java.util.HashMap;
 
-public class Product_DB {
+public class ProductDB extends Parser<HashMap<Integer,Product>>{
     /**
      * ProductId, Product Object
      */
     public HashMap<Integer, Product> Inventory;
-    public Product_DB()
+    public ProductDB()
     {
         this.Inventory = new HashMap<>();
     }
-
-    /*TODO: Instantiate Product_DB with existing data store
-    *  e.g. Taking parameter file path*/
-
+    public ProductDB(HashMap<Integer, Product> DB)
+    {
+        this.Inventory = DB;
+    }
+    public ProductDB(String filePath) throws IOException, ClassNotFoundException {
+        this.Inventory = ReadDatabase(filePath);
+    }
     public void addProduct(@NonNull Product added)
     {
-        Product existingProduct = Inventory.get(added.getID());
+        Product existingProduct = Inventory.get(Integer.parseInt(added.getID()));
         if (existingProduct != null)
         {
             existingProduct.addStockQuantity(added.getStockQuantity());
@@ -57,7 +61,7 @@ public class Product_DB {
     {
         for (Product p :
                 Inventory.values()) {
-            if (p.getName() == ProductName)
+            if (p.getName().equals(ProductName))
             {
                 return p;
             }

@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/Product_DB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Database/Product_DBTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/classes/oop/tubes2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/oop/tubes2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product_DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/ProductDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Database/Product_DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/ProductDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,14 +67,17 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Database" />
       <recent name="Customers" />
       <recent name="oop.tubes2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Product_DBTest">
-    <configuration name="Product_DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="productDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -80,13 +86,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.Product_DBTest" />
+      <option name="MAIN_CLASS_NAME" value="Database.productDBTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Product_DBTest.ClearDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="productDBTest.ClearDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -95,14 +101,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.Product_DBTest" />
+      <option name="MAIN_CLASS_NAME" value="Database.productDBTest" />
       <option name="METHOD_NAME" value="ClearDatabase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Product_DBTest.DBAddSubtractProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="productDBTest.ReadDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -111,14 +117,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.Product_DBTest" />
-      <option name="METHOD_NAME" value="DBAddSubtractProduct" />
+      <option name="MAIN_CLASS_NAME" value="Database.productDBTest" />
+      <option name="METHOD_NAME" value="ReadDatabaseTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Product_DBTest.NonExisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="productDBTest.WriteDatabase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -127,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.Product_DBTest" />
-      <option name="METHOD_NAME" value="NonExisting" />
+      <option name="MAIN_CLASS_NAME" value="Database.productDBTest" />
+      <option name="METHOD_NAME" value="WriteDatabase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Product_DBTest.RemoveProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="productDBTest.WriteDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -143,8 +149,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.Product_DBTest" />
-      <option name="METHOD_NAME" value="RemoveProduct" />
+      <option name="MAIN_CLASS_NAME" value="Database.productDBTest" />
+      <option name="METHOD_NAME" value="WriteDatabaseTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Product_DBTest" />
-        <item itemvalue="JUnit.Product_DBTest.ClearDatabase" />
-        <item itemvalue="JUnit.Product_DBTest.RemoveProduct" />
-        <item itemvalue="JUnit.Product_DBTest.NonExisting" />
-        <item itemvalue="JUnit.Product_DBTest.DBAddSubtractProduct" />
+        <item itemvalue="JUnit.productDBTest.ReadDatabaseTest" />
+        <item itemvalue="JUnit.productDBTest.WriteDatabaseTest" />
+        <item itemvalue="JUnit.productDBTest.WriteDatabase" />
+        <item itemvalue="JUnit.productDBTest" />
+        <item itemvalue="JUnit.productDBTest.ClearDatabase" />
       </list>
     </recent_temporary>
   </component>
@@ -182,11 +188,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="milk" />
-      </configuration>
-    </watches-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
   </component>
 </project>
