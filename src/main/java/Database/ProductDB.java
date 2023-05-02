@@ -3,34 +3,32 @@ package Database;
 import Products.Product;
 import lombok.NonNull;
 
-import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class ProductDB extends Parser<HashMap<Integer,Product>>{
+public class ProductDB implements Serializable {
+    private static final long serialVersionUID = 11L;
     /**
      * ProductId, Product Object
      */
-    public HashMap<Integer, Product> Inventory;
+    public HashMap<String, Product> Inventory;
     public ProductDB()
     {
         this.Inventory = new HashMap<>();
     }
-    public ProductDB(HashMap<Integer, Product> DB)
+    public ProductDB(HashMap<String, Product> DB)
     {
         this.Inventory = DB;
     }
-    public ProductDB(String filePath) throws IOException, ClassNotFoundException {
-        this.Inventory = ReadDatabase(filePath);
-    }
     public void addProduct(@NonNull Product added)
     {
-        Product existingProduct = Inventory.get(Integer.parseInt(added.getID()));
+        Product existingProduct = Inventory.get(added.getID());
         if (existingProduct != null)
         {
             existingProduct.addStockQuantity(added.getStockQuantity());
         } else
         {
-            Inventory.put(Integer.parseInt(added.getID()), added);
+            Inventory.put(String.valueOf(added.getID()), added);
         }
     }
 
@@ -46,26 +44,33 @@ public class ProductDB extends Parser<HashMap<Integer,Product>>{
     }
     public void removeProduct(@NonNull Product removed)
     {
-        Inventory.remove(Integer.parseInt(removed.getID()));
+        Inventory.remove(removed.getID());
     }
-    public void clearDatabase()
+    public void clearInventory()
     {
         Inventory.clear();
     }
 
-    public Product find(int ProductID)
+    public Product find(String filter, String filterValue)
     {
-        return Inventory.get(ProductID);
-    }
-    public Product find(String ProductName)
-    {
-        for (Product p :
-                Inventory.values()) {
-            if (p.getName().equals(ProductName))
-            {
-                return p;
-            }
+        switch (filter){
+            case "Id":
+            case "id":
+            case "ID":
+                return Inventory.get(filterValue);
+            case "name":
+            case "NAME":
+            case "Name":
+                for (Product p :
+                        Inventory.values()) {
+                    if (p.getName().equals(filterValue))
+                    {
+                        return p;
+                    }
+                }
+                return null;
+            default:
+                return null;
         }
-        return null;
     }
 }
