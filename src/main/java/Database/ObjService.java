@@ -2,7 +2,7 @@ package Database;
 
 import java.io.*;
 
-public class ObjService<T> implements IDatabase<T> {
+public class ObjService<T> implements IDBAdapter<T> {
     @Override
     public void WriteDatabase(String DestPath, T data) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(DestPath);

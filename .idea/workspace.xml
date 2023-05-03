@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +60,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Products" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Database" />
@@ -152,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBAdapterTest" />
-        <item itemvalue="JUnit.DBAdapterTest.loadDataTest" />
-        <item itemvalue="JUnit.DBAdapterTest.saveDataTest" />
-        <item itemvalue="JUnit.ProductDBTest.ReadDatabaseTest" />
         <item itemvalue="JUnit.ProductDBTest.WriteDatabaseTest" />
+        <item itemvalue="JUnit.ProductDBTest.ReadDatabaseTest" />
+        <item itemvalue="JUnit.DBAdapterTest.saveDataTest" />
+        <item itemvalue="JUnit.DBAdapterTest.loadDataTest" />
+        <item itemvalue="JUnit.DBAdapterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +169,14 @@
       <option name="presentableId" value="Default" />
       <updated>1682490372924</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix: move ProductDB to Products package">
+      <created>1683143091740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683143091740</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,7 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
+    <MESSAGE value="fix: move ProductDB to Products package" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: move ProductDB to Products package" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
