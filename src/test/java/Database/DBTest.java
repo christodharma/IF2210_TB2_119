@@ -25,15 +25,14 @@ class DBTest {
     @Order(1)
     void saveDataTest() throws IOException {
         ProductDB testDB = templateProductDB();
-        IDatabase<ProductDB> DBInterface = new ObjService<>();
-        DBAdapter<ProductDB> objDB = new DBAdapter<>(DBInterface, "src/test/resources/data/Products.obj");
+        IDBAdapter<ProductDB> DBInterface = new ObjService<ProductDB>();
+        Database<ProductDB> objDB = new Database<ProductDB>(DBInterface, "src/test/resources/data/Products.obj");
         objDB.saveData(testDB);
     }
     @Test
     @Order(2)
     void loadDataTest() throws IOException, ClassNotFoundException {
-        IDatabase<Object> IDB = new ObjService<>();
-        DBAdapter<Object> DB = new DBAdapter<>(IDB, "src/test/resources/data/Products.obj");
+        Database<Object> DB = new Database<Object>(new ObjService<>(), "src/test/resources/data/Products.obj");
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
@@ -46,14 +45,13 @@ class DBTest {
     @Order(3)
     void JsonSaveDataTest() throws IOException {
         ProductDB testDB = templateProductDB();
-        IDatabase<ProductDB> DBInterface = new JsonService<>(ProductDB.class);
-        DBAdapter<ProductDB> DB = new DBAdapter<>(DBInterface, "src/test/resources/data/Products.json");
+        Database<ProductDB> DB = new Database<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
         DB.saveData(testDB);
     }
     @Test
     @Order(4)
     void JsonLoadDataTest() throws IOException, ClassNotFoundException {
-        DBAdapter<ProductDB> DB = new DBAdapter<>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
+        Database<ProductDB> DB = new Database<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
         ProductDB products = /*(ProductDB)*/ DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");

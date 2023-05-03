@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/IDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/IDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
