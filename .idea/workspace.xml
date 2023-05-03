@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DBAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/IDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/oop/tubes2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/ProductDBTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBAdapterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +75,7 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Database.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,7 +90,7 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Database.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +106,7 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Database.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,7 +122,7 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Database.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,7 +138,7 @@
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Database.*" />
+          <option name="PATTERN" value="Products.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -198,5 +185,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.junit.platform.engine.TestExecutionResult" memberName="throwable" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Products.*</FILTER>
+    </SUITE>
   </component>
 </project>

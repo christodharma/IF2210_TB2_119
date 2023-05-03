@@ -1,6 +1,5 @@
-package Database;
+package Products;
 
-import Products.Product;
 import lombok.NonNull;
 
 import java.io.Serializable;
