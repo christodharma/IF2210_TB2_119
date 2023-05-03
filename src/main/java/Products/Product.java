@@ -1,5 +1,7 @@
 package Products;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.io.Serializable;
@@ -31,5 +33,18 @@ public class Product implements Serializable{
         } else {
             return false;
         }
+    }
+    /**
+     * Handling for JSON format DB
+     * */
+    @JsonCreator
+    public static Product create(
+            @JsonProperty("name") String Name,
+            @JsonProperty("id") String ID,
+            @JsonProperty("price") Double Price,
+            @JsonProperty("stockQuantity") int StockQuantity
+            )
+        {
+            return new Product(ID, Name, Price, StockQuantity);
     }
 }
