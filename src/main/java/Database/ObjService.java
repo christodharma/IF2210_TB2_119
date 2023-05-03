@@ -13,11 +13,16 @@ public class ObjService<T> implements IDatabase<T> {
 
     @Override
     @SuppressWarnings("unchecked")
-    public T ReadDatabase(String SrcPath) throws IOException, ClassNotFoundException {
-        FileInputStream fileInputStream = new FileInputStream(SrcPath);
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        Object readObs = objectInputStream.readObject();
-        objectInputStream.close();
+    public T ReadDatabase(String SrcPath) throws IOException {
+        Object readObs = null;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(SrcPath);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            readObs = objectInputStream.readObject();
+            objectInputStream.close();
+        } catch (ClassNotFoundException exec) {
+            exec.printStackTrace();
+        }
         return (T) readObs;
     }
     /*
