@@ -2,9 +2,19 @@ package Database;
 
 import java.io.*;
 
+import Exception.ExtensionException;
 public class ObjService<T> implements IDBAdapter<T> {
     @Override
-    public void WriteDatabase(String DestPath, T data) throws IOException {
+    public void WriteDatabase(String DestPath, T data) throws IOException, ExtensionException {
+        File target = new File(DestPath);
+        if (!DestPath.toLowerCase().endsWith(".obj")){
+            String fileName = target.getName();
+            int index = fileName.lastIndexOf('.');
+            if (index > 0) {
+                String extension = fileName.substring(index+1);
+                throw new ExtensionException("File extension is wrong! \nExpected: obj\nActual: "+extension);
+            }
+        }
         FileOutputStream fileOutputStream = new FileOutputStream(DestPath);
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(data);
@@ -13,9 +23,18 @@ public class ObjService<T> implements IDBAdapter<T> {
 
     @Override
     @SuppressWarnings("unchecked")
-    public T ReadDatabase(String SrcPath) throws IOException {
+    public T ReadDatabase(String SrcPath) throws IOException, ExtensionException{
         Object readObs = null;
         try {
+            File target = new File(SrcPath);
+            if (!SrcPath.toLowerCase().endsWith(".obj")){
+                String fileName = target.getName();
+                int index = fileName.lastIndexOf('.');
+                if (index > 0) {
+                    String extension = fileName.substring(index+1);
+                    throw new ExtensionException("File extension is wrong! \nExpected: obj\nActual: "+extension);
+                }
+            }
             FileInputStream fileInputStream = new FileInputStream(SrcPath);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             readObs = objectInputStream.readObject();

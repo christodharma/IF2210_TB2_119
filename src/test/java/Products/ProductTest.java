@@ -1,5 +1,6 @@
 package Products;
 
+import Exception.ExtensionException;
 import Database.*;
 import org.junit.jupiter.api.Test;
 
@@ -16,9 +17,9 @@ class ProductTest {
         assertEquals(10, Milk.getStockQuantity(), "Stock isn't 0");
     }
     @Test
-    public void ProductIntoXML() throws IOException {
+    public void ProductIntoXML() throws IOException, ExtensionException {
         Product p = new Product("1", "Soap", 25d, 20);
-        Database<Product> db = new Database<Product>(new XmlService<Product>(Product.class), "src/test/resources/data/ProductTest.xml");
+        Database<Product> db = new Database<Product>(new XmlService<>(Product.class), "src/test/resources/data/ProductTest.xml");
         db.saveData(p);
     }
 }

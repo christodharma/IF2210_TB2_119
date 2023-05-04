@@ -1,5 +1,6 @@
 package Database;
 
+import Exception.ExtensionException;
 import Products.Product;
 import Products.ProductDB;
 import org.junit.jupiter.api.MethodOrderer;
@@ -23,7 +24,7 @@ class DBTest {
     }
     @Test
     @Order(1)
-    void saveDataTest() throws IOException {
+    void saveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
         IDBAdapter<ProductDB> DBInterface = new ObjService<ProductDB>();
         Database<ProductDB> objDB = new Database<ProductDB>(DBInterface, "src/test/resources/data/Products.obj");
@@ -31,7 +32,9 @@ class DBTest {
     }
     @Test
     @Order(2)
-    void loadDataTest() throws IOException, ClassNotFoundException {
+    void loadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
+        Database<ProductDB> DBWrongPath = new Database<ProductDB>(new ObjService<ProductDB>(), "src/test/resources/data/Products.xm");
+        assertThrows(ExtensionException.class, DBWrongPath::loadData);
         Database<Object> DB = new Database<Object>(new ObjService<>(), "src/test/resources/data/Products.obj");
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
@@ -43,14 +46,16 @@ class DBTest {
     }
     @Test
     @Order(3)
-    void JsonSaveDataTest() throws IOException {
+    void JsonSaveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
         Database<ProductDB> DB = new Database<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
         DB.saveData(testDB);
     }
     @Test
     @Order(4)
-    void JsonLoadDataTest() throws IOException, ClassNotFoundException {
+    void JsonLoadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
+        Database<ProductDB> DBWrongPath = new Database<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.xm");
+        assertThrows(ExtensionException.class, DBWrongPath::loadData);
         Database<ProductDB> DB = new Database<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
         ProductDB products = /*(ProductDB)*/ DB.loadData();
         assertNotNull(products, "Fail to import");
@@ -62,14 +67,16 @@ class DBTest {
     }
     @Test
     @Order(5)
-    void XmlSaveDataTest() throws IOException {
+    void XmlSaveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
         Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
         DB.saveData(testDB);
     }
     @Test
     @Order(6)
-    void XmlLoadDataTest() throws IOException, ClassNotFoundException {
+    void XmlLoadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
+        Database<ProductDB> DBWrongPath = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xm");
+        assertThrows(ExtensionException.class, DBWrongPath::loadData);
         Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
         ProductDB products = /*(ProductDB)*/ DB.loadData();
         assertNotNull(products, "Fail to import");

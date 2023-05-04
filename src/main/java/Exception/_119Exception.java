@@ -7,12 +7,7 @@ public class _119Exception extends Exception{
     public _119Exception(String message){
         super (message);
     }
-    public _119Exception(String message, Throwable cause)
-    {
-        super (message,cause);
-    }
-    public _119Exception(Throwable cause)
-    {
-        super(cause);
+    public String getMessage(){
+        return super.getMessage();
     }
 }
