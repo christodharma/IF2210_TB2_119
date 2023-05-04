@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs&#10;Warning: Unchecked Cast on ReadDatabase()">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/XMLDBTemp" />
+        <entry key="$PROJECT_DIR$" value="feat/XMLDB" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,22 +74,7 @@
       <recent name="oop.tubes2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBTest.JsonLoadDataTest">
-    <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Products.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Database" />
-      <option name="MAIN_CLASS_NAME" value="Database.DBTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DBTest.XmlLoadDataTest">
     <configuration name="DBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
@@ -118,6 +102,22 @@
       <option name="PACKAGE_NAME" value="Database" />
       <option name="MAIN_CLASS_NAME" value="Database.DBTest" />
       <option name="METHOD_NAME" value="JsonSaveDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBTest.XmlLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Database" />
+      <option name="MAIN_CLASS_NAME" value="Database.DBTest" />
+      <option name="METHOD_NAME" value="XmlLoadDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBTest.JsonLoadDataTest" />
-        <item itemvalue="JUnit.DBTest.JsonSaveDataTest" />
-        <item itemvalue="JUnit.DBTest" />
-        <item itemvalue="JUnit.DBTest.loadDataTest" />
+        <item itemvalue="JUnit.DBTest.XmlLoadDataTest" />
         <item itemvalue="JUnit.DBTest.saveDataTest" />
+        <item itemvalue="JUnit.DBTest.loadDataTest" />
+        <item itemvalue="JUnit.DBTest.JsonSaveDataTest" />
+        <item itemvalue="JUnit.DBTest.JsonLoadDataTest" />
       </list>
     </recent_temporary>
   </component>

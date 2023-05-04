@@ -70,7 +70,7 @@ class DBTest {
     @Test
     @Order(6)
     void XmlLoadDataTest() throws IOException, ClassNotFoundException {
-        Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.json");
+        Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
         ProductDB products = /*(ProductDB)*/ DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
