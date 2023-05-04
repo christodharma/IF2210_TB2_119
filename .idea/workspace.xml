@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="Fix ! : DONT FORGET PROPER EXTENSION">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/ExtensionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseFormatChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/IDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/IDBAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/XmlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exception/_119Exception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exception/_119Exception.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683180806526</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat : ExtensionException for DB">
+      <created>1683189220054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683189220054</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +221,8 @@
     <MESSAGE value="fix: Implementing lombok in JsonService&#10;fix: Annotate Product with XmlAnnotations&#10;fix: Add XML dependencies in pom.xml&#10;fix: Rename Inventory field to Products" />
     <MESSAGE value="TODO: XMLDB WIP" />
     <MESSAGE value="Fix ! : DONT FORGET PROPER EXTENSION" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix ! : DONT FORGET PROPER EXTENSION" />
+    <MESSAGE value="feat : ExtensionException for DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : ExtensionException for DB" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
