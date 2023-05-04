@@ -7,12 +7,11 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class JsonService<T> implements IDBAdapter<T>{
     private final Class<T> _class;
-    public JsonService(Class<T> c){
-        _class = c;
-    }
     @Override
     public void WriteDatabase(String DestPath, T data) throws IOException {
         try {

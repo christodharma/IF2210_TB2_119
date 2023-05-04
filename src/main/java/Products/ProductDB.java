@@ -10,24 +10,24 @@ public class ProductDB implements Serializable {
     /**
      * ProductId, Product Object
      */
-    public HashMap<String, Product> Inventory;
+    public HashMap<String, Product> Products;
     public ProductDB()
     {
-        this.Inventory = new HashMap<>();
+        this.Products = new HashMap<>();
     }
     public ProductDB(HashMap<String, Product> DB)
     {
-        this.Inventory = DB;
+        this.Products = DB;
     }
     public void addProduct(@NonNull Product added)
     {
-        Product existingProduct = Inventory.get(added.getID());
+        Product existingProduct = Products.get(keyPrefix + added.getID());
         if (existingProduct != null)
         {
             existingProduct.addStockQuantity(added.getStockQuantity());
         } else
         {
-            Inventory.put(String.valueOf(added.getID()), added);
+            Products.put(keyPrefix + added.getID(), added);
         }
     }
 
@@ -43,11 +43,11 @@ public class ProductDB implements Serializable {
     }
     public void removeProduct(@NonNull Product removed)
     {
-        Inventory.remove(removed.getID());
+        Products.remove(removed.getID());
     }
     public void clearInventory()
     {
-        Inventory.clear();
+        Products.clear();
     }
 
     public Product find(String filter, String filterValue)
@@ -56,12 +56,12 @@ public class ProductDB implements Serializable {
             case "Id":
             case "id":
             case "ID":
-                return Inventory.get(filterValue);
+                return Products.get(filterValue);
             case "name":
             case "NAME":
             case "Name":
                 for (Product p :
-                        Inventory.values()) {
+                        Products.values()) {
                     if (p.getName().equals(filterValue))
                     {
                         return p;
