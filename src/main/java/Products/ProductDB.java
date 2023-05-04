@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 public class ProductDB implements Serializable {
     private static final long serialVersionUID = 11L;
+    private static final String keyPrefix = "Product";
     /**
      * ProductId, Product Object
      */
