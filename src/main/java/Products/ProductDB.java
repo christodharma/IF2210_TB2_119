@@ -1,14 +1,9 @@
 package Products;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.NonNull;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class ProductDB implements Serializable {
     private static final long serialVersionUID = 11L;
@@ -16,7 +11,6 @@ public class ProductDB implements Serializable {
     /**
      * ProductId, Product Object
      */
-    @XmlJavaTypeAdapter(ProductAdapter.class)
     public HashMap<String, Product> Products;
     public ProductDB()
     {
@@ -79,26 +73,4 @@ public class ProductDB implements Serializable {
                 return null;
         }
     }
-}
-class ProductAdapter extends XmlAdapter<ProductMap, HashMap<String,Product>> {
-    @Override
-    public ProductMap marshal(HashMap<String, Product> v) throws Exception {
-        ProductMap itemMap = new ProductMap();
-        itemMap.items = new ArrayList<>(v.values());
-        return itemMap;
-    }
-
-    @Override
-    public HashMap<String, Product> unmarshal(ProductMap v) throws Exception {
-        HashMap<String, Product> map = new HashMap<>();
-        for (Product item : v.items) {
-            map.put(item.getName(), item);
-        }
-        return map;
-    }
-}
-
-class ProductMap {
-    @JacksonXmlProperty(localName = "Product")
-    List<Product> items;
 }
