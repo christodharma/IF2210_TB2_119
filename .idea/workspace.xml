@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="Fix ! : DONT FORGET PROPER EXTENSION">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseFormatChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseFormatChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseFormatChange.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBTest" />
-        <item itemvalue="JUnit.DBTest.JsonSaveDataTest" />
-        <item itemvalue="JUnit.DBTest.loadDataTest" />
         <item itemvalue="JUnit.ProductTest.ProductIntoXML" />
         <item itemvalue="JUnit.DBTest.XmlSaveDataTest" />
+        <item itemvalue="JUnit.DBTest.loadDataTest" />
+        <item itemvalue="JUnit.DBTest.JsonSaveDataTest" />
+        <item itemvalue="JUnit.DBTest" />
       </list>
     </recent_temporary>
   </component>
