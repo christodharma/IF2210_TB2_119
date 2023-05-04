@@ -2,11 +2,11 @@ package Database;
 
 import java.io.IOException;
 import Exception.ExtensionException;
-public class Database<T> {
+public class DatabaseService<T> {
     private final IDBAdapter<T> IDB;
     private final String DBPath;
 
-    public Database(IDBAdapter<T> idb, String path) {
+    public DatabaseService(IDBAdapter<T> idb, String path) {
         IDB = idb;
         DBPath = path;
     }
