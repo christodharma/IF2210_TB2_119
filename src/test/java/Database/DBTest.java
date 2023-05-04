@@ -37,7 +37,7 @@ class DBTest {
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
-                products.Inventory.values()) {
+                products.Products.values()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
         }
     }
@@ -56,7 +56,26 @@ class DBTest {
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
-                products.Inventory.values()) {
+                products.Products.values()) {
+            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
+        }
+    }
+    @Test
+    @Order(5)
+    void XmlSaveDataTest() throws IOException {
+        ProductDB testDB = templateProductDB();
+        Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
+        DB.saveData(testDB);
+    }
+    @Test
+    @Order(6)
+    void XmlLoadDataTest() throws IOException, ClassNotFoundException {
+        Database<ProductDB> DB = new Database<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.json");
+        ProductDB products = /*(ProductDB)*/ DB.loadData();
+        assertNotNull(products, "Fail to import");
+        assertTrue(products instanceof ProductDB, "Wrong Class");
+        for (Product p :
+                products.Products.values()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
         }
     }
