@@ -42,7 +42,7 @@ public class Product implements Serializable{
      * Handling for JSON format DB
      * */
     @JsonCreator
-    public static Product create(
+    public static Product JacksonCreate(
             @JsonProperty("name") String Name,
             @JsonProperty("id") String ID,
             @JsonProperty("price") Double Price,
