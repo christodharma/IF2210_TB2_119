@@ -1,7 +1,11 @@
 package Customers;
 
 import com.fasterxml.jackson.annotation.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
 import java.io.Serializable;
 
 @Getter

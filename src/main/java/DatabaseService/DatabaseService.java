@@ -1,15 +1,16 @@
 package DatabaseService;
 
-import java.io.IOException;
 import Exception.ExtensionException;
+
+import java.io.IOException;
 public class DatabaseService {
     private final ServiceAdapter IDB;
     private final String DBPath;
 
     /**
      * Service for Database
-     * @param idb ServiceAdapter,
-     * @param path
+     * @param idb ServiceAdapter, determines which format of data store
+     * @param path Path of data store
      */
 
     public DatabaseService(ServiceAdapter idb, String path) {

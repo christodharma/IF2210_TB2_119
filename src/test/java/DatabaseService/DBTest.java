@@ -40,8 +40,8 @@ class DBTest {
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
-                products.Products.values()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
+                products.getProducts()) {
+            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
         }
     }
     @Test
@@ -61,8 +61,8 @@ class DBTest {
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
-                products.Products.values()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
+                products.getProducts()) {
+            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
         }
     }
     @Test
@@ -82,8 +82,8 @@ class DBTest {
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
-                products.Products.values()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getStockQuantity());
+                products.getProducts()) {
+            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
         }
     }
 }

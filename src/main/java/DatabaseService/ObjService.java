@@ -1,9 +1,8 @@
 package DatabaseService;
 
-import java.io.*;
-
-
 import Exception.ExtensionException;
+
+import java.io.*;
 
 public class ObjService extends DatabaseType implements ServiceAdapter {
     public ObjService(Class<?> dataClass) {

@@ -1,7 +1,8 @@
 package DatabaseService;
 
-import java.io.IOException;
 import Exception.ExtensionException;
+
+import java.io.IOException;
 public interface ServiceAdapter{
     void WriteDatabase(String DestPath, Object data) throws IOException, ExtensionException;
     Object ReadDatabase (String SrcPath) throws IOException, ExtensionException;

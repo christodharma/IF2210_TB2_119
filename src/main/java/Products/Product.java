@@ -2,9 +2,9 @@ package Products;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
 
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
@@ -22,17 +22,17 @@ public class Product implements Serializable{
 //     * @param Price Required product price
 //     * @param Quantity Stock Quantity, defaults to 0
 //     */
-    @XmlAttribute(name = "id") private final String ID;
+    @JacksonXmlProperty(localName = "id", isAttribute = true) private final String ID;
     @XmlElement(name = "name") @NonNull private String Name;
     @XmlElement(name = "price") @NonNull private Double Price;
-    @XmlElement(name = "stockQuantity") private int StockQuantity = 0;
+    @XmlElement(name = "quantity") private int quantity = 0;
     //Need to add productCount, either from counting DB entries or static int counter
-    public void addStockQuantity(int many){
-        StockQuantity+=many;
+    public void addQuantity(int many){
+        quantity+=many;
     }
-    public boolean subtractStockQuantity(int many){
-        if (StockQuantity>=many){
-            StockQuantity-=many;
+    public boolean subtractQuantity(int many){
+        if (quantity>=many){
+            quantity-=many;
             return true;
         } else {
             return false;
@@ -46,9 +46,9 @@ public class Product implements Serializable{
             @JsonProperty("name") String Name,
             @JsonProperty("id") String ID,
             @JsonProperty("price") Double Price,
-            @JsonProperty("stockQuantity") int StockQuantity
+            @JsonProperty("quantity") int quantity
             )
         {
-            return new Product(ID, Name, Price, StockQuantity);
+            return new Product(ID, Name, Price, quantity);
     }
 }

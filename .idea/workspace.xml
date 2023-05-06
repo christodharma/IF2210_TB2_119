@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/customerCount.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/customerCount.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerDBTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +22,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="gui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,66 +89,16 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerCountTest">
-    <configuration name="CustomerCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DBTest.XmlLoadDataTest">
+    <configuration name="Bill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Bill.Bill" />
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Customers.*" />
+          <option name="PATTERN" value="Bill.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerCountTest.AddingCustomers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
-      <option name="METHOD_NAME" value="AddingCustomers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerCountTest.SaveCustomerCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
-      <option name="METHOD_NAME" value="SaveCustomerCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerTest.CustomerDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerTest" />
-      <option name="METHOD_NAME" value="CustomerDB" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,13 +118,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DBTest.XmlLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DatabaseService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DatabaseService" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
+      <option name="METHOD_NAME" value="XmlLoadDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <option name="METHOD_NAME" value="JsonLoadDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerCountTest" />
-        <item itemvalue="JUnit.CustomerTest.CustomerDB" />
+        <item itemvalue="JUnit.DBTest.XmlLoadDataTest" />
+        <item itemvalue="JUnit.ProductDBTest" />
+        <item itemvalue="JUnit.ProductDBTest.JsonLoadDataTest" />
         <item itemvalue="JUnit.DBTest" />
-        <item itemvalue="JUnit.CustomerCountTest.SaveCustomerCount" />
-        <item itemvalue="JUnit.CustomerCountTest.AddingCustomers" />
+        <item itemvalue="Application.Bill" />
       </list>
     </recent_temporary>
   </component>
