@@ -1,20 +1,23 @@
 package Database;
 
-import java.io.File;
-import java.io.IOException;
-
+import Exception.ExtensionException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import lombok.AllArgsConstructor;
 
-import Exception.ExtensionException;
-@AllArgsConstructor
-public class JsonService<T> implements IDBAdapter<T>{
-    private final Class<T> _class;
+import java.io.File;
+import java.io.IOException;
+public class JsonService extends DatabaseType implements ServiceAdapter {
+
+    public JsonService(Class<?> dataClass) {
+        super(dataClass);
+    }
+    public JsonService(Object data) {
+        super(data);
+    }
     @Override
-    public void WriteDatabase(String DestPath, T data) throws IOException {
+    public void WriteDatabase(String DestPath, Object data) throws IOException {
         try {
             File target = new File(DestPath);
             if (!DestPath.toLowerCase().endsWith(".json")){
@@ -33,8 +36,8 @@ public class JsonService<T> implements IDBAdapter<T>{
         }
     }
     @Override
-    public T ReadDatabase(String SrcPath) throws IOException, ExtensionException {
-        T data = null;
+    public Object ReadDatabase(String SrcPath) throws IOException, ExtensionException {
+        Object data = null;
         try {
             File target = new File(SrcPath);
             if (!SrcPath.toLowerCase().endsWith(".json")){

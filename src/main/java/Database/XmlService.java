@@ -1,10 +1,10 @@
 package Database;
 
+import Exception.ExtensionException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import lombok.AllArgsConstructor;
 
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -13,14 +13,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 
-import Exception.ExtensionException;
-
-@AllArgsConstructor
-public class XmlService<T> implements IDBAdapter<T>{
-    private final Class<T> _class;
+public class XmlService extends DatabaseType implements ServiceAdapter {
+    public XmlService(Class<?> dataClass){
+        super(dataClass);
+    }
+    public XmlService(Object data){
+        super(data);
+    }
 
     @Override
-    public void WriteDatabase(String DestPath, T data) throws IOException, ExtensionException {
+    public void WriteDatabase(String DestPath, Object data) throws IOException, ExtensionException {
         try {
             File target = new File(DestPath);
             if (!DestPath.toLowerCase().endsWith(".xml")){
@@ -43,8 +45,8 @@ public class XmlService<T> implements IDBAdapter<T>{
     }
 
     @Override
-    public T ReadDatabase(String SrcPath) throws IOException, ExtensionException {
-        T data = null;
+    public Object ReadDatabase(String SrcPath) throws IOException, ExtensionException {
+        Object data = null;
         try {
             File target = new File(SrcPath);
             if (!SrcPath.toLowerCase().endsWith(".xml")){

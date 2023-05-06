@@ -2,18 +2,18 @@ package Database;
 
 import java.io.IOException;
 import Exception.ExtensionException;
-public class DatabaseService<T> {
-    private final IDBAdapter<T> IDB;
+public class DatabaseService {
+    private final ServiceAdapter IDB;
     private final String DBPath;
 
-    public DatabaseService(IDBAdapter<T> idb, String path) {
+    public DatabaseService(ServiceAdapter idb, String path) {
         IDB = idb;
         DBPath = path;
     }
-    public void saveData(T data) throws IOException, ExtensionException {
+    public void saveData(Object data) throws IOException, ExtensionException {
         IDB.WriteDatabase(DBPath,data);
     }
-    public T loadData() throws IOException, ClassNotFoundException, ExtensionException {
+    public Object loadData() throws IOException, ExtensionException {
         return IDB.ReadDatabase(DBPath);
     }
 }

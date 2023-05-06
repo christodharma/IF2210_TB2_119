@@ -26,16 +26,16 @@ class DBTest {
     @Order(1)
     void saveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
-        IDBAdapter<ProductDB> DBInterface = new ObjService<ProductDB>();
-        DatabaseService<ProductDB> objDB = new DatabaseService<ProductDB>(DBInterface, "src/test/resources/data/Products.obj");
+        ServiceAdapter DBInterface = new ObjService(ProductDB.class);
+        DatabaseService objDB = new DatabaseService(DBInterface, "src/test/resources/data/Products.obj");
         objDB.saveData(testDB);
     }
     @Test
     @Order(2)
-    void loadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
-        DatabaseService<ProductDB> DBWrongPath = new DatabaseService<ProductDB>(new ObjService<ProductDB>(), "src/test/resources/data/Products.xm");
+    void loadDataTest() throws IOException, ExtensionException {
+        DatabaseService DBWrongPath = new DatabaseService(new ObjService(ProductDB.class), "src/test/resources/data/Products.xm");
         assertThrows(ExtensionException.class, DBWrongPath::loadData);
-        DatabaseService<Object> DB = new DatabaseService<Object>(new ObjService<>(), "src/test/resources/data/Products.obj");
+        DatabaseService DB = new DatabaseService(new ObjService(ProductDB.class), "src/test/resources/data/Products.obj");
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
@@ -48,16 +48,16 @@ class DBTest {
     @Order(3)
     void JsonSaveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
-        DatabaseService<ProductDB> DB = new DatabaseService<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
+        DatabaseService DB = new DatabaseService(new JsonService(ProductDB.class), "src/test/resources/data/Products.json");
         DB.saveData(testDB);
     }
     @Test
     @Order(4)
-    void JsonLoadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
-        DatabaseService<ProductDB> DBWrongPath = new DatabaseService<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.xm");
+    void JsonLoadDataTest() throws IOException, ExtensionException {
+        DatabaseService DBWrongPath = new DatabaseService(new JsonService(ProductDB.class), "src/test/resources/data/Products.xm");
         assertThrows(ExtensionException.class, DBWrongPath::loadData);
-        DatabaseService<ProductDB> DB = new DatabaseService<ProductDB>(new JsonService<>(ProductDB.class), "src/test/resources/data/Products.json");
-        ProductDB products = /*(ProductDB)*/ DB.loadData();
+        DatabaseService DB = new DatabaseService(new JsonService(ProductDB.class), "src/test/resources/data/Products.json");
+        ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :
@@ -69,16 +69,16 @@ class DBTest {
     @Order(5)
     void XmlSaveDataTest() throws IOException, ExtensionException {
         ProductDB testDB = templateProductDB();
-        DatabaseService<ProductDB> DB = new DatabaseService<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
+        DatabaseService DB = new DatabaseService(new XmlService(testDB), "src/test/resources/data/Products.xml");
         DB.saveData(testDB);
     }
     @Test
     @Order(6)
-    void XmlLoadDataTest() throws IOException, ClassNotFoundException, ExtensionException {
-        DatabaseService<ProductDB> DBWrongPath = new DatabaseService<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xm");
+    void XmlLoadDataTest() throws IOException, ExtensionException {
+        DatabaseService DBWrongPath = new DatabaseService(new XmlService(ProductDB.class), "src/test/resources/data/Products.xm");
         assertThrows(ExtensionException.class, DBWrongPath::loadData);
-        DatabaseService<ProductDB> DB = new DatabaseService<ProductDB>(new XmlService<>(ProductDB.class), "src/test/resources/data/Products.xml");
-        ProductDB products = /*(ProductDB)*/ DB.loadData();
+        DatabaseService DB = new DatabaseService(new XmlService(ProductDB.class), "src/test/resources/data/Products.xml");
+        ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
         for (Product p :

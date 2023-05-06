@@ -2,10 +2,19 @@ package Database;
 
 import java.io.*;
 
+
 import Exception.ExtensionException;
-public class ObjService<T> implements IDBAdapter<T> {
+
+public class ObjService extends DatabaseType implements ServiceAdapter {
+    public ObjService(Class<?> dataClass) {
+        super(dataClass);
+    }
+    public ObjService(Object data) {
+        super(data);
+    }
+
     @Override
-    public void WriteDatabase(String DestPath, T data) throws IOException, ExtensionException {
+    public void WriteDatabase(String DestPath, Object data) throws IOException, ExtensionException {
         File target = new File(DestPath);
         if (!DestPath.toLowerCase().endsWith(".obj")){
             String fileName = target.getName();
@@ -22,8 +31,7 @@ public class ObjService<T> implements IDBAdapter<T> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
-    public T ReadDatabase(String SrcPath) throws IOException, ExtensionException{
+    public Object ReadDatabase(String SrcPath) throws IOException, ExtensionException{
         Object readObs = null;
         try {
             File target = new File(SrcPath);
@@ -42,7 +50,7 @@ public class ObjService<T> implements IDBAdapter<T> {
         } catch (ClassNotFoundException exec) {
             exec.printStackTrace();
         }
-        return (T) readObs;
+        return readObs;
     }
     /*
 //        /**

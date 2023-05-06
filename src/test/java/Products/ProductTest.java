@@ -19,7 +19,7 @@ class ProductTest {
     @Test
     public void ProductIntoXML() throws IOException, ExtensionException {
         Product p = new Product("1", "Soap", 25d, 20);
-        DatabaseService<Product> db = new DatabaseService<Product>(new XmlService<>(Product.class), "src/test/resources/data/ProductTest.xml");
+        DatabaseService db = new DatabaseService(new XmlService(Product.class), "src/test/resources/data/ProductTest.xml");
         db.saveData(p);
     }
 }
