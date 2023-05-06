@@ -13,7 +13,7 @@ public class MainGUI {
 
     static Font poppinsBold;
     static Font poppinsSemiBold;
-    private static TabbedPane tabbedPane; // declare tabbedPane as a field
+    public static TabbedPane tabbedPane = new TabbedPane(); // declare tabbedPane as a field
     private static Map<JLabel, String> panelLabel = new HashMap<>(); // declare panelLabel as a field
     public static void main(String[] args) throws IOException {
         JFrame frame = new JFrame();
@@ -36,7 +36,7 @@ public class MainGUI {
 
         JPanel halamanUtama = new HalamanUtama();
         panelLabel.putAll(((HalamanUtama) halamanUtama).HalamanUtama());
-        TabbedPane tabbedPane = new TabbedPane(panelLabel);
+        tabbedPane.addTabs(panelLabel);
         tabbedPane.setBackground(Color.decode("#F3DEBA"));
 
         JButton closeTab = new JButton();
@@ -155,6 +155,18 @@ public class MainGUI {
         historyButton.setIcon(new ImageIcon("src/main/resources/images/Label.png"));
         frame.add(historyButton);
 
+        historyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    JPanel historyHalaman = new History();
+                    tabbedPane.addTabs(((History) historyHalaman).History()); // add the new tab here
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
         JButton penjualanButton = new JButton();
         JLabel penjualanText = new JLabel("Penjualan");
         penjualanText.setFont(poppinsSemiBold.deriveFont(18f));
@@ -238,6 +250,18 @@ public class MainGUI {
         jualBarangButton.setBounds(755, 648, 185, 59);
         jualBarangButton.setIcon(new ImageIcon("src/main/resources/images/Label.png"));
         frame.add(jualBarangButton);
+
+        jualBarangButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    JPanel jualBarangHalaman = new JualBarang();
+                    tabbedPane.addTabs(((JualBarang) jualBarangHalaman).JualBarang()); // add the new tab here
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
         JButton settingButton = new JButton();
         JLabel settingText = new JLabel("Setting");
