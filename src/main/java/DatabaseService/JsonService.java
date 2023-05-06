@@ -1,4 +1,4 @@
-package Database;
+package DatabaseService;
 
 import Exception.ExtensionException;
 import com.fasterxml.jackson.core.JsonParseException;

@@ -1,7 +1,7 @@
 package Products;
 
 import Exception.ExtensionException;
-import Database.*;
+import DatabaseService.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

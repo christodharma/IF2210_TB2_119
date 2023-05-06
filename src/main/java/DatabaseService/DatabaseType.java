@@ -1,4 +1,4 @@
-package Database;
+package DatabaseService;
 
 public class DatabaseType<T>{
     protected final Class<T> _class;

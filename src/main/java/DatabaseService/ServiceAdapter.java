@@ -1,4 +1,4 @@
-package Database;
+package DatabaseService;
 
 import java.io.IOException;
 import Exception.ExtensionException;

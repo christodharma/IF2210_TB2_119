@@ -1,20 +1,23 @@
 package Customers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
 
 import java.io.Serializable;
 
 @Setter
-
+@JsonRootName("customer")
 public class Customer extends Membership implements Serializable {
-    private static final long serialVersionUID = System.currentTimeMillis();
+    private static final long serialVersionUID = 21L;
+    @JacksonXmlProperty(localName = "id", isAttribute = true)
+    @JsonProperty("id")
     private final String ID;
-    public static int customerNo = 0;
-    //need to be changed to current customer count in database instead
     public Customer()
     {
-        this.ID = String.valueOf(customerNo);
-        customerNo++;
+        this.ID = String.valueOf(Counter);
+        Counter++;
     }
     @Override
     public String getID()
