@@ -36,16 +36,16 @@ class MemberDBTest {
     @Test
     @Order(2)
     public void MemberDBSaveTest() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new ObjService(custDB), "src/test/resources/data/Members.obj");
+        DatabaseService dbs = new DatabaseService(new ObjService(custDB), "src/test/resources/data/MembersTest.obj");
         dbs.saveData(custDB);
-        File file = new File("src/test/resources/data/Members.obj");
+        File file = new File("src/test/resources/data/MembersTest.obj");
         assertTrue(file.exists());
     }
 
     @Test
     @Order(3)
     public void MemberDBLoadTest() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new ObjService(MemberDB.class), "src/test/resources/data/Members.obj");
+        DatabaseService dbs = new DatabaseService(new ObjService(MemberDB.class), "src/test/resources/data/MembersTest.obj");
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :
@@ -57,16 +57,16 @@ class MemberDBTest {
     @Test
     @Order(4)
     public void MemberDBSaveTestJson() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new JsonService(custDB), "src/test/resources/data/Members.json");
+        DatabaseService dbs = new DatabaseService(new JsonService(custDB), "src/test/resources/data/MembersTest.json");
         dbs.saveData(custDB);
-        File file = new File("src/test/resources/data/Members.json");
+        File file = new File("src/test/resources/data/MembersTest.json");
         assertTrue(file.exists());
     }
 
     @Test
     @Order(5)
     public void MemberDBLoadTestJson() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new JsonService(MemberDB.class), "src/test/resources/data/Members.json");
+        DatabaseService dbs = new DatabaseService(new JsonService(MemberDB.class), "src/test/resources/data/MembersTest.json");
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :
@@ -82,16 +82,16 @@ class MemberDBTest {
     @Test
     @Order(6)
     public void MemberDBSaveTestXML() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new XmlService(custDB), "src/test/resources/data/Members.xml");
+        DatabaseService dbs = new DatabaseService(new XmlService(custDB), "src/test/resources/data/MembersTest.xml");
         dbs.saveData(custDB);
-        File file = new File("src/test/resources/data/Members.xml");
+        File file = new File("src/test/resources/data/MembersTest.xml");
         assertTrue(file.exists());
     }
 
     @Test
     @Order(7)
     public void MemberDBLoadTestXML() throws ExtensionException, IOException {
-        DatabaseService dbs = new DatabaseService(new XmlService(MemberDB.class), "src/test/resources/data/Members.xml");
+        DatabaseService dbs = new DatabaseService(new XmlService(MemberDB.class), "src/test/resources/data/MembersTest.xml");
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :

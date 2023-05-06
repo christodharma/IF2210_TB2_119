@@ -16,7 +16,7 @@ public class Customer extends Membership implements Serializable {
     private final String ID;
     public Customer()
     {
-        this.ID = String.valueOf(Counter);
+        this.ID = String.valueOf(Counter+1);
         Counter++;
     }
     @Override

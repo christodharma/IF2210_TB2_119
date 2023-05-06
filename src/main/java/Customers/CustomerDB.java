@@ -22,4 +22,5 @@ public class CustomerDB extends MembershipDB<Customer> implements Serializable {
     public ArrayList<Customer> getMemberships(){
         return Memberships;
     }
+    public void resetCustomerCount(){Membership.Counter = 0;}
 }

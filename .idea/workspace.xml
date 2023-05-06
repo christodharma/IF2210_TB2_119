@@ -4,29 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: Products fit to spec&#10;feat: Customer-Member and datastore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Customers/MemberDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Customers/MembershipDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerDBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/customerCount.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/customerCount.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/VIP.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/ObjService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ServiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/ServiceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/XmlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/VIPTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerDBTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -83,6 +74,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\data" />
+      <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\main\resources\data" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -95,11 +90,12 @@
       <recent name="oop.tubes2" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Products" />
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberDBTest">
-    <configuration name="CustomerDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CustomerCountTest">
+    <configuration name="CustomerCountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +104,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerDBTest" />
+      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerDBTest.CustomerDBLoadTestXML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerCountTest.AddingCustomers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +119,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.CustomerDBTest" />
-      <option name="METHOD_NAME" value="CustomerDBLoadTestXML" />
+      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
+      <option name="METHOD_NAME" value="AddingCustomers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerCountTest.SaveCustomerCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Customers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Customers" />
+      <option name="MAIN_CLASS_NAME" value="Customers.CustomerCountTest" />
+      <option name="METHOD_NAME" value="SaveCustomerCount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerTest.CustomerDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -140,49 +152,34 @@
       </extension>
       <option name="PACKAGE_NAME" value="Customers" />
       <option name="MAIN_CLASS_NAME" value="Customers.CustomerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.MemberDBTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberDBTest.MemberDBLoadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Customers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.MemberDBTest" />
-      <option name="METHOD_NAME" value="MemberDBLoadTest" />
+      <option name="METHOD_NAME" value="CustomerDB" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DatabaseService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DatabaseService" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemberDBTest" />
-        <item itemvalue="JUnit.CustomerDBTest" />
-        <item itemvalue="JUnit.MemberDBTest.MemberDBLoadTest" />
-        <item itemvalue="JUnit.CustomerTest" />
-        <item itemvalue="JUnit.CustomerDBTest.CustomerDBLoadTestXML" />
+        <item itemvalue="JUnit.CustomerCountTest" />
+        <item itemvalue="JUnit.CustomerTest.CustomerDB" />
+        <item itemvalue="JUnit.DBTest" />
+        <item itemvalue="JUnit.CustomerCountTest.SaveCustomerCount" />
+        <item itemvalue="JUnit.CustomerCountTest.AddingCustomers" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683359986756</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: typo">
+      <created>1683389742247</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683389742247</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add members test db">
+      <created>1683397048626</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683397048626</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,41 +255,15 @@
     <MESSAGE value="Fix ! : DONT FORGET PROPER EXTENSION" />
     <MESSAGE value="fix: ObjService takes param to match other service&#10;feat: DatabaseType singleton class" />
     <MESSAGE value="feat: Products fit to spec&#10;feat: Customer-Member and datastore" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Products fit to spec&#10;feat: Customer-Member and datastore" />
+    <MESSAGE value="fix: typo" />
+    <MESSAGE value="add members test db" />
+    <option name="LAST_COMMIT_MESSAGE" value="add members test db" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DatabaseService/JsonService.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/DatabaseService/ObjService.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.junit.platform.engine.TestExecutionResult" memberName="throwable" />
+        <PinnedItemInfo parentTag="DatabaseService.DatabaseService" memberName="IDB" />
       </pinned-members>
     </pin-to-top-manager>
   </component>
