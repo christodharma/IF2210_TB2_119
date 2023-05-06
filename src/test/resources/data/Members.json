@@ -1,0 +1,33 @@
+{
+  "members" : [ {
+    "customer" : {
+      "id" : "3"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "7357",
+    "point" : 0,
+    "name" : "Mime",
+    "id" : "3"
+  }, {
+    "customer" : {
+      "id" : "1"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "73577357",
+    "point" : 0,
+    "name" : "Memi",
+    "id" : "1"
+  }, {
+    "customer" : {
+      "id" : "2"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "735715",
+    "point" : 0,
+    "name" : "Momo",
+    "id" : "2"
+  } ]
+}

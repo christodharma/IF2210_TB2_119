@@ -1,0 +1,31 @@
+<MemberDB>
+  <members>
+    <members>
+      <customer id="3"/>
+      <status>true</status>
+      <class>Member</class>
+      <phone>7357</phone>
+      <point>0</point>
+      <name>Mime</name>
+      <id>3</id>
+    </members>
+    <members>
+      <customer id="1"/>
+      <status>true</status>
+      <class>Member</class>
+      <phone>73577357</phone>
+      <point>0</point>
+      <name>Memi</name>
+      <id>1</id>
+    </members>
+    <members>
+      <customer id="2"/>
+      <status>true</status>
+      <class>Member</class>
+      <phone>735715</phone>
+      <point>0</point>
+      <name>Momo</name>
+      <id>2</id>
+    </members>
+  </members>
+</MemberDB>
