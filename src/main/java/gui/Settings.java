@@ -2,7 +2,12 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Map;
 
 public class Settings extends JPanel {
@@ -77,16 +82,6 @@ public class Settings extends JPanel {
         uploadPlugin.setBackground(Color.decode("#A9907E"));
         panelMain.add(uploadPlugin);
 
-        uploadPlugin.addActionListener(e -> {
-//            JFileChooser fileChooser = new JFileChooser();
-//            fileChooser.setDialogTitle("Pilih Plugin");
-//            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-//            int result = fileChooser.showOpenDialog(this);
-//            if (result == JFileChooser.APPROVE_OPTION) {
-//                String pathFile = fileChooser.getSelectedFile().getAbsolutePath();
-//                System.out.println(pathFile);
-//            }
-        });
 
         Map < JLabel, String > panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
