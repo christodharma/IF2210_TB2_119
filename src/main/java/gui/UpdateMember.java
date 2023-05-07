@@ -1,14 +1,15 @@
-package oop.tubes2;
+package gui;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
+//import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
-public class DeactivateMember extends JPanel {
+public class UpdateMember extends JPanel {
     JLabel textLabel;
-    public Map<JLabel, String> DeactivateMember() throws IOException {
-        String path = "src/main/resources/images/Tab Deactivate Member.png";
+    public Map<JLabel, String> UpdateMember() throws IOException {
+        String path = "src/main/resources/images/Tab Update Member.png";
         JLabel panelMain = new JLabel();
         ImageIcon bg = new ImageIcon("src/main/resources/images/Background.png");
         panelMain.setBounds(0, 90, 1280, 630);
@@ -21,16 +22,11 @@ public class DeactivateMember extends JPanel {
         panelMain.add(textLabel);
 
         String[] idList = {"001", "002", "003", "004"};
-//        AutoCompleteDecorator.decorate(textField,
-//                new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, idList));
-//        JTextField textField = new JTextField();
-//        textField.setFont(new Font("Arial", Font.PLAIN, 33));
-//        textField.setBackground(new Color(177, 197, 221));
-//        textField.setForeground(Color.WHITE);
-        JComboBox id = new JComboBox(idList);
-        id.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        JPanel id = new JPanel();
         id.setBounds(617, 142, 487, 40);
-        id.setForeground(Color.decode("#675D50"));
+        id.setLayout(new FlowLayout());
+        id.setOpaque(false);
+        id.add(new AutoSuggest(idList,487,40));
         panelMain.add(id);
 
         JTextField name = new JTextField();
@@ -55,7 +51,7 @@ public class DeactivateMember extends JPanel {
         panelMain.add(status);
 
         JButton saveButton = new JButton();
-        JLabel saveText = new JLabel("Deactivate");
+        JLabel saveText = new JLabel("Save");
         saveText.setFont(MainGUI.poppinsSemiBold.deriveFont(25f));
         saveText.setForeground(Color.decode("#675D50"));
         saveText.setAlignmentX(Component.CENTER_ALIGNMENT);
