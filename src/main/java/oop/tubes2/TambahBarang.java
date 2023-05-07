@@ -5,11 +5,10 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
 
-public class Perbarui extends JPanel {
-
+public class TambahBarang {
     JLabel textLabel;
-    public Map<JLabel, String> Perbarui() throws IOException {
-        String path = "src/main/resources/images/Tab Perbarui.png";
+    public Map<JLabel, String> TambahBarang() throws IOException {
+        String path = "src/main/resources/images/Tab Tambah Barang.png";
         JLabel panelMain = new JLabel();
         ImageIcon bg = new ImageIcon("src/main/resources/images/Background.png");
         panelMain.setBounds(0, 90, 1280, 630);
@@ -21,9 +20,8 @@ public class Perbarui extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] idList = {"001", "002", "003", "004"};
 
-        JComboBox id = new JComboBox(idList);
+        JTextField id = new JTextField();
         id.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         id.setBounds(641, 80, 447, 35);
         id.setForeground(Color.decode("#675D50"));
@@ -64,7 +62,7 @@ public class Perbarui extends JPanel {
         stokBarang.setBorder(null);
         panelMain.add(stokBarang);
 
-
+//            membuat button pilih gambar
         JButton pilihGambar = new JButton();
         JLabel pilihGambarText = new JLabel("Pilih Gambar");
         pilihGambarText.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
@@ -97,78 +95,38 @@ public class Perbarui extends JPanel {
 //                }
 //            });
 
-        JButton deleteButton = new JButton();
-        JLabel deleteText = new JLabel("Hapus");
-        deleteText.setFont(MainGUI.poppinsSemiBold.deriveFont(25f));
-        deleteText.setForeground(Color.decode("#FFFFFF"));
-        deleteText.setAlignmentX(Component.CENTER_ALIGNMENT);
-        deleteButton.add(deleteText);
-        deleteButton.setBounds(400, 470, 167, 51);
-        deleteButton.setIcon(new ImageIcon("src/main/resources/images/Delete.png"));
-        deleteButton.setBackground(Color.decode("#A9907E"));
-        panelMain.add(deleteButton);
+        JButton tambahButton = new JButton();
+        JLabel tambahText = new JLabel("Tambah Barang");
+        tambahText.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+        tambahText.setForeground(Color.decode("#675D50"));
+        tambahText.setAlignmentX(Component.CENTER_ALIGNMENT);
+        tambahButton.add(tambahText);
+        tambahButton.setBounds(552, 465, 175, 48);
+        tambahButton.setIcon(new ImageIcon("src/main/resources/images/Perbarui dan Tambah Barang.png"));
+        tambahButton.setBackground(Color.decode("#A9907E"));
+        panelMain.add(tambahButton);
 
-//        jika menekan tombol deleteButton, maka akan menghapus data yang ada di database dan menampilkan pesan berhasil, lalu menghapus isi JTextField menjadi kosong
-        deleteButton.addActionListener(e -> {
+        //        jika menekan tombol tambahBarang, maka akan menambah data yang ada di database dan menampilkan pesan berhasil, lalu menghapus isi JTextField menjadi kosong
+        tambahButton.addActionListener(e -> {
 //            try {
-//                String idBarang = id.getSelectedItem().toString();
-//                String nama = namaBarang.getText();
-//                String hargaJualBarang = hargaJual.getText();
-//                String hargaBeliBarang = hargaBeli.getText();
-//                String kategoriBarang = kategori.getText();
-//                String stok = stokBarang.getText();
-//                String pathGambar = path;
-//                String query = "DELETE FROM barang WHERE id_barang = '" + idBarang + "'";
-//                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_pos", "root", "");
-//                Statement stat = con.createStatement();
-//                stat.executeUpdate(query);
+//                Barang barang = new Barang();
+//                barang.setIdBarang(id.getText());
+//                barang.setNamaBarang(namaBarang.getText());
+//                barang.setHargaJual(Integer.parseInt(hargaJual.getText()));
+//                barang.setHargaBeli(Integer.parseInt(hargaBeli.getText()));
+//                barang.setKategori(kategori.getText());
+//                barang.setStokBarang(Integer.parseInt(stokBarang.getText()));
+//                barang.setGambar("src/main/resources/images/Barang/" + id.getText() + ".png");
+//                barang.tambahBarang();
+                JOptionPane.showMessageDialog(null, "Berhasil Menambah Barang");
+                id.setText("");
                 namaBarang.setText("");
                 hargaJual.setText("");
                 hargaBeli.setText("");
                 kategori.setText("");
                 stokBarang.setText("");
-
-
-                JOptionPane.showMessageDialog(null, "Data berhasil dihapus");
-//            } catch (Exception ex) {
-//                JOptionPane.showMessageDialog(null, "Data gagal dihapus");
-//            }
-        });
-
-        JButton updateButton = new JButton();
-        JLabel updateText = new JLabel("Update");
-        updateText.setFont(MainGUI.poppinsSemiBold.deriveFont(25f));
-        updateText.setForeground(Color.decode("#675D50"));
-        updateText.setAlignmentX(Component.CENTER_ALIGNMENT);
-        updateButton.add(updateText);
-        updateButton.setBounds(710, 470, 167, 51);
-        updateButton.setIcon(new ImageIcon("src/main/resources/images/Update n Create.png"));
-        updateButton.setBackground(Color.decode("#A9907E"));
-        panelMain.add(updateButton);
-
-
-//        jika menekan tombol updateButton, maka akan memperbarui data yang ada di database dan menampilkan pesan berhasil, lalu menghapus isi JTextField menjadi kosong
-        updateButton.addActionListener(e -> {
-//            try {
-//                String idBarang = id.getSelectedItem().toString();
-//                String nama = namaBarang.getText();
-//                String hargaJualBarang = hargaJual.getText();
-//                String hargaBeliBarang = hargaBeli.getText();
-//                String kategoriBarang = kategori.getText();
-//                String stok = stokBarang.getText();
-//                String pathGambar = path;
-//                String query = "UPDATE barang SET nama_barang = '" + nama + "', harga_jual = '" + hargaJualBarang + "', harga_beli = '" + hargaBeliBarang + "', kategori = '" + kategoriBarang + "', stok = '" + stok + "', gambar = '" + pathGambar + "' WHERE id_barang = '" + idBarang + "'";
-//                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_pos", "root", "");
-//                Statement stat = con.createStatement();
-//                stat.executeUpdate(query);
-                namaBarang.setText("");
-                hargaJual.setText("");
-                hargaBeli.setText("");
-                kategori.setText("");
-                stokBarang.setText("");
-                JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
-//            } catch (Exception ex) {
-//                JOptionPane.showMessageDialog(null, "Data gagal diupdate");
+//            } catch (Exception exception) {
+//                JOptionPane.showMessageDialog(null, "Gagal Menambah Barang");
 //            }
         });
 

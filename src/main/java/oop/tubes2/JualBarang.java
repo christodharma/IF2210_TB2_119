@@ -89,27 +89,58 @@ public class JualBarang extends JPanel {
         totalHarga.setBounds(970, 459, 262, 40);
         panelMain.add(totalHarga);
 
-        String[][] data = {{"Donat","Makanan","4000","5000","5"},{"Risoles","Makanan","7000","8000","7"},{"Nasi Gila","Makanan","11000","13000","10"}};
-
+        String[][] data = {
+                {"Donat","Makanan","4000","5000","5"},
+                {"Risoles","Makanan","7000","8000","6"},
+                {"Nasi Gila","Makanan","8000","9000","7"},
+                {"Nasi Goreng","Makanan","9000","1000","8"},
+                {"Kwetiauw","Makanan","10000","11000","9"},
+                {"Fanta susu","Minuman","5000","6000","10"},
+                {"Es Milo","Minuman","6000","6000","11"},
+                {"Donat","Makanan","4000","5000","5"},
+                {"Risoles","Makanan","7000","8000","6"},
+                {"Nasi Gila","Makanan","8000","9000","7"},
+                {"Nasi Goreng","Makanan","9000","1000","8"},
+                {"Kwetiauw","Makanan","10000","11000","9"},
+                {"Fanta susu","Minuman","5000","6000","10"},
+                {"Es Milo","Minuman","6000","6000","11"},
+                {"Donat","Makanan","4000","5000","5"},
+                {"Risoles","Makanan","7000","8000","6"},
+                {"Nasi Gila","Makanan","8000","9000","7"},
+                {"Nasi Goreng","Makanan","9000","1000","8"},
+                {"Kwetiauw","Makanan","10000","11000","9"},
+                {"Fanta susu","Minuman","5000","6000","10"},
+                {"Es Milo","Minuman","6000","6000","11"},
+                {"Donat","Makanan","4000","5000","5"},
+                {"Risoles","Makanan","7000","8000","6"},
+                {"Nasi Gila","Makanan","8000","9000","7"},
+                {"Nasi Goreng","Makanan","9000","1000","8"},
+                {"Kwetiauw","Makanan","10000","11000","9"},
+                {"Fanta susu","Minuman","5000","6000","10"},
+                {"Es Milo","Minuman","6000","6000","11"}
+        };
         JPanel panelBill = new JPanel();
         panelBill.setLayout(new BoxLayout(panelBill, BoxLayout.Y_AXIS));
         panelBill.setBackground(Color.decode("#D9D9D9"));
 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBackground(Color.decode("#F3DEBA"));
+        panel.setBackground(Color.decode("#d9d9d9"));
         for (int i = 0; i < data.length; i++) {
             JPanel panelX = new JPanel();
             panelX.setLayout(new BoxLayout(panelX, BoxLayout.X_AXIS));
+            panelX.setBackground(Color.decode("#d9d9d9"));
 
             JLabel gambar = new JLabel("");
             gambar.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
             gambar.setForeground(Color.decode("#675D50"));
-            gambar.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
+            gambar.setIcon(new ImageIcon("src/main/resources/images/"+data[i][0]+".png"));
             gambar.setVerticalTextPosition(JLabel.CENTER);
             gambar.setHorizontalTextPosition(JLabel.CENTER);
             gambar.setHorizontalAlignment(SwingConstants.CENTER);
             gambar.setPreferredSize(new Dimension(133,75));
+//            gambar.setMinimumSize(new Dimension(133,75));
+//            gambar.setMaximumSize(new Dimension(133,75));
             panelX.add(gambar);
 
             JLabel nama = new JLabel(data[i][0]);
@@ -253,7 +284,7 @@ public class JualBarang extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane(panel);
         scrollPane.setBounds(20, 182-90, 665, 427);
-        scrollPane.setBackground(Color.decode("#ABC4AA"));
+        scrollPane.setBackground(Color.decode("#d9d9d9"));
         scrollPane.setBorder(null);
         panelMain.add(scrollPane);
 
