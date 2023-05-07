@@ -1,7 +1,6 @@
 package Plugin;
 import Products.*;
 import DatabaseService.*;
-import PluginInterface.PluginInterface;
 import BasePlugin.BlankPage;
 import BasePlugin.BasePlugin;
 import org.jfree.chart.*;
@@ -14,39 +13,37 @@ import java.io.IOException;
 import Exception.ExtensionException;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 
 public class Plugin1 implements BasePlugin {
 
     private CategoryDataset createDataset() {
-        // DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        // dataset.addValue(1.0, "Row 1", "Column 1");
-        // dataset.addValue(5.0, "Row 1", "Column 2");
-        // dataset.addValue(3.0, "Row 1", "Column 3");
-        // dataset.addValue(2.0, "Row 2", "Column 1");
-        // dataset.addValue(3.0, "Row 2", "Column 2");
-        // dataset.addValue(2.0, "Row 2", "Column 3");
-        // return dataset;
-
-        DatabaseService DB = new DatabaseService(new JsonService(ProductDB.class), "src/test/resources/data/Products.JSON");
+        DatabaseService DB = new DatabaseService(new XmlService(ProductDB.class), "src/test/resources/data/Products.xml");
         ProductDB products = null;
         try {
-             products = (ProductDB) DB.loadData();
+            products = (ProductDB) DB.loadData();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ExtensionException e) {
             e.printStackTrace();
         }
-        
+    
+        if (products == null) {
+            System.out.println("ProductDB is null");
+        } else {
+            System.out.println("ProductDB is not null");
+        }
+
+        products.getProducts().forEach((v) -> System.out.println(v.getPrice()));
         // define new array list of Double
         ArrayList<Double> priceList = new ArrayList<Double>();
-        products.getProducts().forEach((k,v) -> {
-            priceList.add(v.getPrice());
-        });
+        System.out.println(products.getProducts().size());
         // get the min and max of priceList
-        Double min = priceList.stream().min(Double::compare).get();
-        Double max = priceList.stream().max(Double::compare).get();
+        priceList.forEach(p -> System.out.println(p));
+        Double min = priceList.stream().min(Double::compare).orElse(0.0);
+        Double max = priceList.stream().max(Double::compare).orElse(0.0);
         // define the range of the price
         Double range = max - min;
         // Calculate the number of intervals dynamically based on the data size
@@ -104,22 +101,32 @@ public class Plugin1 implements BasePlugin {
     }
 
     @Override
-    public void onLoad(){
-        BlankPage newPage = new BlankPage();
-        newPage.setTitle("Plugin 1");
-        CategoryDataset dataset = createDataset();
-        ChartPanel chart = createBarChart("Persebaran Product Price", dataset);
-        // chart.pack();
-        // chart.setVisible(true);
+    public void onLoad() {
+        try {
+            BlankPage newPage = new BlankPage();
+            newPage.setTitle("Plugin 1");
+            CategoryDataset dataset = createDataset();
+            ChartPanel chart = createBarChart("Persebaran Product Price", dataset);
+            // chart.pack();
+            // chart.setVisible(true);
 
-        ChartPanel lineChart = createLineChart("Penjualan Per Bulan", dataset);
-        // lineChart.pack();
-        // lineChart.setVisible(true);
-        newPage.setGrid(1, 2);
-        newPage.getPanel().add(chart);
-        newPage.getPanel().add(lineChart);
-        newPage.setVisible(true);
-        System.out.println("Plugin 2 loaded");
+            ChartPanel lineChart = createLineChart("Penjualan Per Bulan", dataset);
+            // lineChart.pack();
+            // lineChart.setVisible(true);
+            newPage.setGrid(1, 2);
+            newPage.getPanel().add(chart);
+            newPage.getPanel().add(lineChart);
+            newPage.setVisible(true);
+            System.out.println("Plugin 2 loaded");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+    public static void main(String[] args) {
+        Plugin1 plugin = new Plugin1();
+        plugin.onLoad();
+    }
+
 
 }
