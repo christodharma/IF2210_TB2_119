@@ -20,7 +20,7 @@ public class Laporan extends JPanel{
         downloadLaporanText.setForeground(Color.decode("#675D50"));
         downloadLaporanText.setAlignmentX(Component.CENTER_ALIGNMENT);
         downloadLaporan.add(downloadLaporanText);
-        downloadLaporan.setBounds(430, 194, 420, 63);
+        downloadLaporan.setBounds(430, 160, 420, 63);
         downloadLaporan.setIcon(new ImageIcon("src/main/resources/images/Laporan dan Bill.png"));
         downloadLaporan.setBackground(Color.decode("#A9907E"));
         panelMain.add(downloadLaporan);
@@ -31,7 +31,7 @@ public class Laporan extends JPanel{
         downloadFixedBillText.setForeground(Color.decode("#675D50"));
         downloadFixedBillText.setAlignmentX(Component.CENTER_ALIGNMENT);
         downloadFixedBill.add(downloadFixedBillText);
-        downloadFixedBill.setBounds(430, 373, 420, 63);
+        downloadFixedBill.setBounds(430, 340, 420, 63);
         downloadFixedBill.setIcon(new ImageIcon("src/main/resources/images/Laporan dan Bill.png"));
         downloadFixedBill.setBackground(Color.decode("#A9907E"));
         panelMain.add(downloadFixedBill);
