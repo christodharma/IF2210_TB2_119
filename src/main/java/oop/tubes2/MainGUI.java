@@ -149,7 +149,7 @@ public class MainGUI {
         });
 
         JButton historyButton = new JButton();
-        JLabel historyText = new JLabel("History");
+        JLabel historyText = new JLabel("Riwayat");
         historyText.setFont(poppinsSemiBold.deriveFont(18f));
         historyText.setForeground(Color.decode("#FFFFFF"));
         historyText.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -202,24 +202,24 @@ public class MainGUI {
 
                 manageBarang.setLayout(null);
                 manageBarang.add(manageBarangText);
-//                manageBarang.addActionListener(new ActionListener() {
-//                    @Override
-//                    public void actionPerformed(ActionEvent e) {
-//                        try {
-//                            JPanel pendaftaranHalaman = new PendaftaranMember();
-//                            tabbedPane.addTabs(((PendaftaranMember) pendaftaranHalaman).PendaftaranMember()); // add the new tab here
-//                        } catch (IOException ex) {
-//                            ex.printStackTrace();
-//                        }
-//                    }
-//                });
+                manageBarang.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            JPanel halamanManajemen = new ManajemenBarangGudang();
+                            tabbedPane.addTabs(((ManajemenBarangGudang) halamanManajemen).ManajemenBarangGudang()); // add the new tab here
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                });
 
                 JButton laporan = new JButton();
                 laporan.setIcon(new ImageIcon("src/main/resources/images/Box Pop Up.png"));
                 laporan.setBackground(new Color(0xF3DEBA));
                 popUp.add(laporan);
 
-                JLabel laporanText = new JLabel("Update Member/VIP");
+                JLabel laporanText = new JLabel("Laporan");
                 laporanText.setFont(poppinsSemiBold.deriveFont(18f));
                 laporanText.setForeground(Color.WHITE);
                 laporanText.setHorizontalAlignment(JLabel.CENTER);
@@ -229,17 +229,17 @@ public class MainGUI {
                 laporan.setLayout(null);
                 laporan.add(laporanText);
 
-//                laporan.addActionListener(new ActionListener() {
-//                    @Override
-//                    public void actionPerformed(ActionEvent e) {
-//                        try {
-//                            JPanel updateHalaman = new UpdateMember();
-//                            tabbedPane.addTabs(((UpdateMember) updateHalaman).UpdateMember()); // add the new tab here
-//                        } catch (IOException ex) {
-//                            ex.printStackTrace();
-//                        }
-//                    }
-//                });
+                laporan.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        try {
+                            JPanel halamanLaporan = new Laporan();
+                            tabbedPane.addTabs(((Laporan) halamanLaporan).Laporan()); // add the new tab here
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                });
                 popUp.show(penjualanButton, 0, -133);
             }
         });
@@ -267,7 +267,7 @@ public class MainGUI {
         });
 
         JButton settingButton = new JButton();
-        JLabel settingText = new JLabel("Setting");
+        JLabel settingText = new JLabel("Pengaturan");
         settingText.setFont(poppinsSemiBold.deriveFont(18f));
         settingText.setForeground(Color.decode("#FFFFFF"));
         settingText.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -276,6 +276,17 @@ public class MainGUI {
         settingButton.setIcon(new ImageIcon("src/main/resources/images/Label.png"));
         frame.add(settingButton);
 
+        settingButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    JPanel halamanSettings = new Settings();
+                    tabbedPane.addTabs(((Settings) halamanSettings).Settings()); // add the new tab here
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
         closeTab.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
