@@ -1,5 +1,6 @@
 package Customers;
 
+import Bill.FixedBill;
 import DatabaseService.DatabaseService;
 import DatabaseService.ObjService;
 import org.junit.jupiter.api.*;
@@ -24,11 +25,11 @@ class CustomerCountTest {
     @Order(2)
     void AddingAndSaveCount() throws ExtensionException, IOException {
         CustomerDB cdb = new CustomerDB();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
+        cdb.addMembership(new FixedBill("0", "1"));
+        cdb.addMembership(new FixedBill("1", "1"));
+        cdb.addMembership(new FixedBill("2", "1"));
+        cdb.addMembership(new FixedBill("3", "1"));
+        cdb.addMembership(new FixedBill("4", "1"));
         assertEquals(5, Membership.getCounter());
         assertNotEquals(0, Membership.getCounter());
         System.out.println(0 + " vs "+Membership.getCounter());

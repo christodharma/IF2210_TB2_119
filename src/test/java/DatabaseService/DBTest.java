@@ -15,11 +15,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class DBTest {
     ProductDB templateProductDB() {
         ProductDB testDB = new ProductDB();
-        testDB.addProduct(new Product("1", "Indomilk", 5000D, 50));
-        testDB.addProduct(new Product("2", "Indomie", 3000d, 100));
-        testDB.addProduct(new Product("3", "Indocafe", 3000D, 400));
-        testDB.addProduct(new Product("4", "Teh Kotak", 5000D, 70));
-        testDB.addProduct(new Product("5", "Teh Bundar", 4000D, 40));
+        testDB.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        testDB.addProduct(new Product("2", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        testDB.addProduct(new Product("3", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        testDB.addProduct(new Product("4", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        testDB.addProduct(new Product("4", "Indomilk", 5000D, 4900D, "Food", "", 0));
         return testDB;
     }
     @Test

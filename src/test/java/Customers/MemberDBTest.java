@@ -1,10 +1,13 @@
 package Customers;
 
+import Bill.Bill;
+import Bill.FixedBill;
 import DatabaseService.DatabaseService;
 import DatabaseService.JsonService;
 import DatabaseService.ObjService;
 import DatabaseService.XmlService;
 import Exception.ExtensionException;
+import Products.Product;
 import org.junit.jupiter.api.*;
 
 import java.io.File;
@@ -17,9 +20,15 @@ class MemberDBTest {
     @BeforeAll
     public static void setUp(){
         custDB = new MemberDB();
-        Member m1 = new Member(new Customer(), "Memi", "73577357");
-        Member m2 = new Member(new Customer(), "Momo", "735715");
-        Member m = new Member(new Customer(), "Mime", "7357");
+        Bill cart = new Bill("123", "1");
+        Product p = new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0);
+        cart.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        cart.addProduct(new Product("12", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        cart.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
+        assertNotNull(cart);
+        Member m1 = new Member(new Customer(new FixedBill("0", "1")), "Memi", "73577357");
+        Member m2 = new Member(new Customer(new FixedBill("0", "1")), "Momo", "735715");
+        Member m = new Member(new Customer(new FixedBill("0", "1")), "Mime", "7357");
         custDB.addMembership(m);
         custDB.addMembership(m1);
         custDB.addMembership(m2);

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
     </list>
@@ -22,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -31,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gui" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +82,7 @@
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="History" />
       <recent name="Customers" />
       <recent name="Database" />
       <recent name="oop.tubes2" />
@@ -89,31 +92,11 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBTest.XmlLoadDataTest">
-    <configuration name="Bill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bill.Bill" />
+  <component name="RunManager" selected="JUnit.All in _119">
+    <configuration name="All in _119" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Bill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DatabaseService.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DatabaseService" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,32 +117,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Products.*" />
+          <option name="PATTERN" value="History.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <option name="PACKAGE_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductDBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionHistoryTest.TransactionHistorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Products.*" />
+          <option name="PATTERN" value="History.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
-      <option name="METHOD_NAME" value="JsonLoadDataTest" />
+      <option name="PACKAGE_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
+      <option name="METHOD_NAME" value="TransactionHistorySave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionHistoryTest.TransactionHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="History.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
+      <option name="METHOD_NAME" value="TransactionHistoryTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in _119" />
+        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistorySave" />
+        <item itemvalue="JUnit.TransactionHistoryTest" />
+        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistoryTest" />
         <item itemvalue="JUnit.DBTest.XmlLoadDataTest" />
-        <item itemvalue="JUnit.ProductDBTest" />
-        <item itemvalue="JUnit.ProductDBTest.JsonLoadDataTest" />
-        <item itemvalue="JUnit.DBTest" />
-        <item itemvalue="Application.Bill" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683397048626</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: Bill, FixedBill">
+      <created>1683412246779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683412246779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +255,8 @@
     <MESSAGE value="feat: Products fit to spec&#10;feat: Customer-Member and datastore" />
     <MESSAGE value="fix: typo" />
     <MESSAGE value="add members test db" />
-    <option name="LAST_COMMIT_MESSAGE" value="add members test db" />
+    <MESSAGE value="feat: Bill, FixedBill" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Bill, FixedBill" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
