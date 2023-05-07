@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: TransactionHistory&#10;feat: ProductCollection">
       <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductCollectionTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db"/>
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
+    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="add JualBarang">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gui/AutoSuggest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Charge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Save Bill.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -27,6 +37,20 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/DeactivateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/HalamanUtama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/HalamanUtama.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/JualBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/JualBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/Laporan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Laporan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/ManajemenBarangGudang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ManajemenBarangGudang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/PendaftaranMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Perbarui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/ShowTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ShowTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/TabbedPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/TabbedPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UpdateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Label Harga.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Label Harga.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.xml" beforeDir="false" />
@@ -46,13 +70,35 @@
       </list>
     </option>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="gui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b97c59cb-72d2-4e1c-90d7-dd9f5b30e58a" />
+        <option name="url" value="https://github.com/christodharma/IF2210_TB2_119.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,6 +114,80 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "128",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "77",
+    "last_opened_file_path": "C:/Users/ASUS/IdeaProjects/IF2210_TB2_119/src/main/resources/images",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="oop.tubes2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\IdeaProjects\IF2210_TB2_119\src\main\resources\images" />
+      <recent name="C:\Users\ASUS\IdeaProjects\IF2210_TB2_119\src\main\java\oop\tubes2" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="oop.tubes2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainGUI"/>
+    <configuration name="AutoSuggest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.AutoSuggest" />
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HalamanUtama" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.HalamanUtama" />
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.MainGUI" />
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true"/>
+      <option name="MAIN_CLASS_NAME" value="oop.tubes2.MainPage" />
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -152,12 +272,26 @@
       <option name="PACKAGE_NAME" value="Products" />
       <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
       <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true"/>
+      <option name="MAIN_CLASS_NAME" value="oop.tubes2.Page" />
     <configuration name="TransactionHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="History.*" />
@@ -171,6 +305,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainGUI" />
+        <item itemvalue="Application.AutoSuggest" />
+        <item itemvalue="Application.HalamanUtama" />
+        <item itemvalue="Application.MainPage" />
+        <item itemvalue="Application.Page" />
+      </list>
+    </recent_temporary>
     <configuration name="TransactionHistoryTest.TransactionHistorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
@@ -206,6 +349,35 @@
       <option name="presentableId" value="Default" />
       <updated>1682490372924</updated>
     </task>
+    <task id="LOCAL-00001" summary="add gui">
+      <created>1683386958443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683386958443</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add Font">
+      <created>1683387741955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683387741955</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add History">
+      <created>1683415926933</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683415926933</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add JualBarang">
+      <created>1683469030182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683469030182</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <task id="LOCAL-00001" summary="fix: Implementing lombok in JsonService&#10;fix: Annotate Product with XmlAnnotations&#10;fix: Add XML dependencies in pom.xml&#10;fix: Rename Inventory field to Products">
       <created>1683163813429</created>
       <option name="number" value="00001" />
@@ -263,7 +435,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -318,5 +496,16 @@
     <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Products.*</FILTER>
     </SUITE>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add gui" />
+    <MESSAGE value="add Font" />
+    <MESSAGE value="add History" />
+    <MESSAGE value="add JualBarang" />
+    <option name="LAST_COMMIT_MESSAGE" value="add JualBarang" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
