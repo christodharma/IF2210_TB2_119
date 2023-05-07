@@ -16,16 +16,7 @@ import BasePlugin.BasePlugin;
 
 public class PluginCaller {
 
-    public static void MainPluginCaller() {
-        JFrame frame = new JFrame("Jar File Opener");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 200);
-
-        JButton button = new JButton("Select Jar File");
-
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+    public static void MainPluginCaller() { 
                 JFileChooser fileChooser = new JFileChooser();
                 fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
                 fileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
@@ -38,22 +29,16 @@ public class PluginCaller {
                     }
                 });
 
-                int result = fileChooser.showOpenDialog(frame);
+                int result = fileChooser.showOpenDialog(new JFrame());
                 if (result == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
                     String jarFilePath = selectedFile.getAbsolutePath();
                     try {
                         loadJarFile(jarFilePath);
-                        // Do something with the loaded classes
                     } catch (Exception ex) {
                         System.out.println(ex);
                     }
                 }
-            }
-        });
-
-        frame.getContentPane().add(button, BorderLayout.CENTER);
-        frame.setVisible(true);
     }
 
     private static void loadJarFile(String filePath) throws Exception {

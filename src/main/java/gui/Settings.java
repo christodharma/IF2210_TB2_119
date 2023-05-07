@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
+import PluginCaller.PluginCaller;
 
 public class Settings extends JPanel {
 
@@ -76,6 +77,16 @@ public class Settings extends JPanel {
         uploadPlugin.setIcon(new ImageIcon("src/main/resources/images/Upload Plugin.png"));
         uploadPlugin.setBackground(Color.decode("#A9907E"));
         panelMain.add(uploadPlugin);
+
+        // if uploadPlugin is clicked
+        // add MainPluginCaller to the action listener
+        uploadPlugin.addActionListener(pluginCaller -> {
+            try {
+                PluginCaller.MainPluginCaller();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
         Map < JLabel, String > panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
