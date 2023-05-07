@@ -2,7 +2,14 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Map;
 
 public class Perbarui extends JPanel {
@@ -75,27 +82,46 @@ public class Perbarui extends JPanel {
         pilihGambar.setIcon(new ImageIcon("src/main/resources/images/Pilih Gambar.png"));
         pilihGambar.setBackground(Color.decode("#A9907E"));
         panelMain.add(pilihGambar);
-//            membuat action yang dapat mengambil gambar dari file lokal
-//            pilihGambar.addActionListener(e -> {
-//                JFileChooser fileChooser = new JFileChooser();
-//                fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
-//                FileNameExtensionFilter filter = new FileNameExtensionFilter("*.IMAGE", "jpg", "gif", "png");
-//                fileChooser.addChoosableFileFilter(filter);
-//                int result = fileChooser.showSaveDialog(null);
-//                if (result == JFileChooser.APPROVE_OPTION) {
-//                    File selectedFile = fileChooser.getSelectedFile();
-//                    String pathGambar = selectedFile.getAbsolutePath();
-//                    ImageIcon myImage = new ImageIcon(pathGambar);
-//                    Image img = myImage.getImage();
-//                    Window gambar = null;
-//                    Image newImg = img.getScaledInstance(gambar.getWidth(), gambar.getHeight(), Image.SCALE_SMOOTH);
-//                    ImageIcon image = new ImageIcon(newImg);
-//                    gambar.setIcon(image);
-//
-//                } else if (result == JFileChooser.CANCEL_OPTION) {
-//                    System.out.println("No Data");
-//                }
-//            });
+
+
+        pilihGambar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Membuat JFileChooser
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+
+                // Menampilkan dialog untuk memilih file gambar
+                int result = fileChooser.showOpenDialog(panelMain);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    // Mendapatkan file gambar yang dipilih
+                    File selectedFile = fileChooser.getSelectedFile();
+
+                    // Mendapatkan nama file gambar
+                    String fileName = selectedFile.getName();
+
+                    // Menyalin file gambar ke folder
+                    try {
+                        Path sourcePath = Paths.get(selectedFile.getAbsolutePath());
+                        Path destinationPath = Paths.get("src/main/resources/images/" + fileName);
+                        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+
+                    // Menambahkan label text dengan nama file gambar
+                    JLabel fileNameLabel = new JLabel(fileName);
+                    fileNameLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+//                    mengetur posisi
+                    fileNameLabel.setBounds(900, 390, 300, 35);
+                    fileNameLabel.setForeground(Color.decode("#FFFFFF"));
+                    panelMain.remove(pilihGambarText);
+                    panelMain.add(fileNameLabel);
+                    panelMain.updateUI();
+                }
+            }
+        });
+
 
         JButton deleteButton = new JButton();
         JLabel deleteText = new JLabel("Hapus");

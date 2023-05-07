@@ -2,12 +2,21 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TambahBarang extends JPanel{
     JLabel textLabel;
+    private File selectedFile;
+
     public Map<JLabel, String> TambahBarang() throws IOException {
         String path = "src/main/resources/images/Tab Tambah Barang.png";
         JLabel panelMain = new JLabel();
@@ -74,27 +83,13 @@ public class TambahBarang extends JPanel{
         pilihGambar.setIcon(new ImageIcon("src/main/resources/images/Pilih Gambar.png"));
         pilihGambar.setBackground(Color.decode("#A9907E"));
         panelMain.add(pilihGambar);
-        //            membuat action yang dapat mengambil gambar dari file lokal
-        //            pilihGambar.addActionListener(e -> {
-        //                JFileChooser fileChooser = new JFileChooser();
-        //                fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
-        //                FileNameExtensionFilter filter = new FileNameExtensionFilter("*.IMAGE", "jpg", "gif", "png");
-        //                fileChooser.addChoosableFileFilter(filter);
-        //                int result = fileChooser.showSaveDialog(null);
-        //                if (result == JFileChooser.APPROVE_OPTION) {
-        //                    File selectedFile = fileChooser.getSelectedFile();
-        //                    String pathGambar = selectedFile.getAbsolutePath();
-        //                    ImageIcon myImage = new ImageIcon(pathGambar);
-        //                    Image img = myImage.getImage();
-        //                    Window gambar = null;
-        //                    Image newImg = img.getScaledInstance(gambar.getWidth(), gambar.getHeight(), Image.SCALE_SMOOTH);
-        //                    ImageIcon image = new ImageIcon(newImg);
-        //                    gambar.setIcon(image);
-        //
-        //                } else if (result == JFileChooser.CANCEL_OPTION) {
-        //                    System.out.println("No Data");
-        //                }
-        //            });
+
+        JLabel fileNameLabel = new JLabel("");
+        fileNameLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(12f));
+        fileNameLabel.setForeground(Color.decode("#675D50"));
+        fileNameLabel.setAlignmentX(CENTER_ALIGNMENT);
+        fileNameLabel.setBounds(640, 435, 150, 20);
+        panelMain.add(fileNameLabel);
 
         JButton tambahButton = new JButton();
         JLabel tambahText = new JLabel("Tambah Barang");
@@ -107,8 +102,58 @@ public class TambahBarang extends JPanel{
         tambahButton.setBackground(Color.decode("#A9907E"));
         panelMain.add(tambahButton);
 
+        pilihGambar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Pilih gambar");
+                int result = fileChooser.showOpenDialog(panelMain);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    File selectedFile = fileChooser.getSelectedFile();
+                    String fileName = selectedFile.getName();
+                    try {
+                        Path sourcePath = Paths.get(selectedFile.getAbsolutePath());
+                        Path destinationPath = Paths.get("src/main/resources/images/" + fileName);
+                        Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                    JLabel fileNameLabel = new JLabel(fileName);
+                    fileNameLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(12f));
+                    fileNameLabel.setForeground(Color.decode("#675D50"));
+                    fileNameLabel.setAlignmentX(CENTER_ALIGNMENT);
+                    fileNameLabel.setBounds(640, 435, 150, 20);
+                    panelMain.add(fileNameLabel);
+                    panelMain.revalidate();
+                    panelMain.repaint();
+                }
+            }
+        });
+
+        tambahButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (!fileNameLabel.getText().equals("")) {
+                    File sourceFile = new File(selectedFile.getAbsolutePath());
+                    File destFolder = new File("src/main/resources/images");
+                    try {
+                        Files.copy(sourceFile.toPath(), destFolder.toPath().resolve(sourceFile.getName()), StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
+
         //        jika menekan tombol tambahBarang, maka akan menambah data yang ada di database dan menampilkan pesan berhasil, lalu menghapus isi JTextField menjadi kosong
-        tambahButton.addActionListener(e -> {
+//        tambahButton.addActionListener(e -> {
             //            try {
             //                Barang barang = new Barang();
             //                barang.setIdBarang(id.getText());
@@ -119,17 +164,17 @@ public class TambahBarang extends JPanel{
             //                barang.setStokBarang(Integer.parseInt(stokBarang.getText()));
             //                barang.setGambar("src/main/resources/images/Barang/" + id.getText() + ".png");
             //                barang.tambahBarang();
-            JOptionPane.showMessageDialog(null, "Berhasil Menambah Barang");
-            id.setText("");
-            namaBarang.setText("");
-            hargaJual.setText("");
-            hargaBeli.setText("");
-            kategori.setText("");
-            stokBarang.setText("");
+//            JOptionPane.showMessageDialog(null, "Berhasil Menambah Barang");
+//            id.setText("");
+//            namaBarang.setText("");
+//            hargaJual.setText("");
+//            hargaBeli.setText("");
+//            kategori.setText("");
+//            stokBarang.setText("");
             //            } catch (Exception exception) {
             //                JOptionPane.showMessageDialog(null, "Gagal Menambah Barang");
             //            }
-        });
+//        });
 
 
         Map<JLabel, String> panelLabel = new HashMap<>();

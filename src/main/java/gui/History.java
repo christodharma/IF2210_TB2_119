@@ -80,7 +80,6 @@ public class History extends JPanel {
                                 } catch (IOException ex) {
                                     throw new RuntimeException(ex);
                                 }
-
                             }
                         });
 
