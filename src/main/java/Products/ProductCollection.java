@@ -4,10 +4,9 @@ import lombok.NonNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class ProductCollection {
-    HashMap<String, Product> contents = new HashMap<>();
+    protected HashMap<String, Product> contents = new HashMap<>();
     public void addProduct(@NonNull Product added)
     {
         Product existingProduct = contents.get(added.getID());
@@ -53,7 +52,8 @@ public class ProductCollection {
                 return null;
         }
     }
-    public List<Product> getProducts(){
-        return new ArrayList<>(contents.values());
+    public ArrayList<Product> getProducts(){
+        ArrayList<Product> ret = new ArrayList<>((contents.values()));
+        return ret;
     }
 }

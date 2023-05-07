@@ -1,38 +1,37 @@
 package Bill;
 
 
+import Customers.Customer;
 import Products.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Getter;
 
 import java.util.ArrayList;
 
 @Getter
-public class FixedBill extends Bill{
+@JacksonXmlRootElement(localName = "FixedBill")
+public class FixedBill {
+    @JacksonXmlProperty(localName = "fixedItems")
+    private final ArrayList<FixedBillEntry> fixedItems = new ArrayList<>();
+    private final Customer buyer;
 
-    public FixedBill(String buyerID, String transactionID) {
-        super(buyerID, transactionID);
-        for (Product i :
-                super.getItems().getProducts()) {
-            fixedItems.add(new Pair(i, i.getQuantity()));
+    public FixedBill(Bill s) {
+        buyer = s.getCustomerRef();
+        for (Product i : s.getProducts()) {
+            fixedItems.add(new FixedBillEntry(i, i.getQuantity()));
         }
     }
-    @Getter
-    @AllArgsConstructor
-    class Pair {
-        @JsonProperty("product")
-        Product product;
-        @JsonProperty("quantity")
-        Integer qty;
-    }
-    private final ArrayList<Pair> fixedItems = new ArrayList<>();
-    private double getSubTotal(){
-        double ret=0d;
-        for (Pair i :
-                fixedItems) {
-            ret=i.product.getPrice()* i.qty;
+    @JsonProperty("subTotal")
+    @JacksonXmlProperty(localName = "subTotal")
+    private double getSubTotal () {
+        double ret = 0d;
+        for (FixedBillEntry e :
+                getFixedItems()) {
+            ret += e.getTotalPrice();
         }
         return ret;
     }
 }
+

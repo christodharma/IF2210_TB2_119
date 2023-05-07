@@ -4,20 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: TransactionHistory&#10;feat: ProductCollection"/>
+      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductCollectionTest.java" afterDir="false" />
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db"/>
       <change afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
-    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="add JualBarang">
+    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="add JualBarang"/>
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/gui/AutoSuggest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/Charge.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/Save Bill.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="update manajemen barang gudang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/customerCount.obj" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system/customerCount.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/DeactivateMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/HalamanUtama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/HalamanUtama.java" afterDir="false" />
@@ -33,6 +52,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/TabbedPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/TabbedPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/oop/tubes2/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/UpdateMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/images/Label Harga.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Label Harga.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/customerCount.obj" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +65,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -58,6 +88,8 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="gui_2" />
+        <entry key="$PROJECT_DIR$" value="dev" />
         <entry key="$PROJECT_DIR$" value="main" />
         <entry key="$PROJECT_DIR$" value="gui" />
       </map>
@@ -81,7 +113,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Ox7ROrTFjwkg6JlUVP3jdH8k9X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -91,6 +123,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"/>{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -110,6 +149,10 @@
       "JAVA"
     ]
   }
+}</component>
+  <component name="RunManager" selected="Application.gui.MainGUI">
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oop.tubes2.MainGUI" />
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -192,10 +235,13 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\main\resources\system" />
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Customers" />
+      <recent name="Products" />
+      <recent name="History" />
       <recent name="Database" />
       <recent name="oop.tubes2" />
     </key>
@@ -204,20 +250,7 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBTest.XmlLoadDataTest">
-    <configuration name="Bill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bill.Bill" />
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Bill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MemberDBTest">
     <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
@@ -233,18 +266,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBTest.XmlLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DatabaseService.*" />
+          <option name="PATTERN" value="Customers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DatabaseService" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
-      <option name="METHOD_NAME" value="XmlLoadDataTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="Customers" />
+      <option name="MAIN_CLASS_NAME" value="Customers.MemberDBTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <option name="TEST_OBJECT" value="class" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="oop.tubes2.*" />
@@ -257,7 +304,7 @@
     </configuration>
     <configuration name="Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true"/>
       <option name="MAIN_CLASS_NAME" value="oop.tubes2.Page" />
-    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -267,17 +314,25 @@
       </extension>
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Products.*" />
+          <option name="PATTERN" value="oop.tubes2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="History.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="gui.MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true"/>
+      <option name="MAIN_CLASS_NAME" value="gui.MainGUI" />
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGUI" />
@@ -287,17 +342,23 @@
         <item itemvalue="Application.Page" />
       </list>
     </recent_temporary>
-    <configuration name="ProductDBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionHistoryTest.TransactionHistorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Products.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Products" />
-      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
-      <option name="METHOD_NAME" value="JsonLoadDataTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="History.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="History" />
+      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
+      <option name="METHOD_NAME" value="TransactionHistorySave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -305,23 +366,37 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBTest.XmlLoadDataTest" />
-        <item itemvalue="JUnit.ProductDBTest" />
-        <item itemvalue="JUnit.ProductDBTest.JsonLoadDataTest" />
+        <item itemvalue="Application.gui.MainGUI" />
+        <item itemvalue="Application.MainGUI" />
+      </list>
+    </recent_temporary>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberDBTest" />
+        <item itemvalue="JUnit.TransactionHistoryTest" />
+        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistorySave" />
         <item itemvalue="JUnit.DBTest" />
-        <item itemvalue="Application.Bill" />
+        <item itemvalue="JUnit.ProductDBTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="" />
+      <changelist id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="" />
       <created>1682490372924</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682490372924</updated>
     </task>
+    <task id="LOCAL-00001" summary="update manajemen barang gudang">
+      <created>1683485596751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683485596751</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <task id="LOCAL-00001" summary="add gui">
       <created>1683386958443</created>
       <option name="number" value="00001" />
@@ -393,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683397048626</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: Bill, FixedBill">
+      <created>1683412246779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683412246779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,6 +496,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="update manajemen barang gudang" />
+    <option name="LAST_COMMIT_MESSAGE" value="update manajemen barang gudang" />
+  </component>
+  <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
     <MESSAGE value="fix: Implementing lombok in JsonService&#10;fix: Annotate Product with XmlAnnotations&#10;fix: Add XML dependencies in pom.xml&#10;fix: Rename Inventory field to Products" />
     <MESSAGE value="TODO: XMLDB WIP" />
@@ -422,15 +508,41 @@
     <MESSAGE value="feat: Products fit to spec&#10;feat: Customer-Member and datastore" />
     <MESSAGE value="fix: typo" />
     <MESSAGE value="add members test db" />
-    <option name="LAST_COMMIT_MESSAGE" value="add members test db" />
+    <MESSAGE value="feat: Bill, FixedBill" />
+    <MESSAGE value="feat: TransactionHistory&#10;feat: ProductCollection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: TransactionHistory&#10;feat: ProductCollection" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.junit.platform.engine.TestExecutionResult" memberName="throwable" />
         <PinnedItemInfo parentTag="DatabaseService.DatabaseService" memberName="IDB" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="cart" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

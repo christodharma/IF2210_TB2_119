@@ -1,11 +1,13 @@
 package DatabaseService;
 
 import Exception.ExtensionException;
+import lombok.Setter;
 
 import java.io.IOException;
+@Setter
 public class DatabaseService {
-    private final ServiceAdapter IDB;
-    private final String DBPath;
+    private ServiceAdapter IDB;
+    private String DBPath;
 
     /**
      * Service for Database

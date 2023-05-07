@@ -14,15 +14,19 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class MemberDBTest {
     static MemberDB custDB;
-    @BeforeAll
-    public static void setUp(){
-        custDB = new MemberDB();
+    public static MemberDB templateMemberDB() {
+        MemberDB ret = new MemberDB();
         Member m1 = new Member(new Customer(), "Memi", "73577357");
         Member m2 = new Member(new Customer(), "Momo", "735715");
         Member m = new Member(new Customer(), "Mime", "7357");
-        custDB.addMembership(m);
-        custDB.addMembership(m1);
-        custDB.addMembership(m2);
+        ret.addMembership(m);
+        ret.addMembership(m1);
+        ret.addMembership(m2);
+        return ret;
+    }
+    @BeforeAll
+    public static void setUp(){
+        custDB = templateMemberDB();
     }
     @Test
     @Order(1)

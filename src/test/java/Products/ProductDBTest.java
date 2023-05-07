@@ -15,11 +15,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProductDBTest {
     ProductDB templateProductDB() {
         ProductDB testDB = new ProductDB();
-        testDB.addProduct(new Product("1", "Indomilk", 5000D, 50));
-        testDB.addProduct(new Product("2", "Indomie", 3000d, 100));
-        testDB.addProduct(new Product("3", "Indocafe", 3000D, 400));
-        testDB.addProduct(new Product("4", "Teh Kotak", 5000D, 70));
-        testDB.addProduct(new Product("5", "Teh Bundar", 4000D, 40));
+        testDB.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 200));
+        testDB.addProduct(new Product("2", "Indomie", 5000D, 4900D, "Food", "", 244));
+        testDB.addProduct(new Product("3", "Indotea", 5000D, 4900D, "Food", "", 124));
+        testDB.addProduct(new Product("4", "Indokopi", 5000D, 4900D, "Food", "", 165));
+        testDB.addProduct(new Product("5", "Indorice", 5000D, 4900D, "Food", "", 554));
         return testDB;
     }
     @Test
@@ -39,10 +39,6 @@ class ProductDBTest {
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
-        for (Product p :
-                products.getProducts()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
-        }
     }
     @Test
     @Order(3)
@@ -60,10 +56,6 @@ class ProductDBTest {
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
-        for (Product p :
-                products.getProducts()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
-        }
     }
     @Test
     @Order(5)
@@ -81,9 +73,5 @@ class ProductDBTest {
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
-        for (Product p :
-                products.getProducts()) {
-            System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
-        }
     }
 }

@@ -2,7 +2,12 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Map;
 
 public class Settings extends JPanel {
@@ -11,7 +16,7 @@ public class Settings extends JPanel {
     public Map<JLabel, String> Settings() throws IOException {
         String path = "src/main/resources/images/Tab Pengaturan.png";
         JLabel panelMain = new JLabel();
-        ImageIcon bg = new ImageIcon("src/main/resources/images/Settings.png");
+        ImageIcon bg = new ImageIcon("src/main/resources/images/Background.png");
         panelMain.setBounds(0, 90, 1280, 630);
         panelMain.setIcon(bg);
 
@@ -21,14 +26,14 @@ public class Settings extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        textLabel = new JLabel("<html><div style='line-width: 5em;'>Hapus Plugin</html>");
+        textLabel = new JLabel("<html><div style='line-width: 5em;'>Plugin</html>");
         textLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(30f));
-        textLabel.setBounds(765, 101, 372, 45);
+        textLabel.setBounds(820, 101, 372, 45);
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
         String[] dataPenyimpanan = {"xml", "json"};
-        String[] listPlugin = {"Plugin 1", "Plugin 2"};
+//        String[] listPlugin = {"Plugin 1", "Plugin 2"};
 
         JComboBox penyimpanan = new JComboBox(dataPenyimpanan);
         penyimpanan.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
@@ -36,12 +41,11 @@ public class Settings extends JPanel {
         penyimpanan.setForeground(Color.decode("#675D50"));
         panelMain.add(penyimpanan);
 
-        JComboBox plugin = new JComboBox(listPlugin);
-        plugin.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
-        plugin.setBounds(730, 197, 290, 36);
-        plugin.setForeground(Color.decode("#675D50"));
-        panelMain.add(plugin);
-
+//        JComboBox plugin = new JComboBox(listPlugin);
+//        plugin.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
+//        plugin.setBounds(730, 197, 290, 36);
+//        plugin.setForeground(Color.decode("#675D50"));
+//        panelMain.add(plugin);
 
 
         JButton hapus = new JButton();
@@ -54,6 +58,7 @@ public class Settings extends JPanel {
         hapus.setIcon(new ImageIcon("src/main/resources/images/Hapus.png"));
         hapus.setBackground(Color.decode("#A9907E"));
         panelMain.add(hapus);
+
 
         JButton simpan = new JButton();
         JLabel simpanText = new JLabel("Simpan");
@@ -76,6 +81,7 @@ public class Settings extends JPanel {
         uploadPlugin.setIcon(new ImageIcon("src/main/resources/images/Upload Plugin.png"));
         uploadPlugin.setBackground(Color.decode("#A9907E"));
         panelMain.add(uploadPlugin);
+
 
         Map < JLabel, String > panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
