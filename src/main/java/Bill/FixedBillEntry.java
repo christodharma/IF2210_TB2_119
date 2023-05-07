@@ -2,26 +2,25 @@ package Bill;
 
 import Products.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NonNull;
 
 @Getter
-@RequiredArgsConstructor
-@JsonRootName("fixed-item")
-@JacksonXmlRootElement(localName = "fixed-item")
 public class FixedBillEntry {
-    private final Product product;
-    private final Integer qty;
-    @JsonProperty("total")
-    public Double total = this.getProduct().getPrice()*this.getQty();
-    @JsonProperty("product")
-    public Product getProduct() {
-        return product;
-    }
-    @JsonProperty("quantity")
-    public Integer getQty() {
-        return qty;
+@JsonProperty("product")
+@JacksonXmlProperty(localName = "product")
+    @NonNull private final Product product;
+@JsonProperty("quantity")
+@JacksonXmlProperty(localName = "quantity")
+    @NonNull private final Integer qty;
+@JsonProperty("total")
+@JacksonXmlProperty(localName = "total")
+    public Double totalPrice;
+
+    public FixedBillEntry(Product p, int qty){
+        this.product = p;
+        this.qty = qty;
+        this.totalPrice = p.getPrice()*qty;
     }
 }

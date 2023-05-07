@@ -4,17 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: TransactionHistory&#10;feat: ProductCollection">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductCollectionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/CustomerDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Membership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/customerCount.obj" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/system/customerCount.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Members.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/customerCount.obj" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -42,7 +58,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Ox7ROrTFjwkg6JlUVP3jdH8k9X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -79,11 +95,13 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\main\resources\system" />
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="History" />
       <recent name="Customers" />
+      <recent name="Products" />
+      <recent name="History" />
       <recent name="Database" />
       <recent name="oop.tubes2" />
     </key>
@@ -92,16 +110,8 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in _119">
-    <configuration name="All in _119" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBTest.XmlLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MemberDBTest">
+    <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -111,8 +121,37 @@
       </extension>
       <option name="PACKAGE_NAME" value="DatabaseService" />
       <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
-      <option name="METHOD_NAME" value="XmlLoadDataTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Customers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Customers" />
+      <option name="MAIN_CLASS_NAME" value="Customers.MemberDBTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Products" />
+      <option name="MAIN_CLASS_NAME" value="Products.ProductDBTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,29 +187,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionHistoryTest.TransactionHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="History.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="History" />
-      <option name="MAIN_CLASS_NAME" value="History.TransactionHistoryTest" />
-      <option name="METHOD_NAME" value="TransactionHistoryTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in _119" />
-        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistorySave" />
+        <item itemvalue="JUnit.MemberDBTest" />
         <item itemvalue="JUnit.TransactionHistoryTest" />
-        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistoryTest" />
-        <item itemvalue="JUnit.DBTest.XmlLoadDataTest" />
+        <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistorySave" />
+        <item itemvalue="JUnit.DBTest" />
+        <item itemvalue="JUnit.ProductDBTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,15 +279,40 @@
     <MESSAGE value="fix: typo" />
     <MESSAGE value="add members test db" />
     <MESSAGE value="feat: Bill, FixedBill" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Bill, FixedBill" />
+    <MESSAGE value="feat: TransactionHistory&#10;feat: ProductCollection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: TransactionHistory&#10;feat: ProductCollection" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.junit.platform.engine.TestExecutionResult" memberName="throwable" />
         <PinnedItemInfo parentTag="DatabaseService.DatabaseService" memberName="IDB" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="cart" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

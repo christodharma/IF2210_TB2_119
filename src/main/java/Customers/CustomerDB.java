@@ -1,7 +1,6 @@
 package Customers;
 
 
-import Bill.FixedBill;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -16,8 +15,8 @@ public class CustomerDB extends MembershipDB<Customer> implements Serializable {
     public CustomerDB(ArrayList<Customer> customers){
         super(customers);
     }
-    public void addMembership(FixedBill bought){
-        Memberships.add(new Customer(bought));
+    public void addMembership(){
+        Memberships.add(new Customer());
     }
     @JsonProperty("customer")
     @JsonInclude(JsonInclude.Include.NON_EMPTY)

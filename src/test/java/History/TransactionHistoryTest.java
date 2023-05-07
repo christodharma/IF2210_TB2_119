@@ -1,42 +1,56 @@
 package History;
 
 import Bill.Bill;
+import Bill.FixedBill;
+import Customers.Customer;
+import Customers.Membership;
 import DatabaseService.DatabaseService;
-import Products.Product;
+import DatabaseService.ObjService;
+import DatabaseService.XmlService;
+import Exception.ExtensionException;
+import lombok.NonNull;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import DatabaseService.*;
-
 import java.io.File;
 import java.io.IOException;
-import Exception.ExtensionException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static Products.ProductCollectionTest.templateProductCollection;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class TransactionHistoryTest {
+public class TransactionHistoryTest {
 
-    Bill cart;
-    @Test
-    @Order(1)
-    void TransactionHistoryTest(){
-        cart = new Bill("123", "1");
-        Product p = new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0);
-        cart.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        cart.addProduct(new Product("12", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        cart.addProduct(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        assertNotNull(cart);
+    public static FixedBill templateBill(@NonNull Customer buyer){
+        Bill cart = new Bill(buyer);
+        templateProductCollection(cart);
+        return new FixedBill(cart);
     }
     @Test
-    @Order(2)
+    @Order(1)
     void TransactionHistorySave() throws ExtensionException, IOException {
-        TransactionHistoryTest();
-        DatabaseService dbs = new DatabaseService(new JsonService(TransactionHistory.class), "src/test/resources/data/TransactionHistory.json");
-        dbs.saveData(cart);
-        File fileCheck = new File("src/test/resources/data/TransactionHistory.json");
+        FixedBill b = templateBill(new Customer());
+        TransactionHistory h = new TransactionHistory();
+        h.addHistory(b);
+        h.addHistory(b);
+        h.addHistory(b);
+        h.addHistory(b);
+        h.addHistory(b);
+        DatabaseService dbs = new DatabaseService(new XmlService(TransactionHistory.class), "src/test/resources/data/TransactionHistory.xml");
+        dbs.saveData(h);
+        dbs.setIDB(new ObjService(Membership.getCounter()));
+        dbs.setDBPath("src/test/resources/data/customerCount.obj");
+        System.out.println(Membership.getCounter());
+        dbs.saveData(Membership.getCounter());
+        File fileCheck = new File("src/test/resources/data/TransactionHistory.xml");
+        File fileCheckCustCount = new File("src/test/resources/data/customerCount.obj");
         assertTrue(fileCheck.exists());
+        assertTrue(fileCheckCustCount.exists());
+        long a = (long) dbs.loadData();
+        assertEquals(a, Membership.getCounter());
+        dbs.setIDB(new ObjService(Long.class));
     }
 }
