@@ -21,31 +21,33 @@ public class UpdateMember extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] idList = {"001", "002", "003", "004"};
-        JPanel id = new JPanel();
-        id.setBounds(617, 142, 487, 40);
-        id.setLayout(new FlowLayout());
-        id.setOpaque(false);
-        id.add(new AutoSuggest(idList,487,40));
-        panelMain.add(id);
+        String[] idList = {"001", "002", "003", "004","005"};
+        String[][] data = {{"001","Rifa","000"}, {"002","Joja","111"}, {"003","Toto","222"}, {"004","Agsha","333"},{"005","Malik","444"}};
 
         JTextField name = new JTextField();
-        name.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        name.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         name.setBounds(617, 192, 487, 40);
         name.setForeground(Color.decode("#675D50"));
         name.setBorder(null);
         panelMain.add(name);
 
         JTextField phoneNumber = new JTextField();
-        phoneNumber.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        phoneNumber.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         phoneNumber.setBounds(617, 242, 487, 41);
         phoneNumber.setForeground(Color.decode("#675D50"));
         phoneNumber.setBorder(null);
         panelMain.add(phoneNumber);
 
+        JPanel id = new JPanel();
+        id.setBounds(617, 142, 487, 40);
+        id.setLayout(new FlowLayout());
+        id.setOpaque(false);
+        id.add(new AutoSuggest(idList,487,40, name, phoneNumber, data));
+        panelMain.add(id);
+
         String statusList[] = {"Member", "VIP"};
         JComboBox status = new JComboBox(statusList);
-        status.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        status.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         status.setBounds(617, 292, 487, 41);
         status.setForeground(Color.decode("#675D50"));
         panelMain.add(status);

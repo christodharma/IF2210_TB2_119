@@ -2,6 +2,8 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Map;
 
@@ -26,28 +28,29 @@ public class PendaftaranMember extends JPanel {
 //        idList.add("002");
 //        idList.add("003");
 //        idList.add("004");
-        String[] idList = {"001", "002", "003", "004"};
-
-        JPanel id = new JPanel();
-        id.setBounds(617, 155, 487, 40);
-        id.setLayout(new FlowLayout());
-        id.setOpaque(false);
-        id.add(new AutoSuggest(idList,487,40));
-        panelMain.add(id);
+        String[] idList = {"001", "002", "003", "004","005"};
+        String[][] data = {{"001","Rifa","000"}, {"002","Joja","111"}, {"003","Toto","222"}, {"004","Agsha","333"},{"005","Malik","444"}};
 
         JTextField name = new JTextField();
-        name.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        name.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         name.setBounds(617, 205, 487, 40);
         name.setForeground(Color.decode("#675D50"));
         name.setBorder(null);
         panelMain.add(name);
 
         JTextField phoneNumber = new JTextField();
-        phoneNumber.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+        phoneNumber.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         phoneNumber.setBounds(617, 255, 487, 41);
         phoneNumber.setForeground(Color.decode("#675D50"));
         phoneNumber.setBorder(null);
         panelMain.add(phoneNumber);
+
+        JPanel id = new JPanel();
+        id.setBounds(617, 155, 487, 40);
+        id.setLayout(new FlowLayout());
+        id.setOpaque(false);
+        id.add(new AutoSuggest(idList,487,40, name, phoneNumber, data));
+        panelMain.add(id);
 
         JButton saveButton = new JButton();
         JLabel saveText = new JLabel("Save");

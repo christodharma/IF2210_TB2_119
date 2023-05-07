@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.util.*;
 import javax.swing.*;
 
@@ -58,29 +59,44 @@ public class AutoSuggest extends JPanel{
                 }
             }
         });
-//        String[] countries = {"Afghanistan", "Albania", "Algeria", "Andorra", "Angola","Argentina"
-//                ,"Armenia","Austria","Bahamas","Bahrain", "Bangladesh","Barbados", "Belarus","Belgium",
-//                "Benin","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","Bulgaria",
-//                "Burkina Faso","Burma","Burundi","Cambodia","Cameroon","Canada", "China","Colombia",
-//                "Comoros","Congo","Croatia","Cuba","Cyprus","Czech Republic","Denmark", "Georgia",
-//                "Germany","Ghana","Great Britain","Greece","Hungary","Holland","India","Iran","Iraq",
-//                "Italy","Somalia", "Spain", "Sri Lanka", "Sudan","Suriname", "Swaziland","Sweden",
-//                "Switzerland", "Syria","Uganda","Ukraine","United Arab Emirates","United Kingdom",
-//                "United States","Uruguay","Uzbekistan","Vanuatu","Venezuela","Vietnam",
-//                "Yemen","Zaire","Zambia","Zimbabwe"};
         for(int i=0;i<countries.length;i++){
             v.addElement(countries[i]);
         }
         setModel(new DefaultComboBoxModel(v), "");
         JPanel p = new JPanel(new BorderLayout());
-//        p.setBorder(BorderFactory.createTitledBorder("AutoSuggestion Box"));
         p.add(combo, BorderLayout.NORTH);
         add(p);
-//        setBorder(BorderFactory.createEmptyBorder(0,0,0,0));
         setPreferredSize(new Dimension(x, y));
         combo.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         combo.setForeground(Color.decode("#675D50"));
     }
+    public AutoSuggest(String[] countries, int x, int y, JPanel panelButtons, String[][] historyList, String[][] transactionList) {
+//        call auto suggest
+        this(countries, x, y);
+        this.actionHistoryCombo(combo, panelButtons, historyList, transactionList);
+    }
+    public AutoSuggest(String[] countries, int x, int y, JTextField name, JTextField phoneNumber, String[][] data) {
+//        call auto suggest
+        this(countries, x, y);
+        this.actionMemberCombo(combo, name, phoneNumber, data);
+    }
+    public AutoSuggest(String[] countries, int x, int y, String[][] saveBill, JPanel panelBill, JLabel totalHarga) {
+//        call auto suggest
+        this(countries, x, y);
+        this.actionJualBeliCombo(combo, saveBill, panelBill, totalHarga);
+    }
+
+    public AutoSuggest(String[] countries, int x, int y, JTextField namaBarang, JTextField hargaJual, JTextField hargaBeli, JTextField kategori, JTextField stokBarang, String[][] data) {
+//        call auto suggest
+        this(countries, x, y);
+        this.actionPerbaruiCombo(combo, namaBarang, hargaJual, hargaBeli, kategori, stokBarang, data);
+    }
+
+    public AutoSuggest(String[] countries, int x, int y, String[][] data, JPanel panel, JPanel panelBill, JLabel totalHarga) {
+        this(countries, x, y);
+        this.actionShowInventory(combo, data, panel, panelBill, totalHarga);
+    }
+
     private boolean hide_flag = false;
     private void setModel(DefaultComboBoxModel mdl, String str) {
         combo.setModel(mdl);
@@ -93,6 +109,194 @@ public class AutoSuggest extends JPanel{
             if(s.startsWith(text)) m.addElement(s);
         }
         return m;
+    }
+
+    public void actionHistoryCombo(JComboBox id, JPanel panelButtons, String[][] historyList, String[][] transactionList) {
+        id.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                panelButtons.removeAll(); // clear existing buttons
+                String selectedId = (String) id.getSelectedItem();
+                System.out.println("Selected ID: " + selectedId);
+                for (int i = 0; i < historyList.length; i++) {
+                    System.out.println("Checking historyList[" + i + "][0]: " + historyList[i][0]);
+                    ArrayList<String[]> selectedIdList = new ArrayList<String[]>();
+                    if (historyList[i][0].equals(selectedId)) {
+                        System.out.println("Adding button for historyList[" + i + "]");
+                        JButton button = new JButton();
+                        JLabel text = new JLabel("Button " + historyList[i][1] + "          " + historyList[i][2] + "          " + historyList[i][3]);
+                        text.setFont(MainGUI.poppinsSemiBold.deriveFont(18f));
+                        text.setForeground(Color.decode("#675D50"));
+                        text.setAlignmentX(Component.CENTER_ALIGNMENT);
+                        button.add(text);
+                        button.setBackground(Color.decode("#ABC4AA"));
+                        button.setBorder(null);
+                        button.setMaximumSize(new Dimension(880, 50));
+
+                        // Add ActionListener to button
+                        int finalI = i;
+                        button.addActionListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                for (int j = 0; j < transactionList.length; j++) {
+                                    if (transactionList[j][0].equals(selectedId) && transactionList[j][1].equals(historyList[finalI][1])) {
+                                        selectedIdList.add(transactionList[j]);
+                                        System.out.println("Adding transactionList[" + j + "] to selectedIdList");
+                                    }
+                                }
+                                ShowTransaction showTransaction = new ShowTransaction();
+                                try {
+                                    Map<JLabel, String> panelTransaction = showTransaction.ShowTransaction(selectedIdList);
+                                    MainGUI.tabbedPane.addTabs(panelTransaction);
+                                } catch (IOException ex) {
+                                    throw new RuntimeException(ex);
+                                }
+
+                            }
+                        });
+
+                        panelButtons.add(button);
+                    }
+                }
+                panelButtons.revalidate(); // refresh panel
+                panelButtons.repaint();
+            }
+        });
+    }
+
+    public void actionMemberCombo(JComboBox id, JTextField name, JTextField phoneNumber, String[][] data) {
+        id.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedId = (String) id.getSelectedItem();
+                for (int i = 0; i < data.length; i++) {
+                    if (data[i][0].equals(selectedId)) {
+                        name.setText(data[i][1]);
+                        phoneNumber.setText(data[i][2]);
+                    }
+                }
+            }
+        });
+    }
+
+    public void actionPerbaruiCombo (JComboBox id, JTextField namaBarang, JTextField hargaJual, JTextField hargaBeli, JTextField kategori, JTextField stokBarang, String[][] data) {
+        id.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedId = (String) id.getSelectedItem();
+                for (int i = 0; i < data.length; i++) {
+                    if (data[i][0].equals(selectedId)) {
+                        namaBarang.setText(data[i][1]);
+                        hargaJual.setText(data[i][2]);
+                        hargaBeli.setText(data[i][3]);
+                        kategori.setText(data[i][4]);
+                        stokBarang.setText(data[i][5]);
+                    }
+                }
+            }
+        });
+    }
+
+    public void actionShowInventory(JComboBox search, String[][] data, JPanel panel, JPanel panelBill, JLabel totalHarga) {
+        search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                boolean found = false;
+                panel.removeAll();
+                String searchNama = (String) search.getSelectedItem();
+                for (int i = 0; i < data.length; i++) {
+                    if (data[i][0].equals(searchNama)) {
+                        JualBarang.setPanel(data, i, panel, panelBill, totalHarga);
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    for (int i = 0; i < data.length; i++) {
+                        JualBarang.setPanel(data, i, panel, panelBill, totalHarga);
+                    }
+                }
+            }
+        });
+    }
+
+    public void actionJualBeliCombo (JComboBox id, String[][] saveBill, JPanel panelBill, JLabel totalHarga) {
+        id.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedId = (String) id.getSelectedItem();
+                panelBill.removeAll();
+                for (int i = 0; i < saveBill.length; i++) {
+                    if (saveBill[i][0].equals(selectedId)) {
+                        JPanel panelXBill = new JPanel();
+                        panelXBill.setLayout(new BoxLayout(panelXBill, BoxLayout.X_AXIS));
+
+                        JLabel noBill = new JLabel(saveBill[i][1]);
+                        noBill.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+                        noBill.setForeground(Color.decode("#675D50"));
+                        noBill.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
+                        noBill.setVerticalTextPosition(JLabel.CENTER);
+                        noBill.setHorizontalTextPosition(JLabel.CENTER);
+                        noBill.setHorizontalAlignment(SwingConstants.CENTER);
+                        noBill.setPreferredSize(new Dimension(133,75));
+                        panelXBill.add(noBill);
+
+                        JLabel namaBill = new JLabel(saveBill[i][2]);
+                        namaBill.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+                        namaBill.setForeground(Color.decode("#675D50"));
+                        namaBill.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
+                        namaBill.setVerticalTextPosition(JLabel.CENTER);
+                        namaBill.setHorizontalTextPosition(JLabel.CENTER);
+                        namaBill.setHorizontalAlignment(SwingConstants.CENTER);
+                        namaBill.setPreferredSize(new Dimension(133,75));
+                        panelXBill.add(namaBill);
+
+                        JLabel kuantitasBill = new JLabel(saveBill[i][3]);
+                        kuantitasBill.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+                        kuantitasBill.setForeground(Color.decode("#675D50"));
+                        kuantitasBill.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
+                        kuantitasBill.setVerticalTextPosition(JLabel.CENTER);
+                        kuantitasBill.setHorizontalTextPosition(JLabel.CENTER);
+                        kuantitasBill.setHorizontalAlignment(SwingConstants.CENTER);
+                        kuantitasBill.setPreferredSize(new Dimension(133,75));
+                        panelXBill.add(kuantitasBill);
+
+                        JLabel hargaBill = new JLabel(saveBill[i][4]);
+                        hargaBill.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
+                        hargaBill.setForeground(Color.decode("#675D50"));
+                        hargaBill.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
+                        hargaBill.setVerticalTextPosition(JLabel.CENTER);
+                        hargaBill.setHorizontalTextPosition(JLabel.CENTER);
+                        hargaBill.setHorizontalAlignment(SwingConstants.CENTER);
+                        hargaBill.setPreferredSize(new Dimension(133,75));
+                        panelXBill.add(hargaBill);
+
+                        boolean itemFound = false;
+                        for (Component component : panelBill.getComponents()) {
+                            if (component instanceof JPanel) {
+                                JPanel panelXBillExisting = (JPanel) component;
+                                JLabel namaBillExisting = (JLabel) panelXBillExisting.getComponent(1);
+                                if (namaBillExisting.getText().equals(namaBill.getText())) {
+                                    itemFound = true;
+                                }
+                            }
+                        }
+
+                        if (!itemFound) {
+                            System.out.println("Item not found");
+                            // Item does not exist, add new item panel
+                            panelBill.add(panelXBill);
+                        }
+                        int totalHargaInt = 0;
+                        for (int j = 0; j < panelBill.getComponentCount(); j++) {
+                            panelXBill = (JPanel) panelBill.getComponent(j);
+                            hargaBill = (JLabel) panelXBill.getComponent(3);
+                            totalHargaInt += Integer.parseInt(hargaBill.getText());
+                        }
+                        totalHarga.setText(String.valueOf(totalHargaInt));
+                    }
+                }
+                panelBill.validate();
+                panelBill.repaint();
+            }
+        });
     }
 //    public static void main(String[] args) {
 //        JFrame frame = new JFrame();
