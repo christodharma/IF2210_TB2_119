@@ -22,12 +22,10 @@ public class Perbarui extends JPanel {
         panelMain.add(textLabel);
 
         String[] idList = {"001", "002", "003", "004"};
-
-        JComboBox id = new JComboBox(idList);
-        id.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
-        id.setBounds(641, 80, 447, 35);
-        id.setForeground(Color.decode("#675D50"));
-        panelMain.add(id);
+        String[][] data = {{"001","Risoles","5000","3000","Makanan","10"},
+                {"002","Kue Lapis","10000","7000","Makanan","10"},
+                {"003","Kue Putri Salju","15000","10000","Makanan","10"},
+                {"004","Kue Nastar","20000","15000","Makanan","10"}};
 
         JTextField namaBarang = new JTextField();
         namaBarang.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
@@ -64,6 +62,12 @@ public class Perbarui extends JPanel {
         stokBarang.setBorder(null);
         panelMain.add(stokBarang);
 
+        JPanel id = new JPanel();
+        id.setBounds(641, 80, 447, 35);
+        id.setLayout(new FlowLayout());
+        id.setOpaque(false);
+        id.add(new AutoSuggest(idList,447,35, namaBarang, hargaJual, hargaBeli, kategori, stokBarang, data));
+        panelMain.add(id);
 
         JButton pilihGambar = new JButton();
         JLabel pilihGambarText = new JLabel("Pilih Gambar");
