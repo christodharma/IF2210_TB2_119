@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: TransactionHistory&#10;feat: ProductCollection">
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="feat: TransactionHistory&#10;feat: ProductCollection"/>
       <change afterPath="$PROJECT_DIR$/src/test/java/Products/ProductCollectionTest.java" afterDir="false" />
     <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="add members test db"/>
       <change afterPath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" afterDir="false" />
-    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="add JualBarang">
+    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="add JualBarang"/>
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/gui/AutoSuggest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/Charge.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/images/Save Bill.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="update manajemen barang gudang">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -64,6 +65,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
         <option value="Interface" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
@@ -80,6 +88,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="gui_2" />
         <entry key="$PROJECT_DIR$" value="dev" />
         <entry key="$PROJECT_DIR$" value="main" />
         <entry key="$PROJECT_DIR$" value="gui" />
@@ -114,6 +123,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"/>{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -133,6 +149,10 @@
       "JAVA"
     ]
   }
+}</component>
+  <component name="RunManager" selected="Application.gui.MainGUI">
+    <configuration name="MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oop.tubes2.MainGUI" />
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -294,6 +314,12 @@
       </extension>
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="oop.tubes2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="coverage">
+        <pattern>
           <option name="PATTERN" value="History.*" />
           <option name="ENABLED" value="true" />
         </pattern>
@@ -305,6 +331,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="gui.MainGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true"/>
+      <option name="MAIN_CLASS_NAME" value="gui.MainGUI" />
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainGUI" />
@@ -316,6 +344,12 @@
     </recent_temporary>
     <configuration name="TransactionHistoryTest.TransactionHistorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="History.*" />
@@ -332,6 +366,12 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.gui.MainGUI" />
+        <item itemvalue="Application.MainGUI" />
+      </list>
+    </recent_temporary>
+    <recent_temporary>
+      <list>
         <item itemvalue="JUnit.MemberDBTest" />
         <item itemvalue="JUnit.TransactionHistoryTest" />
         <item itemvalue="JUnit.TransactionHistoryTest.TransactionHistorySave" />
@@ -343,12 +383,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="" />
+      <changelist id="493a861e-d456-45aa-bdee-c6efca368fc9" name="Changes" comment="" />
       <created>1682490372924</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682490372924</updated>
     </task>
+    <task id="LOCAL-00001" summary="update manajemen barang gudang">
+      <created>1683485596751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683485596751</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <task id="LOCAL-00001" summary="add gui">
       <created>1683386958443</created>
       <option name="number" value="00001" />
@@ -446,6 +494,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update manajemen barang gudang" />
+    <option name="LAST_COMMIT_MESSAGE" value="update manajemen barang gudang" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: R in product database CRUD&#10;feat: Add Parser class and OBJ format data stores&#10;feat: Product DB tests&#10;TODO: Parser for XML and JSON, and converters&#10;TODO: Auto ID-ing new products&#10;TODO: fix serialVersionUIDs" />
