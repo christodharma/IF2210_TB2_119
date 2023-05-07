@@ -1,4 +1,4 @@
-package oop.tubes2;
+package gui;
 
 import javax.swing.*;
 import java.awt.*;

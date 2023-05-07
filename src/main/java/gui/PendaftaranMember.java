@@ -1,4 +1,4 @@
-package oop.tubes2;
+package gui;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Map;
 
 public class PendaftaranMember extends JPanel {
-
+    private static final String COMMIT_ACTION = "commit";
     JLabel textLabel;
     public Map<JLabel, String> PendaftaranMember() throws IOException {
         String path = "src/main/resources/images/Tab Pendaftaran Member.png";
@@ -21,17 +21,18 @@ public class PendaftaranMember extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
+//        ArrayList<String> idList = new ArrayList<String>();
+//        idList.add("001");
+//        idList.add("002");
+//        idList.add("003");
+//        idList.add("004");
         String[] idList = {"001", "002", "003", "004"};
-//        AutoCompleteDecorator.decorate(textField,
-//                new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, idList));
-//        JTextField textField = new JTextField();
-//        textField.setFont(new Font("Arial", Font.PLAIN, 33));
-//        textField.setBackground(new Color(177, 197, 221));
-//        textField.setForeground(Color.WHITE);
-        JComboBox id = new JComboBox(idList);
-        id.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
+
+        JPanel id = new JPanel();
         id.setBounds(617, 155, 487, 40);
-        id.setForeground(Color.decode("#675D50"));
+        id.setLayout(new FlowLayout());
+        id.setOpaque(false);
+        id.add(new AutoSuggest(idList,487,40));
         panelMain.add(id);
 
         JTextField name = new JTextField();

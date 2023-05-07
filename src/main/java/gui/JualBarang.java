@@ -1,14 +1,11 @@
-package oop.tubes2;
+package gui;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 
 public class JualBarang extends JPanel {
@@ -79,68 +76,37 @@ public class JualBarang extends JPanel {
         total.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         total.setHorizontalAlignment(SwingConstants.RIGHT);
         total.setForeground(Color.decode("#675D50"));
-        total.setBounds(700, 459, 270, 40);
+        total.setBounds(700, 439, 270, 40);
         panelMain.add(total);
 
         JLabel totalHarga = new JLabel("");
         totalHarga.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         totalHarga.setForeground(Color.decode("#675D50"));
         totalHarga.setHorizontalAlignment(SwingConstants.RIGHT);
-        totalHarga.setBounds(970, 459, 262, 40);
+        totalHarga.setBounds(970, 439, 262, 40);
         panelMain.add(totalHarga);
 
-        String[][] data = {
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"}
-        };
+        String[][] data = {{"Donat","Makanan","4000","5000","5"},{"Risoles","Makanan","7000","8000","7"},{"Nasi Gila","Makanan","11000","13000","10"}};
+
         JPanel panelBill = new JPanel();
         panelBill.setLayout(new BoxLayout(panelBill, BoxLayout.Y_AXIS));
         panelBill.setBackground(Color.decode("#D9D9D9"));
 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBackground(Color.decode("#d9d9d9"));
+        panel.setBackground(Color.decode("#D9D9D9"));
         for (int i = 0; i < data.length; i++) {
             JPanel panelX = new JPanel();
             panelX.setLayout(new BoxLayout(panelX, BoxLayout.X_AXIS));
-            panelX.setBackground(Color.decode("#d9d9d9"));
 
             JLabel gambar = new JLabel("");
             gambar.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
             gambar.setForeground(Color.decode("#675D50"));
-            gambar.setIcon(new ImageIcon("src/main/resources/images/"+data[i][0]+".png"));
+            gambar.setIcon(new ImageIcon("src/main/resources/images/Label Jual Barang.png"));
             gambar.setVerticalTextPosition(JLabel.CENTER);
             gambar.setHorizontalTextPosition(JLabel.CENTER);
             gambar.setHorizontalAlignment(SwingConstants.CENTER);
             gambar.setPreferredSize(new Dimension(133,75));
-//            gambar.setMinimumSize(new Dimension(133,75));
-//            gambar.setMaximumSize(new Dimension(133,75));
             panelX.add(gambar);
 
             JLabel nama = new JLabel(data[i][0]);
@@ -283,8 +249,8 @@ public class JualBarang extends JPanel {
         }
 
         JScrollPane scrollPane = new JScrollPane(panel);
-        scrollPane.setBounds(20, 182-90, 665, 427);
-        scrollPane.setBackground(Color.decode("#d9d9d9"));
+        scrollPane.setBounds(20, 182-90, 665, 367);
+        scrollPane.setBackground(Color.decode("#ABC4AA"));
         scrollPane.setBorder(null);
         panelMain.add(scrollPane);
 
@@ -356,10 +322,30 @@ public class JualBarang extends JPanel {
         panelXBill.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JScrollPane scrollPaneBill = new JScrollPane(panelBill);
-        scrollPaneBill.setBounds(700, 165, 532, 294);
+        scrollPaneBill.setBounds(700, 165, 532, 274);
         scrollPaneBill.setBackground(Color.decode("#ABC4AA"));
         scrollPaneBill.setBorder(null);
         panelMain.add(scrollPaneBill);
+
+        JButton chargeButton = new JButton();
+        JLabel chargeText = new JLabel(" Charge");
+        chargeText.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
+        chargeText.setForeground(Color.decode("#675D50"));
+        chargeText.setAlignmentX(Component.CENTER_ALIGNMENT);
+        chargeButton.add(chargeText);
+        chargeButton.setBounds(700, 479, 266, 40);
+        chargeButton.setIcon(new ImageIcon("src/main/resources/images/Charge.png"));
+        panelMain.add(chargeButton);
+
+        JButton saveBillButton = new JButton();
+        JLabel saveBillText = new JLabel(" Save Bill");
+        saveBillText.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
+        saveBillText.setForeground(Color.decode("#FFFFFF"));
+        saveBillText.setAlignmentX(Component.CENTER_ALIGNMENT);
+        saveBillButton.add(saveBillText);
+        saveBillButton.setBounds(966, 479, 266, 40);
+        saveBillButton.setIcon(new ImageIcon("src/main/resources/images/Save Bill.png"));
+        panelMain.add(saveBillButton);
 
         return panelLabel;
     }

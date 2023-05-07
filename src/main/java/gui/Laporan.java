@@ -1,8 +1,7 @@
-package oop.tubes2;
+package gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Map;
 public class Laporan extends JPanel{
