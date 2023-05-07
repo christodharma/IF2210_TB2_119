@@ -43,6 +43,9 @@ public class MainGUI {
         closeTab.setBounds(1170, 120, 62, 62);
         closeTab.setIcon(new ImageIcon("src/main/resources/images/Close Tab.png"));
         closeTab.setBackground(new Color(0xA9907E));
+        closeTab.setOpaque(false);
+        closeTab.setContentAreaFilled(false);
+        closeTab.setBorderPainted(false);
         frame.add(closeTab);
 
         JButton membershipButton = new JButton();

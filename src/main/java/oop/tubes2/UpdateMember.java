@@ -22,12 +22,6 @@ public class UpdateMember extends JPanel {
         panelMain.add(textLabel);
 
         String[] idList = {"001", "002", "003", "004"};
-//        AutoCompleteDecorator.decorate(textField,
-//                new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, idList));
-//        JTextField textField = new JTextField();
-//        textField.setFont(new Font("Arial", Font.PLAIN, 33));
-//        textField.setBackground(new Color(177, 197, 221));
-//        textField.setForeground(Color.WHITE);
         JComboBox id = new JComboBox(idList);
         id.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
         id.setBounds(617, 142, 487, 40);

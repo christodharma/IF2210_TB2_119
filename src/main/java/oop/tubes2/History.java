@@ -22,7 +22,7 @@ public class History extends JPanel {
 
         textLabel = new JLabel("<html><div style='line-height: 5em;'>ID Customer</html>");
         textLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(35f));
-        textLabel.setBounds(200, 149-90, 315, 45);
+        textLabel.setBounds(205, 149-90, 315, 45);
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
@@ -89,6 +89,7 @@ public class History extends JPanel {
                     }
                 }
                 panelButtons.revalidate(); // refresh panel
+                panelButtons.repaint();
             }
         });
 
