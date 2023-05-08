@@ -1,0 +1,35 @@
+{
+  "products" : [ {
+    "id" : "1",
+    "name" : "Indomilk",
+    "price" : 5000.0,
+    "buyPrice" : 4900.0,
+    "category" : "Food",
+    "picture" : "",
+    "quantity" : 0
+  }, {
+    "id" : "2",
+    "name" : "Indomilk",
+    "price" : 5000.0,
+    "buyPrice" : 4900.0,
+    "category" : "Food",
+    "picture" : "",
+    "quantity" : 0
+  }, {
+    "id" : "3",
+    "name" : "Indomilk",
+    "price" : 5000.0,
+    "buyPrice" : 4900.0,
+    "category" : "Food",
+    "picture" : "",
+    "quantity" : 0
+  }, {
+    "id" : "4",
+    "name" : "Indomilk",
+    "price" : 5000.0,
+    "buyPrice" : 4900.0,
+    "category" : "Food",
+    "picture" : "",
+    "quantity" : 0
+  } ]
+}

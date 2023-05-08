@@ -1,0 +1,36 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,17 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="Fix ! : DONT FORGET PROPER EXTENSION">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/ExtensionException.java" afterDir="false" />
++    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="TODO : WIP Format Change">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/IDBAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/IDBAdapter.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/JsonService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/ObjService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/XmlService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Exception/_119Exception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exception/_119Exception.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Database/DBTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,7 +24,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="dev" />
++        <entry key="$PROJECT_DIR$" value="feat/DBFormatChange" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

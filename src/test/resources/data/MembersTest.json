@@ -1,0 +1,39 @@
+{
+  "members" : [ {
+    "customer" : {
+      "purchaseCount" : 1,
+      "id" : "3"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "7357",
+    "point" : 0,
+    "name" : "Mime",
+    "purchaseCount" : 0,
+    "id" : "3"
+  }, {
+    "customer" : {
+      "purchaseCount" : 1,
+      "id" : "1"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "73577357",
+    "point" : 0,
+    "name" : "Memi",
+    "purchaseCount" : 0,
+    "id" : "1"
+  }, {
+    "customer" : {
+      "purchaseCount" : 1,
+      "id" : "2"
+    },
+    "status" : true,
+    "class" : "Member",
+    "phone" : "735715",
+    "point" : 0,
+    "name" : "Momo",
+    "purchaseCount" : 0,
+    "id" : "2"
+  } ]
+}
