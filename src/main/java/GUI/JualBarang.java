@@ -1,12 +1,10 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Map;
 
@@ -87,8 +85,9 @@ public class JualBarang extends JPanel {
         totalHarga.setHorizontalAlignment(SwingConstants.RIGHT);
         totalHarga.setBounds(970, 439, 262, 40);
         panelMain.add(totalHarga);
-
+//      TODO: load database products
         String[][] data = {
+//                TODO: APA INI PER INDEX
                 {"Donat","Makanan","4000","5000","5"},
                 {"Risoles","Makanan","7000","8000","6"},
                 {"Nasi Gila","Makanan","8000","9000","7"},

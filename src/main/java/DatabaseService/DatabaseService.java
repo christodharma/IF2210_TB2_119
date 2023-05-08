@@ -25,4 +25,8 @@ public class DatabaseService {
     public Object loadData() throws IOException, ExtensionException {
         return IDB.ReadDatabase(DBPath);
     }
+    public void reset(){
+        IDB=null;
+        DBPath=null;
+    }
 }

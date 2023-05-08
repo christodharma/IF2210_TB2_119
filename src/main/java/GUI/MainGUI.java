@@ -1,4 +1,4 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,15 +9,18 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static App.Main.LoadDatabases;
+import Exception.ExtensionException;
+
 public class MainGUI {
 
     static Font poppinsBold;
     static Font poppinsSemiBold;
     public static TabbedPane tabbedPane = new TabbedPane(); // declare tabbedPane as a field
     private static Map<JLabel, String> panelLabel = new HashMap<>(); // declare panelLabel as a field
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ExtensionException {
+        LoadDatabases();
         JFrame frame = new JFrame();
-
         try {
             poppinsBold = Font.createFont(Font.TRUETYPE_FONT, new File("src/main/resources/font/Poppins-Bold.ttf"));
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();

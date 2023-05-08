@@ -1,12 +1,17 @@
 package DatabaseService;
 
-public class DatabaseType<T>{
-    protected final Class<T> _class;
-    public DatabaseType(Class<T> dataClass) {
+import lombok.Setter;
+
+public class DatabaseType{
+    protected Class<?> _class;
+    public void set_class(Class<?> set){
+        _class = set;
+    }
+    public void reset(){_class=null;}
+    public DatabaseType(Class<?> dataClass) {
         _class = dataClass;
     }
-    @SuppressWarnings("unchecked")
-    public DatabaseType (T data) {
-        _class = (Class<T>) data.getClass();
+    public DatabaseType (Object data) {
+        _class = data.getClass();
     }
 }

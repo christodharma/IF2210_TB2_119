@@ -1,13 +1,8 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.Map;
 
 public class Settings extends JPanel {
@@ -32,7 +27,7 @@ public class Settings extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] dataPenyimpanan = {"xml", "json"};
+        String[] dataPenyimpanan = {"xml", "json","obj"};
 //        String[] listPlugin = {"Plugin 1", "Plugin 2"};
 
         JComboBox penyimpanan = new JComboBox(dataPenyimpanan);
@@ -40,6 +35,10 @@ public class Settings extends JPanel {
         penyimpanan.setBounds(260, 197, 290, 36);
         penyimpanan.setForeground(Color.decode("#675D50"));
         panelMain.add(penyimpanan);
+        penyimpanan.addActionListener(e -> {
+            String currentFormat = (String) penyimpanan.getSelectedItem();
+            // TODO : Tambahkan apa yang terjadi ketika di box muncul tulisan tertentu
+        });
 
 //        JComboBox plugin = new JComboBox(listPlugin);
 //        plugin.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));

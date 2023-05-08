@@ -10,10 +10,11 @@ import lombok.extern.jackson.Jacksonized;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.util.Objects;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Getter
+@Getter @Setter
 @Builder @Jacksonized
 @XmlRootElement(name="Product")
 public class Product implements Serializable{
@@ -72,5 +73,12 @@ public class Product implements Serializable{
         } else {
             return false;
         }
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Product){
+            return Objects.equals(((Product) o).ID, this.ID);
+        }
+        return false;
     }
 }

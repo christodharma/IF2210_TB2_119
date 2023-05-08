@@ -1,59 +1,61 @@
 package Products;
 
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
+@NoArgsConstructor
 public class ProductCollection {
-    protected HashMap<String, Product> contents = new HashMap<>();
+    protected ArrayList<Product> contents = new ArrayList<>();
     public void addProduct(@NonNull Product added)
     {
-        Product existingProduct = contents.get(added.getID());
-        if (existingProduct != null)
-        {
-            existingProduct.addQuantity(added.getQuantity());
-        } else
-        {
-            contents.put(added.getID(), added);
+        for (Product itr :
+                contents) {
+            if (itr.equals(added)) {
+                itr.addQuantity(added.getQuantity());
+                return;
+            }
         }
+        contents.add(added);
     }
     public boolean subtractProduct(@NonNull Product subtracted, int many)
     {
-        return (subtracted.subtractQuantity(many));
+        return (findProduct("ID", subtracted.getID()).subtractQuantity(many));
     }
-    public void removeProduct(@NonNull Product removed)
+    public void removeProduct(Product removed)
     {
-        contents.remove(removed.getID());
+        contents.remove(findProduct("ID", removed.getID()));
     }
     public void clearContents()
     {
         contents.clear();
     }
-    public Product find(String filter, String filterValue)
+    public Product findProduct(String filter, String filterValue)
     {
         switch (filter){
             case "Id":
             case "id":
             case "ID":
-                return contents.get(filterValue);
+                for (Product itr :
+                        contents) {
+                    if (itr.getID() == filterValue) {
+                        return itr;
+                    }
+                }
             case "name":
             case "NAME":
             case "Name":
-                for (Product p :
-                        contents.values()) {
-                    if (p.getName().equals(filterValue))
-                    {
-                        return p;
+                for (Product itr :
+                        contents) {
+                    if (itr.getName() == filterValue) {
+                        return itr;
                     }
                 }
-                return null;
             default:
                 return null;
         }
     }
     public ArrayList<Product> getProducts(){
-        ArrayList<Product> ret = new ArrayList<>((contents.values()));
-        return ret;
+        return contents;
     }
 }

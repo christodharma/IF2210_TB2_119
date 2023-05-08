@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -60,6 +61,7 @@ class DBTest {
         ProductDB products = (ProductDB) DB.loadData();
         assertNotNull(products, "Fail to import");
         assertTrue(products instanceof ProductDB, "Wrong Class");
+        ArrayList<Product> fromDB = products.getProducts();
         for (Product p :
                 products.getProducts()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
@@ -84,6 +86,11 @@ class DBTest {
         for (Product p :
                 products.getProducts()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
+        }
+        for (Product s:
+                products.getProducts()
+        ) {
+            System.out.println(s);
         }
     }
 }

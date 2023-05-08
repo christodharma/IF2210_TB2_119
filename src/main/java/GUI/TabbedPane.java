@@ -1,11 +1,6 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
-import java.awt.*;
-import java.util.Map;
-
-import javax.swing.*;
-import java.awt.*;
 import java.util.Map;
 
 public class TabbedPane extends JTabbedPane {

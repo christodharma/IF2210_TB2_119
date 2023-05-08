@@ -1,15 +1,14 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
-//import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
-public class UpdateMember extends JPanel {
+public class DeactivateMember extends JPanel {
     JLabel textLabel;
-    public Map<JLabel, String> UpdateMember() throws IOException {
-        String path = "src/main/resources/images/Tab Update Member.png";
+    public Map<JLabel, String> DeactivateMember() throws IOException {
+        String path = "src/main/resources/images/Tab Deactivate Member.png";
         JLabel panelMain = new JLabel();
         ImageIcon bg = new ImageIcon("src/main/resources/images/Background.png");
         panelMain.setBounds(0, 90, 1280, 630);
@@ -48,12 +47,12 @@ public class UpdateMember extends JPanel {
         String statusList[] = {"Member", "VIP"};
         JComboBox status = new JComboBox(statusList);
         status.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
-        status.setBounds(617, 292, 487, 41);
+        status.setBounds(617, 292, 487, 40);
         status.setForeground(Color.decode("#675D50"));
         panelMain.add(status);
 
         JButton saveButton = new JButton();
-        JLabel saveText = new JLabel("Save");
+        JLabel saveText = new JLabel("Deactivate");
         saveText.setFont(MainGUI.poppinsSemiBold.deriveFont(25f));
         saveText.setForeground(Color.decode("#675D50"));
         saveText.setAlignmentX(Component.CENTER_ALIGNMENT);

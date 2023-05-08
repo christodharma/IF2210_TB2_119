@@ -1,4 +1,7 @@
-package gui;
+package GUI;
+
+import App.Main;
+import Products.Product;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,12 +30,18 @@ public class Perbarui extends JPanel {
         textLabel.setBounds(191, 65, 300, 370);
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
-
-        String[] idList = {"001", "002", "003", "004"};
-        String[][] data = {{"001","Risoles","5000","3000","Makanan","10"},
-                {"002","Kue Lapis","10000","7000","Makanan","10"},
-                {"003","Kue Putri Salju","15000","10000","Makanan","10"},
-                {"004","Kue Nastar","20000","15000","Makanan","10"}};
+        String[] idList = new String[Main.Products.getProducts().size()];
+        String[][] data = new String[Main.Products.getProducts().size()][6];
+        int itr=0;
+        for (Product i: Main.Products.getProducts()) {
+            idList[itr] = i.getID();
+            data[itr][0]=i.getID();
+            data[itr][1]=i.getName();
+            data[itr][2]= String.valueOf(i.getPrice());
+            data[itr][3]= String.valueOf(i.getBuyPrice());
+            data[itr][4]=i.getCategory();
+            data[itr][5]= String.valueOf(i.getQuantity());
+        }
 
         JTextField namaBarang = new JTextField();
         namaBarang.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
@@ -152,11 +161,19 @@ public class Perbarui extends JPanel {
 //                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_pos", "root", "");
 //                Statement stat = con.createStatement();
 //                stat.executeUpdate(query);
-                namaBarang.setText("");
-                hargaJual.setText("");
-                hargaBeli.setText("");
-                kategori.setText("");
-                stokBarang.setText("");
+            Main.Products.removeProduct(Main.Products.findProduct("Name", namaBarang.getText()));
+//                namaBarang.setText("");
+//                hargaJual.setText("");
+//                hargaBeli.setText("");
+//                kategori.setText("");
+//                stokBarang.setText("");
+            Perbarui panelLabel = new Perbarui();
+            try {
+                MainGUI.tabbedPane.addTabs(panelLabel.Perbarui());
+                MainGUI.tabbedPane.removeTabAt(MainGUI.tabbedPane.getSelectedIndex());
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
 
 
                 JOptionPane.showMessageDialog(null, "Data berhasil dihapus");

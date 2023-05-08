@@ -1,4 +1,4 @@
-package gui;
+package GUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +12,9 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
+import App.Main;
+import Products.Product;
+import Products.ProductDB;
 
 public class TambahBarang extends JPanel{
     JLabel textLabel;
@@ -139,6 +142,22 @@ public class TambahBarang extends JPanel{
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
+                }
+                Product added = new Product(
+                        id.getText(),
+                        namaBarang.getText(),
+                        Integer.parseInt(hargaJual.getText()),
+                        Integer.parseInt(hargaBeli.getText()),
+                        kategori.getText(),
+                        Integer.parseInt(stokBarang.getText())
+                );
+                Main.Products.addProduct(added);
+                TambahBarang panelLabel = new TambahBarang();
+                try {
+                    MainGUI.tabbedPane.addTabs(panelLabel.TambahBarang());
+                    MainGUI.tabbedPane.removeTabAt(MainGUI.tabbedPane.getSelectedIndex());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
                 }
             }
         });

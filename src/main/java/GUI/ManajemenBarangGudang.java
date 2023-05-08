@@ -1,12 +1,16 @@
-package gui;
+package GUI;
+
+import Products.Product;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import App.Main;
 
 public class ManajemenBarangGudang extends JPanel {
 
@@ -17,37 +21,45 @@ public class ManajemenBarangGudang extends JPanel {
         ImageIcon bg = new ImageIcon("src/main/resources/images/Manajemen Barang Gudang.png");
         panelMain.setBounds(0, 90, 1280, 630);
         panelMain.setIcon(bg);
-
-        String[][] gudang = {
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"}
-        };
+        String[][] gudang = new String[Main.Products.getProducts().size()][5];
+        ArrayList<Product> fromDB = Main.Products.getProducts();
+        for (int i = 0; i < Main.Products.getProducts().size(); i++) {
+            gudang[i][0] = String.valueOf(Main.Products.getProducts().get(i).getName());
+            gudang[i][1] = String.valueOf(Main.Products.getProducts().get(i).getCategory());
+            gudang[i][2] = String.valueOf(Main.Products.getProducts().get(i).getPrice());
+            gudang[i][3] = String.valueOf(Main.Products.getProducts().get(i).getBuyPrice());
+            gudang[i][4] = String.valueOf(Main.Products.getProducts().get(i).getQuantity());
+        }
+//        String[][] gudang = {
+//                {"Donat","Makanan","4000","5000","5"},
+//                {"Risoles","Makanan","7000","8000","6"},
+//                {"Nasi Gila","Makanan","8000","9000","7"},
+//                {"Nasi Goreng","Makanan","9000","1000","8"},
+//                {"Kwetiauw","Makanan","10000","11000","9"},
+//                {"Fanta susu","Minuman","5000","6000","10"},
+//                {"Es Milo","Minuman","6000","6000","11"},
+//                {"Donat","Makanan","4000","5000","5"},
+//                {"Risoles","Makanan","7000","8000","6"},
+//                {"Nasi Gila","Makanan","8000","9000","7"},
+//                {"Nasi Goreng","Makanan","9000","1000","8"},
+//                {"Kwetiauw","Makanan","10000","11000","9"},
+//                {"Fanta susu","Minuman","5000","6000","10"},
+//                {"Es Milo","Minuman","6000","6000","11"},
+//                {"Donat","Makanan","4000","5000","5"},
+//                {"Risoles","Makanan","7000","8000","6"},
+//                {"Nasi Gila","Makanan","8000","9000","7"},
+//                {"Nasi Goreng","Makanan","9000","1000","8"},
+//                {"Kwetiauw","Makanan","10000","11000","9"},
+//                {"Fanta susu","Minuman","5000","6000","10"},
+//                {"Es Milo","Minuman","6000","6000","11"},
+//                {"Donat","Makanan","4000","5000","5"},
+//                {"Risoles","Makanan","7000","8000","6"},
+//                {"Nasi Gila","Makanan","8000","9000","7"},
+//                {"Nasi Goreng","Makanan","9000","1000","8"},
+//                {"Kwetiauw","Makanan","10000","11000","9"},
+//                {"Fanta susu","Minuman","5000","6000","10"},
+//                {"Es Milo","Minuman","6000","6000","11"}
+//        };
 
         textLabel = new JLabel("<html><div style='line-height: 5px;'>Kategori<br>Harga Jual<br>Harga Beli<br>Jumlah</html>");
         textLabel.setFont(MainGUI.poppinsSemiBold.deriveFont(15f));
