@@ -1,9 +1,14 @@
 package GUI;
 
+import Customers.Member;
+import GUI.Call.UpdateMemberAction;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
+
+import static App.Main.Members;
 //import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class UpdateMember extends JPanel {
@@ -21,8 +26,16 @@ public class UpdateMember extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] idList = {"001", "002", "003", "004","005"};
-        String[][] data = {{"001","Rifa","000"}, {"002","Joja","111"}, {"003","Toto","222"}, {"004","Agsha","333"},{"005","Malik","444"}};
+        String[] idList = new String[Members.getMemberships().size()];
+        for (int i = 0; i < idList.length; i++) {
+            idList[i] = Members.getMemberships().get(i).getID();
+        }
+        String[][] data = new String[Members.getMemberships().size()][3];
+        for (int i = 0; i < data.length; i++) {
+            data[i][0] = Members.getMemberships().get(i).getID();
+            data[i][1] = Members.getMemberships().get(i).getName();
+            data[i][2] = Members.getMemberships().get(i).getPhone();
+        }
 
         JTextField name = new JTextField();
         name.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
@@ -66,6 +79,8 @@ public class UpdateMember extends JPanel {
         Map<JLabel, String> panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
 
+        //TODO: ComboBox getter for inputted member ID
+        saveButton.addActionListener(new UpdateMemberAction("MemberID", name.getText(), phoneNumber.getText()));
         return panelLabel;
     }
 }

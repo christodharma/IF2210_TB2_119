@@ -9,6 +9,7 @@ import javax.swing.*;
 public class AutoSuggest extends JPanel{
     private final JTextField tf;
     private final JComboBox combo = new JComboBox();
+    private String returnString;
     private final Vector<String> v = new Vector<String>();
     public AutoSuggest(String[] countries, int x, int y) {
         super(new BorderLayout());
@@ -74,27 +75,32 @@ public class AutoSuggest extends JPanel{
 //        call auto suggest
         this(countries, x, y);
         this.actionHistoryCombo(combo, panelButtons, historyList, transactionList);
+        this.returnString = (String) combo.getSelectedItem();
     }
     public AutoSuggest(String[] countries, int x, int y, JTextField name, JTextField phoneNumber, String[][] data) {
 //        call auto suggest
         this(countries, x, y);
         this.actionMemberCombo(combo, name, phoneNumber, data);
+        this.returnString = (String) combo.getSelectedItem();
     }
     public AutoSuggest(String[] countries, int x, int y, String[][] saveBill, JPanel panelBill, JLabel totalHarga) {
 //        call auto suggest
         this(countries, x, y);
         this.actionJualBeliCombo(combo, saveBill, panelBill, totalHarga);
+        this.returnString = (String) combo.getSelectedItem();
     }
 
     public AutoSuggest(String[] countries, int x, int y, JTextField namaBarang, JTextField hargaJual, JTextField hargaBeli, JTextField kategori, JTextField stokBarang, String[][] data) {
 //        call auto suggest
         this(countries, x, y);
         this.actionPerbaruiCombo(combo, namaBarang, hargaJual, hargaBeli, kategori, stokBarang, data);
+        this.returnString = (String) combo.getSelectedItem();
     }
 
     public AutoSuggest(String[] countries, int x, int y, String[][] data, JPanel panel, JPanel panelBill, JLabel totalHarga) {
         this(countries, x, y);
         this.actionShowInventory(combo, data, panel, panelBill, totalHarga);
+        this.returnString = (String) combo.getSelectedItem();
     }
 
     private boolean hide_flag = false;
