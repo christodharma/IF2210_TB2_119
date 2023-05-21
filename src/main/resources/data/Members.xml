@@ -36,5 +36,29 @@
       <purchaseCount>0</purchaseCount>
       <id>2</id>
     </members>
+    <members>
+      <customer id="4">
+        <purchaseCount>1</purchaseCount>
+      </customer>
+      <status>true</status>
+      <class>Member</class>
+      <phone>712348</phone>
+      <point>0</point>
+      <name>Mumi</name>
+      <purchaseCount>0</purchaseCount>
+      <id>4</id>
+    </members>
+    <members>
+      <customer id="5">
+        <purchaseCount>1</purchaseCount>
+      </customer>
+      <status>true</status>
+      <class>Member</class>
+      <phone>786309</phone>
+      <point>0</point>
+      <name>Mima</name>
+      <purchaseCount>0</purchaseCount>
+      <id>5</id>
+    </members>
   </members>
 </MemberDB>

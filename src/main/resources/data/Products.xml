@@ -1,36 +1,100 @@
 <ProductDB>
   <products>
-    <products id="1">
+    <products id="1011">
       <name>Donat</name>
-      <price>5000.0</price>
-      <buyPrice>4900.0</buyPrice>
+      <price>3000.0</price>
+      <buyPrice>5000.0</buyPrice>
       <category>Food</category>
       <picture></picture>
       <quantity>100</quantity>
     </products>
-    <products id="2">
-      <name>Indomilk</name>
-      <price>5000.0</price>
-      <buyPrice>4900.0</buyPrice>
+    <products id="1022">
+      <name>Risoles</name>
+      <price>2000.0</price>
+      <buyPrice>3000.0</buyPrice>
       <category>Food</category>
       <picture></picture>
-      <quantity>0</quantity>
+      <quantity>65</quantity>
     </products>
-    <products id="3">
-      <name>Indomilk</name>
-      <price>5000.0</price>
-      <buyPrice>4900.0</buyPrice>
+    <products id="1033">
+      <name>Nasi Gila</name>
+      <price>10000.0</price>
+      <buyPrice>13000.0</buyPrice>
       <category>Food</category>
       <picture></picture>
-      <quantity>0</quantity>
+      <quantity>80</quantity>
     </products>
-    <products id="4">
-      <name>Indomilk</name>
-      <price>5000.0</price>
-      <buyPrice>4900.0</buyPrice>
+    <products id="1044">
+      <name>Nasi Goreng</name>
+      <price>12000.0</price>
+      <buyPrice>15000.0</buyPrice>
       <category>Food</category>
       <picture></picture>
-      <quantity>0</quantity>
+      <quantity>40</quantity>
+    </products>
+    <products id="1055">
+      <name>Kwetiauw</name>
+      <price>11000.0</price>
+      <buyPrice>13000.0</buyPrice>
+      <category>Food</category>
+      <picture></picture>
+      <quantity>60</quantity>
+    </products>
+    <products id="1066">
+      <name>Mie Ayam</name>
+      <price>7000.0</price>
+      <buyPrice>13000.0</buyPrice>
+      <category>Food</category>
+      <picture></picture>
+      <quantity>60</quantity>
+    </products>
+    <products id="1012">
+      <name>Fanta Susu</name>
+      <price>4000.0</price>
+      <buyPrice>6000.0</buyPrice>
+      <category>Drink</category>
+      <picture></picture>
+      <quantity>45</quantity>
+    </products>
+    <products id="1023">
+      <name>Es Milo</name>
+      <price>3000.0</price>
+      <buyPrice>5000.0</buyPrice>
+      <category>Drink</category>
+      <picture></picture>
+      <quantity>35</quantity>
+    </products>
+    <products id="1034">
+      <name>Nutrisari</name>
+      <price>4000.0</price>
+      <buyPrice>6000.0</buyPrice>
+      <category>Drink</category>
+      <picture></picture>
+      <quantity>45</quantity>
+    </products>
+    <products id="1045">
+      <name>Lychee Tea</name>
+      <price>8000.0</price>
+      <buyPrice>12000.0</buyPrice>
+      <category>Drink</category>
+      <picture></picture>
+      <quantity>80</quantity>
+    </products>
+    <products id="1056">
+      <name>Iced Tea</name>
+      <price>4000.0</price>
+      <buyPrice>6000.0</buyPrice>
+      <category>Drink</category>
+      <picture></picture>
+      <quantity>100</quantity>
+    </products>
+    <products id="1067">
+      <name>Ice Cream</name>
+      <price>4000.0</price>
+      <buyPrice>6500.0</buyPrice>
+      <category>Dessert</category>
+      <picture></picture>
+      <quantity>40</quantity>
     </products>
   </products>
 </ProductDB>
