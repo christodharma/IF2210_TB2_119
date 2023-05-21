@@ -2,7 +2,7 @@
   "members" : [ {
     "customer" : {
       "purchaseCount" : 1,
-      "id" : "3"
+      "id" : "8"
     },
     "status" : true,
     "class" : "Member",
@@ -10,11 +10,11 @@
     "point" : 0,
     "name" : "Mime",
     "purchaseCount" : 0,
-    "id" : "3"
+    "id" : "8"
   }, {
     "customer" : {
       "purchaseCount" : 1,
-      "id" : "1"
+      "id" : "6"
     },
     "status" : true,
     "class" : "Member",
@@ -22,11 +22,11 @@
     "point" : 0,
     "name" : "Memi",
     "purchaseCount" : 0,
-    "id" : "1"
+    "id" : "6"
   }, {
     "customer" : {
       "purchaseCount" : 1,
-      "id" : "2"
+      "id" : "7"
     },
     "status" : true,
     "class" : "Member",
@@ -34,6 +34,6 @@
     "point" : 0,
     "name" : "Momo",
     "purchaseCount" : 0,
-    "id" : "2"
+    "id" : "7"
   } ]
 }

@@ -1,5 +1,8 @@
 package GUI;
 
+import Customers.Customer;
+import GUI.Call.DaftarMemberAction;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
@@ -64,6 +67,7 @@ public class PendaftaranMember extends JPanel {
         Map<JLabel, String> panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
 
+        saveButton.addActionListener(new DaftarMemberAction(new Customer(), name.getText(), phoneNumber.getText()));
         return panelLabel;
     }
 }

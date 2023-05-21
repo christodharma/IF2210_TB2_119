@@ -1,7 +1,7 @@
 <MemberDB>
   <members>
     <members>
-      <customer id="3">
+      <customer id="8">
         <purchaseCount>1</purchaseCount>
       </customer>
       <status>true</status>
@@ -10,10 +10,10 @@
       <point>0</point>
       <name>Mime</name>
       <purchaseCount>0</purchaseCount>
-      <id>3</id>
+      <id>8</id>
     </members>
     <members>
-      <customer id="1">
+      <customer id="6">
         <purchaseCount>1</purchaseCount>
       </customer>
       <status>true</status>
@@ -22,10 +22,10 @@
       <point>0</point>
       <name>Memi</name>
       <purchaseCount>0</purchaseCount>
-      <id>1</id>
+      <id>6</id>
     </members>
     <members>
-      <customer id="2">
+      <customer id="7">
         <purchaseCount>1</purchaseCount>
       </customer>
       <status>true</status>
@@ -34,7 +34,7 @@
       <point>0</point>
       <name>Momo</name>
       <purchaseCount>0</purchaseCount>
-      <id>2</id>
+      <id>7</id>
     </members>
   </members>
 </MemberDB>

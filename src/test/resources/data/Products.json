@@ -6,30 +6,38 @@
     "buyPrice" : 4900.0,
     "category" : "Food",
     "picture" : "",
-    "quantity" : 0
+    "quantity" : 200
   }, {
     "id" : "2",
-    "name" : "Indomilk",
+    "name" : "Indomie",
     "price" : 5000.0,
     "buyPrice" : 4900.0,
     "category" : "Food",
     "picture" : "",
-    "quantity" : 0
+    "quantity" : 244
   }, {
     "id" : "3",
-    "name" : "Indomilk",
+    "name" : "Indotea",
     "price" : 5000.0,
     "buyPrice" : 4900.0,
     "category" : "Food",
     "picture" : "",
-    "quantity" : 0
+    "quantity" : 124
   }, {
     "id" : "4",
-    "name" : "Indomilk",
+    "name" : "Indokopi",
     "price" : 5000.0,
     "buyPrice" : 4900.0,
     "category" : "Food",
     "picture" : "",
-    "quantity" : 0
+    "quantity" : 165
+  }, {
+    "id" : "5",
+    "name" : "Indorice",
+    "price" : 5000.0,
+    "buyPrice" : 4900.0,
+    "category" : "Food",
+    "picture" : "",
+    "quantity" : 554
   } ]
 }
