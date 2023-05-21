@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="build">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_05_2023_14_43_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_05_2023_14_43__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_04_2023_8_11_pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_04_2023_8_11_pm__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_05_2023_8_03_am_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_05_2023_8_03_am__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2023_5_27_am_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2023_5_27_am__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2023_5_38_am_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2023_5_38_am__Changes_.xml" beforeDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="revision">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MembersTest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.obj" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MembersTest.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MembersTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Products.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Products.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Products.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683515715693</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="revision">
+      <created>1684642716571</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684642716571</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,7 +297,8 @@
     <MESSAGE value="add JualBarang" />
     <MESSAGE value="merge to main" />
     <MESSAGE value="build" />
-    <option name="LAST_COMMIT_MESSAGE" value="build" />
+    <MESSAGE value="revision" />
+    <option name="LAST_COMMIT_MESSAGE" value="revision" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
