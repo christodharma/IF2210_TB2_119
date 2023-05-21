@@ -14,6 +14,8 @@ public class JualBarang extends JPanel {
     JLabel textLabel;
     private String path;
     private JLabel panelMain;
+    public static String[] idList = new String[0];
+    public static String[][] saveBill = new String[0][5];
     public Map<JLabel, String> JualBarang() throws IOException {
         String path = "src/main/resources/images/Tab Jual Barang.png";
         JLabel panelMain = new JLabel();
@@ -110,8 +112,6 @@ public class JualBarang extends JPanel {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBackground(Color.decode("#D9D9D9"));
 
-        String[] idList = {"001","002"};
-        String[][] saveBill = {{"002","1","Nasi Gila","1","13000"}, {"002","2","Risoles","5","15000"}};
         JPanel id = new JPanel();
         id.setBounds(970, 75, 262, 40);
         id.setLayout(new FlowLayout());
@@ -144,7 +144,7 @@ public class JualBarang extends JPanel {
         labelBill.setBounds(700, 25, 532, 50);
         panelMain.add(labelBill);
 
-        JLabel labelAddCustomer = new JLabel("Add Customer : ");
+        JLabel labelAddCustomer = new JLabel("Member : ");
         labelAddCustomer.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
         labelAddCustomer.setForeground(Color.decode("#675D50"));
         labelAddCustomer.setBounds(700, 75, 270, 40);
@@ -223,6 +223,8 @@ public class JualBarang extends JPanel {
         saveBillButton.setBounds(966, 479, 266, 40);
         saveBillButton.setIcon(new ImageIcon("src/main/resources/images/Save Bill.png"));
         panelMain.add(saveBillButton);
+//      TODO: saveBill and charge
+//        saveBillButton.addActionListener();
 
         return panelLabel;
     }
