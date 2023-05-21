@@ -304,7 +304,11 @@ public class AutoSuggest extends JPanel{
             }
         });
     }
-//    public static void main(String[] args) {
+
+    public String getReturnString() {
+        return returnString;
+    }
+    //    public static void main(String[] args) {
 //        JFrame frame = new JFrame();
 //        String[] idList = {"001", "002", "003", "004"};
 //        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

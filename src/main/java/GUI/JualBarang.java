@@ -1,5 +1,7 @@
 package GUI;
 
+import App.Main;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -85,17 +87,15 @@ public class JualBarang extends JPanel {
         totalHarga.setHorizontalAlignment(SwingConstants.RIGHT);
         totalHarga.setBounds(970, 439, 262, 40);
         panelMain.add(totalHarga);
-//      TODO: load database products
-        String[][] data = {
-//                TODO: APA INI PER INDEX
-                {"Donat","Makanan","4000","5000","5"},
-                {"Risoles","Makanan","7000","8000","6"},
-                {"Nasi Gila","Makanan","8000","9000","7"},
-                {"Nasi Goreng","Makanan","9000","1000","8"},
-                {"Kwetiauw","Makanan","10000","11000","9"},
-                {"Fanta susu","Minuman","5000","6000","10"},
-                {"Es Milo","Minuman","6000","6000","11"},
-        };
+
+        String[][] data = new String[Main.Products.getProducts().size()][5];
+        for (int i = 0; i < data.length; i++) {
+            data[i][0] = Main.Products.getProducts().get(i).getName();
+            data[i][1] = Main.Products.getProducts().get(i).getCategory();
+            data[i][2] = String.valueOf(Main.Products.getProducts().get(i).getPrice());
+            data[i][3] = String.valueOf(Main.Products.getProducts().get(i).getBuyPrice());
+            data[i][4] = String.valueOf(Main.Products.getProducts().get(i).getQuantity());
+        }
 
         String[] namaBarang = new String[data.length];
         for (int k = 0; k < data.length; k++) {

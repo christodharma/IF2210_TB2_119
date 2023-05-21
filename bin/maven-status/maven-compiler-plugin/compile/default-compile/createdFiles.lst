@@ -11,6 +11,7 @@ GUI\JualBarang.class
 GUI\AutoSuggest$5.class
 GUI\MainGUI$3$1.class
 DatabaseMain\DatabaseMain.class
+GUI\Call\DeactivateMemberAction.class
 GUI\ShowTransaction.class
 GUI\MainGUI$2.class
 DatabaseService\XmlService.class
@@ -54,6 +55,7 @@ Customers\Membership.class
 History\TransactionHistory.class
 DatabaseService\ServiceAdapter.class
 DatabaseService\DatabaseType.class
+GUI\Call\DaftarMemberAction.class
 Customers\MembershipDB.class
 DatabaseService\JsonService.class
 GUI\MainGUI$5.class
@@ -63,6 +65,7 @@ GUI\Laporan.class
 Bill\FixedBill.class
 Customers\CustomerDB.class
 GUI\JualBarang$1.class
+GUI\Call\UpdateMemberAction.class
 GUI\PendaftaranMember.class
 PluginCaller\PluginCaller$1$1.class
 GUI\MainGUI$1$3.class

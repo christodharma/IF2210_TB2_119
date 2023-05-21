@@ -53,7 +53,8 @@ public class DeactivateMember extends JPanel {
         id.setBounds(617, 142, 487, 40);
         id.setLayout(new FlowLayout());
         id.setOpaque(false);
-        id.add(new AutoSuggest(idList,487,40, name, phoneNumber, data));
+        AutoSuggest as = new AutoSuggest(idList,487,40, name, phoneNumber, data);
+        id.add(as);
         panelMain.add(id);
 
         String statusList[] = {"Member", "VIP"};
@@ -78,7 +79,7 @@ public class DeactivateMember extends JPanel {
         panelLabel.put(panelMain, path);
 
         // TODO: find ID from combobox
-        saveButton.addActionListener(new DeactivateMemberAction(Members.find("")));
+        saveButton.addActionListener(new DeactivateMemberAction(Members.find(as.getReturnString())));
 
         return panelLabel;
     }

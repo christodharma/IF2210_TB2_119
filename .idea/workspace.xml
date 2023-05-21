@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="revision">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="Membership">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/IF2210_TB2_119.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/AutoSuggest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/AutoSuggest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" afterDir="false" />
     </list>
@@ -270,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684642716571</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Membership">
+      <created>1684645996249</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684645996249</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +304,8 @@
     <MESSAGE value="merge to main" />
     <MESSAGE value="build" />
     <MESSAGE value="revision" />
-    <option name="LAST_COMMIT_MESSAGE" value="revision" />
+    <MESSAGE value="Membership" />
+    <option name="LAST_COMMIT_MESSAGE" value="Membership" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

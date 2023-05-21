@@ -54,7 +54,8 @@ public class PendaftaranMember extends JPanel {
         id.setBounds(617, 155, 487, 40);
         id.setLayout(new FlowLayout());
         id.setOpaque(false);
-        id.add(new AutoSuggest(idList,487,40));
+        AutoSuggest as = new AutoSuggest(idList,487,40);
+        id.add(as);
         panelMain.add(id);
 
         JButton saveButton = new JButton();
@@ -71,7 +72,7 @@ public class PendaftaranMember extends JPanel {
         Map<JLabel, String> panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
 
-        saveButton.addActionListener(new DaftarMemberAction((new Customer()).getID(), name.getText(), phoneNumber.getText()));
+        saveButton.addActionListener(new DaftarMemberAction(as.getReturnString(), name.getText(), phoneNumber.getText()));
         return panelLabel;
     }
 }
