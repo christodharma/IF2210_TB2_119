@@ -9,6 +9,7 @@ import java.awt.*;
 @Getter
 @Setter
 public class BlankPage extends JFrame {
+    //TODO: Plugin
     private String title;
     private JPanel panel;
 

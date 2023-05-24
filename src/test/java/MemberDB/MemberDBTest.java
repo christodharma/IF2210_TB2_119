@@ -1,13 +1,12 @@
 package MemberDB;
 
-import Customers.Customer;
-import Customers.Member;
-import Customers.Membership;
+import Memberships.CustomerCounter;
+import Memberships.Member;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.JsonService;
 import Database.DatabaseService.ObjService;
 import Database.DatabaseService.XmlService;
-import Database.Member.MemberDB;
+import Database.Memberships.MemberDB;
 import _119Exception.ExtensionException;
 import org.junit.jupiter.api.*;
 
@@ -20,9 +19,9 @@ class MemberDBTest {
     static MemberDB custDB;
     public static MemberDB templateMemberDB() {
         MemberDB ret = new MemberDB();
-        Member m1 = new Member(new Customer(), "Memi", "73577357");
-        Member m2 = new Member(new Customer(), "Momo", "735715");
-        Member m = new Member(new Customer(), "Mime", "7357");
+        Member m1 = new Member(CustomerCounter.setID(), "Memi", "73577357");
+        Member m2 = new Member(CustomerCounter.setID(), "Momo", "735715");
+        Member m = new Member(CustomerCounter.setID(), "Mime", "7357");
         ret.insert(m);
         ret.insert(m1);
         ret.insert(m2);
@@ -37,7 +36,7 @@ class MemberDBTest {
     public void MembersTest(){
         for (Member itr :
                 custDB.toArrayList()) {
-            Assertions.assertNotEquals(Membership.Counter, itr.getID(), "Counter did not increment");
+            Assertions.assertNotEquals(CustomerCounter.count, itr.getID(), "Counter did not increment");
         }
     }
 

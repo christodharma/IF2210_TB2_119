@@ -144,14 +144,14 @@ public class TambahBarang extends JPanel{
                         ex.printStackTrace();
                     }
                 }
-                Product added = new Product(
+                Product added = Product.builder(
                         id.getText(),
                         namaBarang.getText(),
                         Integer.parseInt(hargaJual.getText()),
                         Integer.parseInt(hargaBeli.getText()),
-                        kategori.getText(),
-                        Integer.parseInt(stokBarang.getText())
-                );
+                        kategori.getText())
+                        .Quantity(Integer.parseInt(stokBarang.getText())
+                        ).build();
                 try {
                     Main.Products.insert(added);
                 } catch (NoSuchEntryException ex) {

@@ -1,4 +1,4 @@
-package DatabaseMain;
+package Database.DatabaseMain;
 
 // import Products.*;
 // import Customers.*;

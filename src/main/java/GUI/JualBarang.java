@@ -1,6 +1,7 @@
 package GUI;
 
 import App.Main;
+import Products.Product;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -8,6 +9,7 @@ import javax.swing.event.ChangeListener;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class JualBarang extends JPanel {
@@ -90,13 +92,14 @@ public class JualBarang extends JPanel {
         totalHarga.setBounds(970, 439, 262, 40);
         panelMain.add(totalHarga);
 
-        String[][] data = new String[Main.Products.getProducts().size()][5];
+        ArrayList<Product> productArrayList =  Main.Products.toArrayList();
+        String[][] data = new String[productArrayList.size()][5];
         for (int i = 0; i < data.length; i++) {
-            data[i][0] = Main.Products.getProducts().get(i).getName();
-            data[i][1] = Main.Products.getProducts().get(i).getCategory();
-            data[i][2] = String.valueOf(Main.Products.getProducts().get(i).getPrice());
-            data[i][3] = String.valueOf(Main.Products.getProducts().get(i).getBuyPrice());
-            data[i][4] = String.valueOf(Main.Products.getProducts().get(i).getQuantity());
+            data[i][0] = productArrayList.get(i).getName();
+            data[i][1] = productArrayList.get(i).getCategory();
+            data[i][2] = String.valueOf(productArrayList.get(i).getPrice());
+            data[i][3] = String.valueOf(productArrayList.get(i).getBuyPrice());
+            data[i][4] = String.valueOf(productArrayList.get(i).getQuantity());
         }
 
         String[] namaBarang = new String[data.length];

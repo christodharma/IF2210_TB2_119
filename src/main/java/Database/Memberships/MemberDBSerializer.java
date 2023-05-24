@@ -1,4 +1,4 @@
-package Database.Member;
+package Database.Memberships;
 
 import Database.DatabaseSerializer;
 import Database.Product.ProductDB;

@@ -1,14 +1,15 @@
 package GUI;
 
 import GUI.Call.UpdateMemberAction;
+import Memberships.Member;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 
 import static App.Main.Members;
-//import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class UpdateMember extends JPanel {
     JLabel textLabel;
@@ -25,15 +26,16 @@ public class UpdateMember extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] idList = new String[Members.getMemberships().size()];
+        ArrayList<Member> memberArrayList = Members.toArrayList();
+        String[] idList = new String[memberArrayList.size()];
         for (int i = 0; i < idList.length; i++) {
-            idList[i] = Members.getMemberships().get(i).getID();
+            idList[i] = memberArrayList.get(i).getID();
         }
-        String[][] data = new String[Members.getMemberships().size()][3];
+        String[][] data = new String[memberArrayList.size()][3];
         for (int i = 0; i < data.length; i++) {
-            data[i][0] = Members.getMemberships().get(i).getID();
-            data[i][1] = Members.getMemberships().get(i).getName();
-            data[i][2] = Members.getMemberships().get(i).getPhone();
+            data[i][0] = memberArrayList.get(i).getID();
+            data[i][1] = memberArrayList.get(i).getName();
+            data[i][2] = memberArrayList.get(i).getPhone();
         }
 
         JTextField name = new JTextField();
@@ -79,7 +81,6 @@ public class UpdateMember extends JPanel {
         Map<JLabel, String> panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
 
-        //TODO: ComboBox getter for inputted member ID
         saveButton.addActionListener(new UpdateMemberAction(as.getReturnString(), name.getText(), phoneNumber.getText()));
         return panelLabel;
     }

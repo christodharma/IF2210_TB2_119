@@ -21,14 +21,14 @@ public class ManajemenBarangGudang extends JPanel {
         ImageIcon bg = new ImageIcon("src/main/resources/images/Manajemen Barang Gudang.png");
         panelMain.setBounds(0, 90, 1280, 630);
         panelMain.setIcon(bg);
-        String[][] gudang = new String[Main.Products.getProducts().size()][5];
-        ArrayList<Product> fromDB = Main.Products.getProducts();
-        for (int i = 0; i < Main.Products.getProducts().size(); i++) {
-            gudang[i][0] = String.valueOf(Main.Products.getProducts().get(i).getName());
-            gudang[i][1] = String.valueOf(Main.Products.getProducts().get(i).getCategory());
-            gudang[i][2] = String.valueOf(Main.Products.getProducts().get(i).getPrice());
-            gudang[i][3] = String.valueOf(Main.Products.getProducts().get(i).getBuyPrice());
-            gudang[i][4] = String.valueOf(Main.Products.getProducts().get(i).getQuantity());
+        ArrayList<Product> ProductArrayList = Main.Products.toArrayList();
+        String[][] gudang = new String[ProductArrayList.size()][5];
+        for (int i = 0; i < ProductArrayList.size(); i++) {
+            gudang[i][0] = ProductArrayList.get(i).getName();
+            gudang[i][1] = ProductArrayList.get(i).getCategory();
+            gudang[i][2] = String.valueOf(ProductArrayList.get(i).getPrice());
+            gudang[i][3] = String.valueOf(ProductArrayList.get(i).getBuyPrice());
+            gudang[i][4] = String.valueOf(ProductArrayList.get(i).getQuantity());
         }
 //        String[][] gudang = {
 //                {"Donat","Makanan","4000","5000","5"},

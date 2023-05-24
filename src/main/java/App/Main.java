@@ -1,11 +1,10 @@
 package App;
 
-import Customers.CustomerDB;
-import Database.Member.MemberDB;
-import Customers.Membership;
 import Database.DatabaseService.*;
+import Database.Memberships.MemberDB;
 import Database.Product.ProductDB;
 import GUI.MainGUI;
+import Memberships.CustomerCounter;
 import _119Exception.ExtensionException;
 import lombok.NonNull;
 
@@ -19,29 +18,26 @@ public class Main {
     static DatabaseService dbs = new DatabaseService(null, DatabasePath);
     public static ProductDB Products = new ProductDB();
     public static MemberDB Members = new MemberDB();
-    public static CustomerDB Customers = new CustomerDB();
 //    public static TransactionHistory Transactions = new TransactionHistory();
     public static void LoadDatabases() throws ExtensionException, IOException {
         Products = (ProductDB) setDBSXMLload(ProductDB.class,xmls,DatabasePath+"Products.xml");
         Members = (MemberDB) setDBSXMLload(MemberDB.class,xmls,DatabasePath+"Members.xml");
-        Customers = (CustomerDB) setDBSXMLload(CustomerDB.class,xmls,DatabasePath+"Customers.xml");
 //        Transactions = (TransactionHistory) setDBSXMLload(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml");
 //        long temp = 0;
 //        setDBSXMLload(long.class,objs,"src/main/resources/system/customerCount.obj", temp);
         objs.set_class(long.class);dbs.setIDB(objs);dbs.setDBPath("src/main/resources/system/customerCount.obj");
         long x = (long) dbs.loadData();
         dbs.reset();xmls.reset();
-        Membership.setCounter(x);
+        CustomerCounter.count = x;
     }
     public static void SaveDatabases() throws ExtensionException, IOException {
         setDBSXMLSave(ProductDB.class,xmls,DatabasePath+"Products.xml", Products);
         setDBSXMLSave(MemberDB.class,xmls,DatabasePath+"Members.xml", Members);
-        setDBSXMLSave(CustomerDB.class,xmls,DatabasePath+"Customers.xml", Customers);
 //        setDBSXMLSave(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml", Transactions);
 //        long temp = 0;
 //        setDBSXMLload(long.class,objs,"src/main/resources/system/customerCount.obj", temp);
         objs.set_class(long.class);dbs.setIDB(objs);dbs.setDBPath("src/main/resources/system/customerCount.obj");
-        dbs.saveData(Membership.getCounter());
+        dbs.saveData(CustomerCounter.count);
         dbs.reset();xmls.reset();
     }
     static Object setDBSXMLload(Class<?> setClass, @NonNull DatabaseType setDatabaseType, String setPath) throws ExtensionException, IOException {
@@ -56,6 +52,13 @@ public class Main {
         dbs.reset();xmls.reset();
     }
     public static void main(String[] args) throws ExtensionException, IOException {
+        //TODO: Continue integrating front and back end
+        //TODO: Threading
+        //TODO: Laporan
+        //TODO: Coverage of unit testings
+        //TODO: Jar executable
+        //TODO?: Class diagram + laporan?
+        //TODO?: Custom Annotation
         LoadDatabases();
         MainGUI.main(args);
         SaveDatabases();

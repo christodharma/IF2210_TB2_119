@@ -2,6 +2,7 @@ package Customers;
 
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.ObjService;
+import Memberships.CustomerCounter;
 import _119Exception.ExtensionException;
 import org.junit.jupiter.api.*;
 
@@ -17,23 +18,22 @@ class CustomerCountTest {
     @Test
     @Order(1)
     void LoadCustomerCountTest() throws ExtensionException, IOException {
-        Membership.Counter = (long) dbs.loadData();
-        assertEquals(0, Membership.Counter, "customerCount is not 0");
+        CustomerCounter.count = (long) dbs.loadData();
+        assertEquals(0, CustomerCounter.count, "customerCount is not 0");
     }
 
     @Test
     @Order(2)
     void AddingAndSaveCount() throws ExtensionException, IOException {
-        CustomerDB cdb = new CustomerDB();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
-        cdb.addMembership();
-        assertNotEquals(0, Membership.getCounter());
-        System.out.println(0 + " vs "+Membership.getCounter());
-        DatabaseService dbs = new DatabaseService(new ObjService(Membership.getCounter()), "src/test/resources/system/customerCount.obj");
-        dbs.saveData(Membership.getCounter());
+        CustomerCounter.setID();
+        CustomerCounter.setID();
+        CustomerCounter.setID();
+        CustomerCounter.setID();
+        CustomerCounter.setID();
+        assertNotEquals(0, CustomerCounter.count);
+        System.out.println(0 + " vs "+CustomerCounter.count);
+        DatabaseService dbs = new DatabaseService(new ObjService(CustomerCounter.count), "src/test/resources/system/customerCount.obj");
+        dbs.saveData(CustomerCounter.count);
 //        new customerCount is saved, customerCount should not be 0 next time
     }
     @Test

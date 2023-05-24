@@ -1,6 +1,6 @@
 package GUI.Call;
 
-import Customers.Member;
+import Memberships.Member;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

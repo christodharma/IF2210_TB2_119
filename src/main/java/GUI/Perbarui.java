@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Perbarui extends JPanel {
@@ -31,10 +32,12 @@ public class Perbarui extends JPanel {
         textLabel.setBounds(191, 65, 300, 370);
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
-        String[] idList = new String[Main.Products.getProducts().size()];
-        String[][] data = new String[Main.Products.getProducts().size()][6];
+
+        ArrayList<Product> productArrayList = Main.Products.toArrayList();
+        String[] idList = new String[productArrayList.size()];
+        String[][] data = new String[productArrayList.size()][6];
         int itr=0;
-        for (Product i: Main.Products.getProducts()) {
+        for (Product i: productArrayList) {
             idList[itr] = i.getID();
             data[itr][0]=i.getID();
             data[itr][1]=i.getName();

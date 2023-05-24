@@ -41,17 +41,13 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
                 return contents.get(keyword);
             } else {
                 // keyword is product name
-                for (Product v :
-                        contents.values()) {
-                    if (keyword.equals(v.getName())){
-                        return v;
-                    }
-                }
+                return contents.values().stream().filter(
+                                member -> member.getID().contains((String) keyword))
+                        .findFirst().orElseThrow(NoSuchEntryException::new);
             }
         } else {
             throw new NoSuchEntryException();
         }
-        return null;
     }
 
     @Override

@@ -1,5 +1,6 @@
-package Customers;
+package Memberships;
 
+import Database.Memberships.VIPDB;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,12 +13,12 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@JsonPropertyOrder({"customer", "status", "class", "phone", "point"})
+@JsonPropertyOrder({"id","name", "status", "phone", "point"})
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Member extends Membership implements Serializable {
-    private static final long serialVersionUID = 22L;
-@JsonProperty("customer")
-    private final Customer customerRef;
+public class Member implements Serializable {
+    private static final long serialVersionUID = 2L;
+@JsonProperty("id")
+    private final String ID;
 @JsonProperty("name")
 @NonNull
     private String Name;
@@ -28,27 +29,31 @@ public class Member extends Membership implements Serializable {
     private int Point = 0;
 @JsonProperty("status")
     private boolean Status = true;
-@JsonProperty(value = "class")
-    private String Type = "Member";
-    @Override
-    public String getID()
-    {
-        return customerRef.getID();
-    }
 
-    public Member(Customer customerRef, @NonNull String Name, @NonNull String Phone){
-        this.customerRef = customerRef;
+    public Member(String ID, @NonNull String Name, @NonNull String Phone){
+        this.ID = ID;
         this.Name = Name;
         this.Phone = Phone;
     }
 
+    public void addPoint(int amount) {
+        setPoint(Point+amount);
+    }
+    public void resetPoint() {
+        setPoint(0);
+    }
+
+    public boolean isVIP(VIPDB where) {
+        return where.isVIP(this);
+    }
+
     @JsonCreator
     public static Member JacksonCreate(
-            @JsonProperty("customer") Customer customerRef,
+            @JsonProperty("id") String ID,
             @JsonProperty("name") String name,
             @JsonProperty("phone") String phone
     )
     {
-        return new Member(customerRef, name, phone);
+        return new Member(ID, name, phone);
     }
 }

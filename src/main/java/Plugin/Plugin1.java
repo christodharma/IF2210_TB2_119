@@ -2,9 +2,9 @@ package Plugin;
 
 import BasePlugin.BasePlugin;
 import BasePlugin.BlankPage;
-import Database.Product.ProductDB;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.XmlService;
+import Database.Product.ProductDB;
 import _119Exception.ExtensionException;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -36,10 +36,11 @@ public class Plugin1 implements BasePlugin {
             System.out.println("ProductDB is not null");
         }
 
-        products.getProducts().forEach((v) -> System.out.println(v.getPrice()));
+        assert products != null;
+        products.toArrayList().forEach((v) -> System.out.println(v.getPrice()));
         // define new array list of Double
         ArrayList<Double> priceList = new ArrayList<Double>();
-        System.out.println(products.getProducts().size());
+        System.out.println(products.toArrayList().size());
         // get the min and max of priceList
         priceList.forEach(p -> System.out.println(p));
         Double min = priceList.stream().min(Double::compare).orElse(0.0);

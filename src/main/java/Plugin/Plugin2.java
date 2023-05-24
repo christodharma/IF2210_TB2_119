@@ -2,9 +2,9 @@ package Plugin;
 
 import BasePlugin.BasePlugin;
 import BasePlugin.BlankPage;
-import Database.Member.MemberDB;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.JsonService;
+import Database.Memberships.MemberDB;
 import _119Exception.ExtensionException;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -30,7 +30,7 @@ public class Plugin2 implements BasePlugin {
         
         if (members != null) {
             DefaultPieDataset dataset = new DefaultPieDataset();
-            dataset.setValue("Member", members.getMemberships().size());
+            dataset.setValue("Member", members.toArrayList().size());
             newPage.setTitle("Plugin 2");
             // Create the pie chart
             JFreeChart chart = ChartFactory.createPieChart("Pie Chart Insight", dataset, true, true, false);

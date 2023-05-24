@@ -1,11 +1,11 @@
-package Database.Member;
+package Database.Memberships;
 
-import Customers.Member;
 import Database.Database;
+import Database.DatabaseOperations;
+import Memberships.Member;
 import _119Exception.NoSuchEntryException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import Database.DatabaseOperations;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -37,17 +37,13 @@ public class MemberDB extends Database<Member> implements DatabaseOperations<Mem
                 return contents.get(keyword);
             } else {
                 // keyword is member name
-                for (Member v :
-                        contents.values()) {
-                    if (keyword.equals(v.getName())){
-                        return v;
-                    }
-                }
+                return contents.values().stream().filter(
+                        member -> member.getName().contains((String) keyword)
+                ).findFirst().orElseThrow(NoSuchEntryException::new);
             }
         } else {
             throw new NoSuchEntryException();
         }
-        return null;
     }
 
     @Override

@@ -18,11 +18,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class DBTest {
     ProductDB templateProductDB() throws NoSuchEntryException {
         ProductDB testDB = new ProductDB();
-        testDB.insert(new Product("1", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        testDB.insert(new Product("2", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        testDB.insert(new Product("3", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        testDB.insert(new Product("4", "Indomilk", 5000D, 4900D, "Food", "", 0));
-        testDB.insert(new Product("4", "Indomilk", 5000D, 4900D, "Food", "", 7357));
+        Product built = Product.builder(
+                        "1",
+                        "Indomilk",
+                        5000,
+                        4900,
+                        "Food")
+                .Quantity(0).build();
+        testDB.insert(built);
+        Product built2 = built.toBuilder().ID("2").build();
+        testDB.insert(built2);
+        Product built3 = built.toBuilder().ID("3").build();
+        testDB.insert(built3);
+        Product built4 = built.toBuilder().ID("4").build();
+        testDB.insert(built4);
+        Product built5 = built.toBuilder().ID("4").Quantity(7357).build();
+        testDB.insert(built5);
         return testDB;
     }
     @Test
@@ -90,11 +101,6 @@ class DBTest {
         for (Product p :
                 products.toArrayList()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
-        }
-        for (Product s:
-                products.toArrayList()
-        ) {
-            System.out.println(s);
         }
     }
 }

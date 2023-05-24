@@ -1,10 +1,13 @@
 package GUI;
 
 import GUI.Call.DeactivateMemberAction;
+import Memberships.Member;
+import _119Exception.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 
 import static App.Main.Members;
@@ -24,15 +27,16 @@ public class DeactivateMember extends JPanel {
         textLabel.setForeground(Color.decode("#675D50"));
         panelMain.add(textLabel);
 
-        String[] idList = new String[Members.getMemberships().size()];
+        ArrayList<Member> MemberArrayList = Members.toArrayList();
+        String[] idList = new String[MemberArrayList.size()];
         for (int i = 0; i < idList.length; i++) {
-            idList[i] = Members.getMemberships().get(i).getID();
+            idList[i] = MemberArrayList.get(i).getID();
         }
-        String[][] data = new String[Members.getMemberships().size()][3];
+        String[][] data = new String[MemberArrayList.size()][3];
         for (int i = 0; i < data.length; i++) {
-            data[i][0] = Members.getMemberships().get(i).getID();
-            data[i][1] = Members.getMemberships().get(i).getName();
-            data[i][2] = Members.getMemberships().get(i).getPhone();
+            data[i][0] = MemberArrayList.get(i).getID();
+            data[i][1] = MemberArrayList.get(i).getName();
+            data[i][2] = MemberArrayList.get(i).getPhone();
         }
         JTextField name = new JTextField();
         name.setFont(MainGUI.poppinsSemiBold.deriveFont(20f));
@@ -77,8 +81,11 @@ public class DeactivateMember extends JPanel {
         Map<JLabel, String> panelLabel = new java.util.HashMap<>();
         panelLabel.put(panelMain, path);
 
-        // TODO: find ID from combobox
-        saveButton.addActionListener(new DeactivateMemberAction(Members.find(as.getReturnString())));
+        try {
+            saveButton.addActionListener(new DeactivateMemberAction(Members.select(as.getReturnString())));
+        } catch (NoSuchEntryException e) {
+            throw new RuntimeException(e);
+        }
 
         return panelLabel;
     }
