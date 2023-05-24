@@ -1,20 +1,20 @@
 package Plugin;
-import Products.*;
-import DatabaseService.*;
-import BasePlugin.BlankPage;
+
 import BasePlugin.BasePlugin;
-import org.jfree.chart.*;
-import org.jfree.data.general.*;
+import BasePlugin.BlankPage;
+import Database.Product.ProductDB;
+import Database.DatabaseService.DatabaseService;
+import Database.DatabaseService.XmlService;
+import _119Exception.ExtensionException;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.ui.ApplicationFrame;
-import java.io.IOException;
-import Exception.ExtensionException;
 
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 
 public class Plugin1 implements BasePlugin {

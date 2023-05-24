@@ -4,10 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="fix: membership">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/SaveBillAction.java" afterDir="false" />
+    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Customers/CustomerCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/Member/MemberDBSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/_119Exception/DatabaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/_119Exception/NoSuchEntryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_05_2023_1_28_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_05_2023_1_28_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_08_05_2023_1_44_am__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_08_05_2023_1_44_am__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BasePlugin/BlankPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BasePlugin/BlankPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/Bill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Member/MemberDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Customers/MembershipDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Customers/MembershipDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/DatabaseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ObjService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/ServiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ServiceAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DatabaseService/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exception/ExtensionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_119Exception/ExtensionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exception/_119Exception.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/_119Exception/_119Exception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/AutoSuggest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/AutoSuggest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/History/TransactionHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PluginCaller/PluginCaller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PluginCaller/PluginCaller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Products/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Products/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/MemberDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseService/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductDB/DBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductCollectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Products.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Products.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Products.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +129,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Database" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\data" />
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\main\resources\data" />
@@ -89,6 +145,9 @@
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\main\resources\system" />
       <recent name="C:\Users\62815\OneDrive - Institut Teknologi Bandung\OOP\tubes 2\_119\src\test\resources\ProductData" />
     </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Database.DatabaseOperations" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Customers" />
       <recent name="Products" />
@@ -101,88 +160,93 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBTest (1)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="IF2210_TB2_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IF2210_TB2_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DatabaseService.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DatabaseService" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DBTest">
     <configuration name="DBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
+      <module name="IF2210_TB2_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DatabaseService.*" />
+          <option name="PATTERN" value="Database.DatabaseService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DatabaseService" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
+      <option name="PACKAGE_NAME" value="ProductDB" />
+      <option name="MAIN_CLASS_NAME" value="ProductDB.DBTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="DBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
+      <module name="IF2210_TB2_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DatabaseService.*" />
+          <option name="PATTERN" value="Database.DatabaseService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DatabaseService" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseService.DBTest" />
+      <option name="PACKAGE_NAME" value="ProductDB" />
+      <option name="MAIN_CLASS_NAME" value="ProductDB.DBTest" />
       <option name="METHOD_NAME" value="JsonLoadDataTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
+    <configuration name="DBTest.JsonSaveDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IF2210_TB2_119" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Customers.*" />
+          <option name="PATTERN" value="Database.DatabaseService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Customers" />
-      <option name="MAIN_CLASS_NAME" value="Customers.MemberDBTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ProductDB" />
+      <option name="MAIN_CLASS_NAME" value="ProductDB.DBTest" />
+      <option name="METHOD_NAME" value="JsonSaveDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBTest.XmlSaveDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IF2210_TB2_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.DatabaseService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductDB" />
+      <option name="MAIN_CLASS_NAME" value="ProductDB.DBTest" />
+      <option name="METHOD_NAME" value="XmlSaveDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBTest.loadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IF2210_TB2_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.DatabaseService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductDB" />
+      <option name="MAIN_CLASS_NAME" value="ProductDB.DBTest" />
+      <option name="METHOD_NAME" value="loadDataTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBTest (1)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MemberDBTest" />
         <item itemvalue="JUnit.DBTest" />
+        <item itemvalue="JUnit.DBTest.XmlSaveDataTest" />
+        <item itemvalue="JUnit.DBTest.JsonSaveDataTest" />
         <item itemvalue="JUnit.DBTest.JsonLoadDataTest" />
+        <item itemvalue="JUnit.DBTest.loadDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -325,9 +389,14 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Bill/FixedBillEntry.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/test/java/ProductDB/DBTest.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ProductDB/DBTest.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -337,11 +406,6 @@
         <PinnedItemInfo parentTag="DatabaseService.DatabaseService" memberName="IDB" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="cart" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,6 @@
 package GUI;
 
+import App.Main;
 import Products.Product;
 
 import javax.swing.*;
@@ -10,7 +11,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import App.Main;
 
 public class ManajemenBarangGudang extends JPanel {
 

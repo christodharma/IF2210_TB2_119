@@ -1,5 +1,7 @@
 package GUI;
 
+import _119Exception.ExtensionException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static App.Main.LoadDatabases;
-import Exception.ExtensionException;
 
 public class MainGUI {
 

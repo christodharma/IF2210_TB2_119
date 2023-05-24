@@ -1,4 +1,4 @@
-package Exception;
+package _119Exception;
 
 public class _119Exception extends Exception{
     public _119Exception(){

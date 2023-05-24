@@ -2,6 +2,7 @@ package GUI;
 
 import App.Main;
 import Products.Product;
+import _119Exception.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -161,7 +162,11 @@ public class Perbarui extends JPanel {
 //                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_pos", "root", "");
 //                Statement stat = con.createStatement();
 //                stat.executeUpdate(query);
-            Main.Products.removeProduct(Main.Products.findProduct("Name", namaBarang.getText()));
+            try {
+                Product deleted = Main.Products.delete(namaBarang.getText());
+            } catch (NoSuchEntryException ex) {
+                throw new RuntimeException(ex);
+            }
 //                namaBarang.setText("");
 //                hargaJual.setText("");
 //                hargaBeli.setText("");
@@ -177,7 +182,7 @@ public class Perbarui extends JPanel {
 
 
                 JOptionPane.showMessageDialog(null, "Data berhasil dihapus");
-//            } catch (Exception ex) {
+//            } catch (_119Exception ex) {
 //                JOptionPane.showMessageDialog(null, "Data gagal dihapus");
 //            }
         });
@@ -214,7 +219,7 @@ public class Perbarui extends JPanel {
                 kategori.setText("");
                 stokBarang.setText("");
                 JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
-//            } catch (Exception ex) {
+//            } catch (_119Exception ex) {
 //                JOptionPane.showMessageDialog(null, "Data gagal diupdate");
 //            }
         });

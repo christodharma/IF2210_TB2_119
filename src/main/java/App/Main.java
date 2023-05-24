@@ -1,12 +1,13 @@
 package App;
 
-import Customers.*;
-import DatabaseService.*;
-import Exception.ExtensionException;
+import Customers.CustomerDB;
+import Database.Member.MemberDB;
+import Customers.Membership;
+import Database.DatabaseService.*;
+import Database.Product.ProductDB;
 import GUI.MainGUI;
-import History.TransactionHistory;
-import Products.ProductDB;
-import org.jetbrains.annotations.NotNull;
+import _119Exception.ExtensionException;
+import lombok.NonNull;
 
 import java.io.IOException;
 
@@ -19,12 +20,12 @@ public class Main {
     public static ProductDB Products = new ProductDB();
     public static MemberDB Members = new MemberDB();
     public static CustomerDB Customers = new CustomerDB();
-    public static TransactionHistory Transactions = new TransactionHistory();
+//    public static TransactionHistory Transactions = new TransactionHistory();
     public static void LoadDatabases() throws ExtensionException, IOException {
         Products = (ProductDB) setDBSXMLload(ProductDB.class,xmls,DatabasePath+"Products.xml");
         Members = (MemberDB) setDBSXMLload(MemberDB.class,xmls,DatabasePath+"Members.xml");
         Customers = (CustomerDB) setDBSXMLload(CustomerDB.class,xmls,DatabasePath+"Customers.xml");
-        Transactions = (TransactionHistory) setDBSXMLload(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml");
+//        Transactions = (TransactionHistory) setDBSXMLload(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml");
 //        long temp = 0;
 //        setDBSXMLload(long.class,objs,"src/main/resources/system/customerCount.obj", temp);
         objs.set_class(long.class);dbs.setIDB(objs);dbs.setDBPath("src/main/resources/system/customerCount.obj");
@@ -36,14 +37,14 @@ public class Main {
         setDBSXMLSave(ProductDB.class,xmls,DatabasePath+"Products.xml", Products);
         setDBSXMLSave(MemberDB.class,xmls,DatabasePath+"Members.xml", Members);
         setDBSXMLSave(CustomerDB.class,xmls,DatabasePath+"Customers.xml", Customers);
-        setDBSXMLSave(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml", Transactions);
+//        setDBSXMLSave(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml", Transactions);
 //        long temp = 0;
 //        setDBSXMLload(long.class,objs,"src/main/resources/system/customerCount.obj", temp);
         objs.set_class(long.class);dbs.setIDB(objs);dbs.setDBPath("src/main/resources/system/customerCount.obj");
         dbs.saveData(Membership.getCounter());
         dbs.reset();xmls.reset();
     }
-    static Object setDBSXMLload(Class<?> setClass, @NotNull DatabaseType setDatabaseType, String setPath) throws ExtensionException, IOException {
+    static Object setDBSXMLload(Class<?> setClass, @NonNull DatabaseType setDatabaseType, String setPath) throws ExtensionException, IOException {
         setDatabaseType.set_class(setClass);dbs.setIDB(xmls);dbs.setDBPath(setPath);
         Object ret = dbs.loadData();
         dbs.reset();setDatabaseType.reset();

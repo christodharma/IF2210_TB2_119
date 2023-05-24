@@ -13,7 +13,7 @@ import java.io.Serializable;
 @JsonRootName("customer")
 public class Customer extends Membership implements Serializable {
     private static final long serialVersionUID = 21L;
-@JacksonXmlProperty(localName = "id", isAttribute = true)
+@JacksonXmlProperty(isAttribute = true, localName = "id")
 @JsonProperty("id")
     private final String ID;
     public Customer()

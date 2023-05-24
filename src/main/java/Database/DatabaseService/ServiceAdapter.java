@@ -1,6 +1,6 @@
-package DatabaseService;
+package Database.DatabaseService;
 
-import Exception.ExtensionException;
+import _119Exception.ExtensionException;
 
 import java.io.IOException;
 public interface ServiceAdapter{

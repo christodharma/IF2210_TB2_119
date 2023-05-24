@@ -1,6 +1,6 @@
-package DatabaseService;
+package Database.DatabaseService;
 
-import Exception.ExtensionException;
+import _119Exception.ExtensionException;
 
 import java.io.*;
 
@@ -51,14 +51,7 @@ public class ObjService extends DatabaseType implements ServiceAdapter {
         }
         return readObs;
     }
-    /*
-//        /**
-//         * TODO: Query should implement Reflect API Executable
-//         * @param DestPath Path of db file
-//         * @return Elements of read db file
-//         * @throws IOException File is not found or invalid path
-//         * @throws ClassNotFoundException Class not found exception
-
+/*
     @Override
     @SuppressWarnings("unchecked")
     public Object QueryDatabase(String DestPath) throws IOException, ClassNotFoundException {

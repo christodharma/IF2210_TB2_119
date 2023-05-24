@@ -1,4 +1,4 @@
-package Exception;
+package _119Exception;
 
 public class ExtensionException extends _119Exception {
     public ExtensionException(){

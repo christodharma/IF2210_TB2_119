@@ -1,6 +1,5 @@
 package GUI;
 
-import App.Main;
 import GUI.Call.DeactivateMemberAction;
 
 import javax.swing.*;

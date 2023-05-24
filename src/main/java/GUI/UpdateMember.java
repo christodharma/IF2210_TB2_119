@@ -1,6 +1,5 @@
 package GUI;
 
-import Customers.Member;
 import GUI.Call.UpdateMemberAction;
 
 import javax.swing.*;

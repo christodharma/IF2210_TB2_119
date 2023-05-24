@@ -1,8 +1,6 @@
-package DatabaseService;
+package Database.DatabaseService;
 
-import lombok.Setter;
-
-public class DatabaseType{
+public abstract class DatabaseType{
     protected Class<?> _class;
     public void set_class(Class<?> set){
         _class = set;

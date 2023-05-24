@@ -1,8 +1,8 @@
 package Customers;
 
-import DatabaseService.DatabaseService;
-import DatabaseService.ObjService;
-import Exception.ExtensionException;
+import Database.DatabaseService.DatabaseService;
+import Database.DatabaseService.ObjService;
+import _119Exception.ExtensionException;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;

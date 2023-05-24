@@ -1,5 +1,9 @@
 package GUI;
 
+import App.Main;
+import Products.Product;
+import _119Exception.NoSuchEntryException;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +16,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 import java.util.Map;
-import App.Main;
-import Products.Product;
-import Products.ProductDB;
 
 public class TambahBarang extends JPanel{
     JLabel textLabel;
@@ -151,7 +152,11 @@ public class TambahBarang extends JPanel{
                         kategori.getText(),
                         Integer.parseInt(stokBarang.getText())
                 );
-                Main.Products.addProduct(added);
+                try {
+                    Main.Products.insert(added);
+                } catch (NoSuchEntryException ex) {
+                    throw new RuntimeException(ex);
+                }
                 TambahBarang panelLabel = new TambahBarang();
                 try {
                     MainGUI.tabbedPane.addTabs(panelLabel.TambahBarang());
@@ -190,7 +195,7 @@ public class TambahBarang extends JPanel{
 //            hargaBeli.setText("");
 //            kategori.setText("");
 //            stokBarang.setText("");
-            //            } catch (Exception exception) {
+            //            } catch (_119Exception exception) {
             //                JOptionPane.showMessageDialog(null, "Gagal Menambah Barang");
             //            }
 //        });

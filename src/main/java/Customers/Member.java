@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 
@@ -37,7 +36,7 @@ public class Member extends Membership implements Serializable {
         return customerRef.getID();
     }
 
-    public Member(Customer customerRef, @NotNull String Name, @NotNull String Phone){
+    public Member(Customer customerRef, @NonNull String Name, @NonNull String Phone){
         this.customerRef = customerRef;
         this.Name = Name;
         this.Phone = Phone;

@@ -1,12 +1,17 @@
 package Plugin;
-import Customers.*;
-import DatabaseService.*;
-import BasePlugin.BlankPage;
+
 import BasePlugin.BasePlugin;
-import org.jfree.chart.*;
-import org.jfree.data.general.*;
+import BasePlugin.BlankPage;
+import Database.Member.MemberDB;
+import Database.DatabaseService.DatabaseService;
+import Database.DatabaseService.JsonService;
+import _119Exception.ExtensionException;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
+
 import java.io.IOException;
-import Exception.ExtensionException;
 
 public class Plugin2 implements BasePlugin {
 

@@ -1,6 +1,5 @@
 package GUI;
 
-import Customers.Customer;
 import GUI.Call.DaftarMemberAction;
 
 import javax.swing.*;

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MembershipDB<T extends Membership> implements Serializable {
-    private static final long serialVersionUID = 10L;
+    private static final long serialVersionUID = 12L;
     protected ArrayList<T> Memberships;
     public MembershipDB(){
         Memberships = new ArrayList<>();

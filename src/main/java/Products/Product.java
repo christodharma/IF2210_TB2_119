@@ -1,54 +1,40 @@
 package Products;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
 import lombok.extern.jackson.Jacksonized;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Objects;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Getter @Setter
-@Builder @Jacksonized
-@XmlRootElement(name="Product")
+@JsonRootName("Product")
 public class Product implements Serializable{
     private static final long serialVersionUID = 1L;
-    @JacksonXmlProperty(localName = "id", isAttribute = true)
         private final String ID;
-    @XmlElement(name = "name")
     @NonNull
         private String Name;
-    @XmlElement(name = "price")
     @NonNull
         private Double Price;
-    @XmlElement(name = "buyPrice")
     @NonNull
         private Double BuyPrice;
-    @XmlElement(name = "category")
     @NonNull
         private String Category;
-    @XmlElement(name="picture")
-    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-    @Builder.Default
         private String Picture = null;
-    @XmlElement(name = "quantity")
-    @NonNull
-    @Builder.Default
         private int Quantity=0;
 
-    public Product(String a, String b, Number c, Number d, String e, int f){
-        this.ID = a;
-        this.Name = b;
-        this.Price = Double.valueOf(String.valueOf(c));
-        this.BuyPrice = Double.valueOf(String.valueOf(d));
-        this.Category = e;
-        this.Quantity = f;
+    public Product(String ID, String Name, Number Price, Number BuyPrice, String Category, int Quantity){
+        this.ID = ID;
+        this.Name = Name;
+        this.Price = Double.valueOf(String.valueOf(Price));
+        this.BuyPrice = Double.valueOf(String.valueOf(BuyPrice));
+        this.Category = Category;
+        this.Quantity = Quantity;
     }
     @JsonCreator
     public static Product create(

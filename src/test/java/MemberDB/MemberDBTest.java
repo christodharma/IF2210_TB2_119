@@ -1,10 +1,14 @@
-package Customers;
+package MemberDB;
 
-import DatabaseService.DatabaseService;
-import DatabaseService.JsonService;
-import DatabaseService.ObjService;
-import DatabaseService.XmlService;
-import Exception.ExtensionException;
+import Customers.Customer;
+import Customers.Member;
+import Customers.Membership;
+import Database.DatabaseService.DatabaseService;
+import Database.DatabaseService.JsonService;
+import Database.DatabaseService.ObjService;
+import Database.DatabaseService.XmlService;
+import Database.Member.MemberDB;
+import _119Exception.ExtensionException;
 import org.junit.jupiter.api.*;
 
 import java.io.File;
@@ -19,9 +23,9 @@ class MemberDBTest {
         Member m1 = new Member(new Customer(), "Memi", "73577357");
         Member m2 = new Member(new Customer(), "Momo", "735715");
         Member m = new Member(new Customer(), "Mime", "7357");
-        ret.addMembership(m);
-        ret.addMembership(m1);
-        ret.addMembership(m2);
+        ret.insert(m);
+        ret.insert(m1);
+        ret.insert(m2);
         return ret;
     }
     @BeforeAll
@@ -32,8 +36,8 @@ class MemberDBTest {
     @Order(1)
     public void MembersTest(){
         for (Member itr :
-                custDB.Memberships) {
-            assertNotEquals(Membership.Counter, itr.getID(), "Counter did not increment");
+                custDB.toArrayList()) {
+            Assertions.assertNotEquals(Membership.Counter, itr.getID(), "Counter did not increment");
         }
     }
 
@@ -53,7 +57,7 @@ class MemberDBTest {
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :
-                loaded.Memberships) {
+                loaded.toArrayList()) {
             assertNotEquals(String.class, c.getClass(), "Loaded DB members is wrong type");
 //            System.out.println(c.getID());
         }
@@ -74,13 +78,9 @@ class MemberDBTest {
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :
-                loaded.Memberships) {
+                loaded.toArrayList()) {
             assertNotEquals(String.class, c.getClass(), "Loaded DB members is wrong type");
-            if (c.getName()==null){
-                System.out.println(c.getID());
-            } else {
-                System.out.println(c.getID() + c.getName());
-            }
+            System.out.println(c.getID() + c.getName());
         }
     }
     @Test
@@ -99,13 +99,9 @@ class MemberDBTest {
         MemberDB loaded = (MemberDB) dbs.loadData();
         assertNotNull(loaded, "Import null");
         for (Member c :
-                loaded.Memberships) {
+                loaded.toArrayList()) {
             assertNotEquals(String.class, c.getClass(), "Loaded DB members is wrong type");
-            if (c.getName()==null){
-                System.out.println(c.getID());
-            } else {
-                System.out.println(c.getID() + c.getName());
-            }
+            System.out.println(c.getID() + c.getName());
         }
     }
 }

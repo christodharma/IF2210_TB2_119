@@ -29,7 +29,7 @@ Products\Product.class
 GUI\ManajemenBarangGudang$2.class
 GUI\AutoSuggest$3.class
 GUI\MainGUI$1.class
-Exception\ExtensionException.class
+_119Exception\ExtensionException.class
 GUI\ManajemenBarangGudang$3.class
 GUI\ManajemenBarangGudang.class
 Plugin\Plugin2.class
@@ -70,7 +70,7 @@ GUI\PendaftaranMember.class
 PluginCaller\PluginCaller$1$1.class
 GUI\MainGUI$1$3.class
 Bill\Bill.class
-Exception\_119Exception.class
+_119Exception\_119Exception.class
 GUI\AutoSuggest$6.class
 GUI\MainGUI$4.class
 GUI\UpdateMember.class
