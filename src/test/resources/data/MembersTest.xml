@@ -1,40 +1,25 @@
 <MemberDB>
-  <members>
-    <members>
-      <customer id="8">
-        <purchaseCount>1</purchaseCount>
-      </customer>
+  <contents>
+    <Member0>
+      <id>0</id>
+      <name>Memi</name>
       <status>true</status>
-      <class>Member</class>
-      <phone>7357</phone>
-      <point>0</point>
-      <name>Mime</name>
-      <purchaseCount>0</purchaseCount>
-      <id>8</id>
-    </members>
-    <members>
-      <customer id="6">
-        <purchaseCount>1</purchaseCount>
-      </customer>
-      <status>true</status>
-      <class>Member</class>
       <phone>73577357</phone>
       <point>0</point>
-      <name>Memi</name>
-      <purchaseCount>0</purchaseCount>
-      <id>6</id>
-    </members>
-    <members>
-      <customer id="7">
-        <purchaseCount>1</purchaseCount>
-      </customer>
+    </Member0>
+    <Member1>
+      <id>1</id>
+      <name>Momo</name>
       <status>true</status>
-      <class>Member</class>
       <phone>735715</phone>
       <point>0</point>
-      <name>Momo</name>
-      <purchaseCount>0</purchaseCount>
-      <id>7</id>
-    </members>
-  </members>
+    </Member1>
+    <Member2>
+      <id>2</id>
+      <name>Mime</name>
+      <status>true</status>
+      <phone>7357</phone>
+      <point>0</point>
+    </Member2>
+  </contents>
 </MemberDB>

@@ -1,13 +1,14 @@
-package Products;
+package Product;
 
-import Transactions.Valueable;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
 @RequiredArgsConstructor
-public class Price implements Serializable,Valueable {
+@Data
+public class Price implements Serializable {
     private static final long serialVersionUID = 4L;
 @JsonProperty("amount")
 @JacksonXmlProperty(isAttribute = true, localName = "amount")
@@ -19,10 +20,6 @@ public class Price implements Serializable,Valueable {
         } else {
             this.amount = (double) amount;
         }
-    }
-    @Override
-    public double valuate(double percentage) {
-        return (1+percentage) * amount;
     }
 
     @Override

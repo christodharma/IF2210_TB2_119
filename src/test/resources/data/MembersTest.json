@@ -1,39 +1,25 @@
 {
-  "members" : [ {
-    "customer" : {
-      "purchaseCount" : 1,
-      "id" : "8"
+  "contents" : {
+    "Member0" : {
+      "id" : "0",
+      "name" : "Memi",
+      "status" : true,
+      "phone" : "73577357",
+      "point" : 0
     },
-    "status" : true,
-    "class" : "Member",
-    "phone" : "7357",
-    "point" : 0,
-    "name" : "Mime",
-    "purchaseCount" : 0,
-    "id" : "8"
-  }, {
-    "customer" : {
-      "purchaseCount" : 1,
-      "id" : "6"
+    "Member1" : {
+      "id" : "1",
+      "name" : "Momo",
+      "status" : true,
+      "phone" : "735715",
+      "point" : 0
     },
-    "status" : true,
-    "class" : "Member",
-    "phone" : "73577357",
-    "point" : 0,
-    "name" : "Memi",
-    "purchaseCount" : 0,
-    "id" : "6"
-  }, {
-    "customer" : {
-      "purchaseCount" : 1,
-      "id" : "7"
-    },
-    "status" : true,
-    "class" : "Member",
-    "phone" : "735715",
-    "point" : 0,
-    "name" : "Momo",
-    "purchaseCount" : 0,
-    "id" : "7"
-  } ]
+    "Member2" : {
+      "id" : "2",
+      "name" : "Mime",
+      "status" : true,
+      "phone" : "7357",
+      "point" : 0
+    }
+  }
 }

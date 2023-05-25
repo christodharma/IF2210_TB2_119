@@ -20,7 +20,7 @@ public class Main {
     public static MemberDB Members = new MemberDB();
 //    public static TransactionHistory Transactions = new TransactionHistory();
     public static void LoadDatabases() throws ExtensionException, IOException {
-        Products = (ProductDB) setDBSXMLload(ProductDB.class,xmls,DatabasePath+"Products.xml");
+        Products = (ProductDB) setDBSXMLload(ProductDB.class,xmls,DatabasePath+"Product.xml");
         Members = (MemberDB) setDBSXMLload(MemberDB.class,xmls,DatabasePath+"Members.xml");
 //        Transactions = (TransactionHistory) setDBSXMLload(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml");
 //        long temp = 0;
@@ -31,7 +31,7 @@ public class Main {
         CustomerCounter.count = x;
     }
     public static void SaveDatabases() throws ExtensionException, IOException {
-        setDBSXMLSave(ProductDB.class,xmls,DatabasePath+"Products.xml", Products);
+        setDBSXMLSave(ProductDB.class,xmls,DatabasePath+"Product.xml", Products);
         setDBSXMLSave(MemberDB.class,xmls,DatabasePath+"Members.xml", Members);
 //        setDBSXMLSave(TransactionHistory.class,xmls,DatabasePath+"TransactionHistory.xml", Transactions);
 //        long temp = 0;

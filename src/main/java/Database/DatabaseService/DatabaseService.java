@@ -14,11 +14,11 @@ public class DatabaseService {
      * @param idb ServiceAdapter, determines which format of data store
      * @param path Path of data store
      */
-
     public DatabaseService(ServiceAdapter idb, String path) {
         IDB = idb;
         DBPath = path;
     }
+    //TODO: review adapter design pattern
     public void saveData(Object data) throws IOException, ExtensionException {
         IDB.WriteDatabase(DBPath,data);
     }

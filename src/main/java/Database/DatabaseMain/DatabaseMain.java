@@ -1,6 +1,6 @@
 package Database.DatabaseMain;
 
-// import Products.*;
+// import Product.*;
 // import Customers.*;
 // import DatabaseService.*;
 import PluginCaller.PluginCaller;

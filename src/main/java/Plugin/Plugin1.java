@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class Plugin1 implements BasePlugin {
 
     private CategoryDataset createDataset() {
-        DatabaseService DB = new DatabaseService(new XmlService(ProductDB.class), "src/test/resources/data/Products.xml");
+        DatabaseService DB = new DatabaseService(new XmlService(ProductDB.class), "src/test/resources/data/Product.xml");
         ProductDB products = null;
         try {
             products = (ProductDB) DB.loadData();

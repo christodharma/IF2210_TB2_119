@@ -1,16 +1,25 @@
 package Transactions;
 
-import Products.Product;
+import Product.Product;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Getter;
 
 @Getter
+@JsonRootName("Entry")
 public class FixedBillEntry{
+    @JsonProperty
     private final String ProductID;
-    private final int Quantity;
+    @JsonProperty
     private final double Price;
-    public FixedBillEntry(Product product,int quantity, double valuation) {
+    @JsonProperty
+    private final int Quantity;
+    @JsonProperty
+    private final double TotalPrice;
+    public FixedBillEntry(Product product, int quantity) {
         ProductID = product.getID();
+        Price = product.getValue();
         Quantity = quantity;
-        Price = product.getPrice().valuate(valuation);
+        TotalPrice = Price * Quantity;
     }
 }

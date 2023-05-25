@@ -2,7 +2,7 @@ package Database.Product;
 
 import Database.Database;
 import Database.DatabaseOperations;
-import Products.Product;
+import Product.Product;
 import _119Exception.NoSuchEntryException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;

@@ -1,5 +1,7 @@
-package Products;
+package Product;
 
+import Transactions.Valueable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -15,7 +17,7 @@ import java.io.Serializable;
 @JsonDeserialize(builder = Product.ProductBuilder.class)
 @Getter @Setter
 @JsonRootName("Product")
-public class Product implements Serializable{
+public class Product implements Serializable, Valueable {
 
     private static final long serialVersionUID = 1L;
     @JsonProperty("id")
@@ -32,6 +34,8 @@ public class Product implements Serializable{
         private String Picture = null;
     @JsonProperty("quantity") @JsonInclude(JsonInclude.Include.NON_DEFAULT) @Builder.Default
         private int Quantity = 0;
+    @JsonProperty("discount") @JsonInclude(JsonInclude.Include.NON_DEFAULT) @Builder.Default
+        private double discount = 0;
 
     public static ProductBuilder builder(
             String ID,
@@ -52,6 +56,16 @@ public class Product implements Serializable{
         } else {
             return false;
         }
+    }
+
+    @Override
+    public double valuate(double percentage) {
+        return Price.getAmount() * (1+percentage);
+    }
+
+    @JsonIgnore
+    public double getValue() {
+        return valuate(-discount);
     }
 //    @Override
 //    public boolean equals(Object o) {

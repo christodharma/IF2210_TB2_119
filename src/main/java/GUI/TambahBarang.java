@@ -1,7 +1,7 @@
 package GUI;
 
 import App.Main;
-import Products.Product;
+import Product.Product;
 import _119Exception.NoSuchEntryException;
 
 import javax.swing.*;

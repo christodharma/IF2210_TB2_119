@@ -1,7 +1,7 @@
 package GUI;
 
 import App.Main;
-import Products.Product;
+import Product.Product;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;

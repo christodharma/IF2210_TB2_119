@@ -1,17 +1,15 @@
 package Transactions;
 
-import Products.Product;
+import Memberships.CustomerCounter;
+import Product.Product;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 @Getter
-@RequiredArgsConstructor
 public class Bill{
-    private final String buyerID;
     private HashMap<Product, Integer> cart = new HashMap<>();
     public boolean addToCart(Product added, Integer amount) {
         if (added.subtractQuantity(amount)){
@@ -38,8 +36,16 @@ public class Bill{
         ArrayList<FixedBillEntry> ret = new ArrayList<>();
         for (Map.Entry<Product, Integer> i :
                 cart.entrySet()) {
-            ret.add(new FixedBillEntry(i.getKey(), i.getValue(), i.getKey().getPrice().valuate(0)));
+            ret.add(new FixedBillEntry(i.getKey(), i.getValue()));
         }
-        return new FixedBill(ret);
+        return new FixedBill(CustomerCounter.setID(), ret);
+    }
+    public FixedBill checkout(String MemberID) {
+        ArrayList<FixedBillEntry> ret = new ArrayList<>();
+        for (Map.Entry<Product, Integer> i :
+                cart.entrySet()) {
+            ret.add(new FixedBillEntry(i.getKey(), i.getValue()));
+        }
+        return new FixedBill(MemberID, ret);
     }
 }

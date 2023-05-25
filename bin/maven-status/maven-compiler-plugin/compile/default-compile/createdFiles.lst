@@ -25,7 +25,7 @@ DatabaseService\DatabaseService.class
 GUI\Perbarui$1.class
 GUI\Settings.class
 BasePlugin\BasePlugin.class
-Products\Product.class
+Product\Product.class
 GUI\ManajemenBarangGudang$2.class
 GUI\AutoSuggest$3.class
 GUI\MainGUI$1.class
@@ -33,7 +33,7 @@ _119Exception\ExtensionException.class
 GUI\ManajemenBarangGudang$3.class
 GUI\ManajemenBarangGudang.class
 Plugin\Plugin2.class
-Products\Product$ProductBuilder.class
+Product\Product$ProductBuilder.class
 BasePlugin\BlankPage.class
 GUI\AutoSuggest$2$1.class
 Customers\Member.class
@@ -49,8 +49,8 @@ GUI\MainGUI$1$1.class
 GUI\Perbarui.class
 GUI\ManajemenBarangGudang$1.class
 Plugin\Plugin1.class
-Products\ProductDB.class
-Products\ProductCollection.class
+Product\ProductDB.class
+Product\ProductCollection.class
 Customers\Membership.class
 History\TransactionHistory.class
 DatabaseService\ServiceAdapter.class
