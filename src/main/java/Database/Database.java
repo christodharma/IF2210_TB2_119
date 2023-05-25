@@ -9,11 +9,11 @@ import java.util.HashMap;
 
 public abstract class Database<T> implements Serializable {
     private static final long serialVersionUID = 10L;
-    @JsonIgnore
     // TODO: Database should use Set to ensure atomic values
     // TODO: Database format change
     // TODO: JDBC Connector
     // TODO?: Bonus lain
+    @JsonIgnore
     protected HashMap<String, T> contents = new HashMap<>();
     @JsonIgnore
     public ArrayList<T> toArrayList() {
