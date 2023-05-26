@@ -12,6 +12,7 @@ import lombok.NonNull;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @Builder(builderMethodName = "internalBuilder", toBuilder = true)
 @JsonDeserialize(builder = Product.ProductBuilder.class)
@@ -35,7 +36,7 @@ public class Product implements Serializable, Valueable {
     @JsonProperty("quantity") @JsonInclude(JsonInclude.Include.NON_DEFAULT) @Builder.Default
         private int Quantity = 0;
     @JsonProperty("discount") @JsonInclude(JsonInclude.Include.NON_DEFAULT) @Builder.Default
-        private double discount = 0;
+        private double Discount = 0;
 
     public static ProductBuilder builder(
             String ID,
@@ -65,13 +66,13 @@ public class Product implements Serializable, Valueable {
 
     @JsonIgnore
     public double getValue() {
-        return valuate(-discount);
+        return valuate(-Discount);
     }
-//    @Override
-//    public boolean equals(Object o) {
-//        if (o instanceof Product){
-//            return Objects.equals(((Product) o).ID, this.ID);
-//        }
-//        return false;
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Product){
+            return Objects.equals(((Product) o).ID, this.ID);
+        }
+        return false;
+    }
 }

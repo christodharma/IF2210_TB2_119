@@ -24,7 +24,7 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     @Override
     public void insert(Product element) throws NoSuchEntryException {
         if (contents.containsValue(element)){
-            addProduct(element, element.getQuantity());
+            throw new NoSuchEntryException("element exists");
         } else {
             contents.put(element.getID(), element);
         }
@@ -38,12 +38,17 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
         } else if (keyword.getClass().equals(String.class)) {
             if (((String) keyword).matches("\\d+")) {
                 // keyword is product ID string
-                return contents.get(keyword);
+                if (contents.containsKey(keyword)){
+                    return contents.get(keyword);
+                } else {
+                    throw new NoSuchEntryException();
+                }
             } else {
                 // keyword is product name
+                // will return the first occasion of select condition
                 return contents.values().stream().filter(
-                                member -> member.getID().contains((String) keyword))
-                        .findFirst().orElseThrow(NoSuchEntryException::new);
+                                member -> member.getName().contains((String) keyword))
+                        .findFirst().orElseThrow(() -> new NoSuchEntryException(keyword + " name not found"));
             }
         } else {
             throw new NoSuchEntryException();

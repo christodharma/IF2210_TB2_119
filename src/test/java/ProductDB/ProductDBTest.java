@@ -4,6 +4,7 @@ import Database.DatabaseService.*;
 import _119Exception.ExtensionException;
 import Product.Product;
 import Database.Product.ProductDB;
+import Product.Price;
 import _119Exception.NoSuchEntryException;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -14,7 +15,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class DBTest {
+class ProductDBTest {
     ProductDB templateProductDB() throws NoSuchEntryException {
         ProductDB testDB = new ProductDB();
         Product built = Product.builder(
@@ -25,14 +26,10 @@ class DBTest {
                         "Food")
                 .Quantity(0).build();
         testDB.insert(built);
-        Product built2 = built.toBuilder().ID("2").build();
-        testDB.insert(built2);
-        Product built3 = built.toBuilder().ID("3").build();
-        testDB.insert(built3);
-        Product built4 = built.toBuilder().ID("4").build();
-        testDB.insert(built4);
-        Product built5 = built.toBuilder().ID("4").Quantity(7357).build();
-        testDB.insert(built5);
+        testDB.insert(built.toBuilder().ID("2").BuyPrice(new Price(4900.5)).build());
+        testDB.insert(built.toBuilder().ID("3").build());
+        testDB.insert(built.toBuilder().ID("4").Quantity(7357).build());
+        testDB.insert(built.toBuilder().ID("5").Name("Metal Pipe").build());
         return testDB;
     }
     @Test
@@ -101,5 +98,57 @@ class DBTest {
                 products.toArrayList()) {
             System.out.println(p.getID() +" "+ p.getName()+" "+p.getPrice()+" "+p.getQuantity());
         }
+    }
+    @Test
+    @Order(7)
+    void OperationTest() throws NoSuchEntryException {
+        ProductDB testDB = templateProductDB();
+        // testDB has template members
+        // basic insert is already covered by templateProductDB
+        assertThrows(NoSuchEntryException.class,() ->
+                testDB.insert(
+                        Product.builder(
+                                "1",
+                                "Indomie",
+                                3000,
+                                2900,
+                                "Food")
+                                .build()),
+                "database overwritten");
+
+        // select operation
+        // select by ID
+        Product select1 = testDB.select("4");
+        // item id 4 should have 7357 in quantity
+        assertEquals(7357, select1.getQuantity(), "Quantity is wrong");
+        // select by name returns first occurance
+        Product select2 = testDB.select("Metal Pipe");
+        assertEquals(testDB.select("5"), select2, "ID is not 5 or not first occurence");
+        // select by Product object
+        Product select3 = testDB.select(select1);
+        assertEquals(select3.getQuantity(), select1.getQuantity(), "fails to find with object param");
+        // select with illegal argument
+        assertThrows(NoSuchEntryException.class, () -> testDB.select(1), "unexpected type accept");
+
+        //update operations
+        assertThrows(NoSuchEntryException.class, () -> testDB.update(1), "unexpected type accept");
+        // before update
+        double beforeUpdate = testDB.select(select1).getValue();
+        select1.setDiscount(0.1);
+        testDB.update(select1);
+        // after update
+        assertNotEquals(beforeUpdate,testDB.select(select1).getValue(), "update fail");
+
+        // subtract and add operation
+        int beforeUpdate2 = testDB.select(select1).getQuantity();
+        testDB.subtractProduct(select1, 7);
+        assertNotEquals(beforeUpdate2, testDB.select(select1).getQuantity());
+        // resetting select1 value
+        testDB.addProduct(select1, 7);
+        assertEquals(beforeUpdate2, testDB.select(select1).getQuantity());
+
+        //delete operation
+        testDB.delete("3");
+        assertThrows(NoSuchEntryException.class, ()->testDB.select("3"), "deletion fail");
     }
 }
