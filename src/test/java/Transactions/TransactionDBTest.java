@@ -11,10 +11,7 @@ import Exception.Database.ExtensionException;
 import Exception.Database.NoSuchEntryException;
 import Model.Memberships.CustomerCounter;
 import Model.Transactions.Bill;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.IOException;
 
@@ -43,8 +40,8 @@ class TransactionDBTest {
         testDB = new TransactionDB();
     }
 
-    @AfterAll
-    static void wrapUp() throws ExtensionException, IOException {
+    @AfterEach
+    void wrapUp() throws ExtensionException, IOException {
         DatabaseService dbs = new DatabaseService(new XmlService(ProductDB.class), DatabasePath+"Product_AfterTransaction.xml");
         dbs.saveData(productDB);
         dbs.setDBPath(DatabasePath + "TransactionDB.xml");
@@ -60,7 +57,7 @@ class TransactionDBTest {
 
     @Test
     @Order(1)
-    void insert() throws NoSuchEntryException {
+    void insertTest() throws NoSuchEntryException {
         Bill cart = new Bill();
         assertFalse(cart.addToCart(productDB.select("1"), 1), "addToCart added 0 quantity product");
         cart.addToCart(productDB.select("4"), 350);
@@ -82,10 +79,11 @@ class TransactionDBTest {
 
     @Test
     @Order(2)
-    void select() throws ExtensionException, IOException, NoSuchEntryException {
+    void selectTest() throws ExtensionException, IOException, NoSuchEntryException {
+        insertTest();
         DatabaseService dbs = new DatabaseService(new JsonService(TransactionDB.class), DatabasePath+"TransactionDB.json");
         testDB = (TransactionDB) dbs.loadData();
-        assertDoesNotThrow(() -> testDB.select("120230528"));
+        assertDoesNotThrow(() -> testDB.select("120230528140412"));
     }
 
     @Test
