@@ -2,7 +2,7 @@ package GUI;
 
 import GUI.Call.DeactivateMemberAction;
 import Memberships.Member;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;

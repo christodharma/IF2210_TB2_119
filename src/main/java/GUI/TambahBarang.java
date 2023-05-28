@@ -2,7 +2,7 @@ package GUI;
 
 import App.Main;
 import Product.Product;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -195,7 +195,7 @@ public class TambahBarang extends JPanel{
 //            hargaBeli.setText("");
 //            kategori.setText("");
 //            stokBarang.setText("");
-            //            } catch (_119Exception exception) {
+            //            } catch (Exception.Database exception) {
             //                JOptionPane.showMessageDialog(null, "Gagal Menambah Barang");
             //            }
 //        });

@@ -1,6 +1,6 @@
 package GUI;
 
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 
 import javax.swing.*;
 import java.awt.*;

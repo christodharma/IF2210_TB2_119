@@ -5,7 +5,7 @@ import BasePlugin.BlankPage;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.JsonService;
 import Database.Memberships.MemberDB;
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;

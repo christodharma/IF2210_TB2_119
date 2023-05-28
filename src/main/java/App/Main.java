@@ -5,7 +5,7 @@ import Database.Memberships.MemberDB;
 import Database.Product.ProductDB;
 import GUI.MainGUI;
 import Memberships.CustomerCounter;
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 import lombok.NonNull;
 
 import java.io.IOException;

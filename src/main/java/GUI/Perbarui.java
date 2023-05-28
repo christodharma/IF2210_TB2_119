@@ -2,7 +2,7 @@ package GUI;
 
 import App.Main;
 import Product.Product;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -185,7 +185,7 @@ public class Perbarui extends JPanel {
 
 
                 JOptionPane.showMessageDialog(null, "Data berhasil dihapus");
-//            } catch (_119Exception ex) {
+//            } catch (Exception.Database ex) {
 //                JOptionPane.showMessageDialog(null, "Data gagal dihapus");
 //            }
         });
@@ -222,7 +222,7 @@ public class Perbarui extends JPanel {
                 kategori.setText("");
                 stokBarang.setText("");
                 JOptionPane.showMessageDialog(null, "Data berhasil diupdate");
-//            } catch (_119Exception ex) {
+//            } catch (Exception.Database ex) {
 //                JOptionPane.showMessageDialog(null, "Data gagal diupdate");
 //            }
         });

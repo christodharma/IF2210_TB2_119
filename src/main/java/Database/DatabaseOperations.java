@@ -1,6 +1,6 @@
 package Database;
 
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 
 public interface DatabaseOperations<T>{
     void insert(T element) throws NoSuchEntryException;

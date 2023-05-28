@@ -2,7 +2,7 @@ package Database.Memberships;
 
 import Database.DatabaseOperations;
 import Memberships.Member;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 import lombok.Getter;
 import lombok.Setter;
 

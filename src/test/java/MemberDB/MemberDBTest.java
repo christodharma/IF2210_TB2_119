@@ -7,7 +7,7 @@ import Database.DatabaseService.JsonService;
 import Database.DatabaseService.ObjService;
 import Database.DatabaseService.XmlService;
 import Database.Memberships.MemberDB;
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 import org.junit.jupiter.api.*;
 
 import java.io.File;

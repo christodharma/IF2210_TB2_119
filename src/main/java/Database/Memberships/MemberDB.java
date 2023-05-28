@@ -3,7 +3,7 @@ package Database.Memberships;
 import Database.Database;
 import Database.DatabaseOperations;
 import Memberships.Member;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 

@@ -1,6 +1,6 @@
 package Database.DatabaseService;
 
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 
 import java.io.*;
 

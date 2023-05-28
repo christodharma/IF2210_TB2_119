@@ -3,7 +3,7 @@ package Database.Product;
 import Database.Database;
 import Database.DatabaseOperations;
 import Product.Product;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

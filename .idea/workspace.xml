@@ -4,12 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="fix: Annotation misplace">
+    <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: ProductDB testing and fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/Database/NoSuchEntryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/App/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/Bill.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/FixedBill.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/FixedBillEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/CustomerDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/MemberDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Membership.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/MembershipDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/DatabaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/DatabaseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/JsonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/ObjService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/ServiceAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/XmlService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Exception/ExtensionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Exception/_119Exception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/History/TransactionHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Products/Product$ProductBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Products/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Products/ProductCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Products/ProductDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ObjService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ServiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ServiceAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductDB/DBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/DatabaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/ExtensionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/NoSuchEntryException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/_119Exception.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +71,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -61,20 +102,19 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;revision/christo&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/62815/OneDrive - Institut Teknologi Bandung/OOP/tubes 2/IF2210_TB2_119&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3770115&quot;
-  &lt;component name=&quot;PropertiesComponent&quot;&gt;{
-  &amp;quot;keyToString&amp;quot;: {
-    &amp;quot;RunOnceActivity.OpenProjectViewOnStart&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;RunOnceActivity.ShowReadmeOnStart&amp;quot;: &amp;quot;true&amp;quot;,
-    &amp;quot;project.structure.last.edited&amp;quot;: &amp;quot;Modules&amp;quot;,
-    &amp;quot;project.structure.proportion&amp;quot;: &amp;quot;0.0&amp;quot;,
-    &amp;quot;project.structure.side.proportion&amp;quot;: &amp;quot;0.0&amp;quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.packagesearch.PackageSearchGeneralConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -97,6 +137,9 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="Database.DatabaseOperations" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Exception.Database" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Customers" />
       <recent name="Products" />
@@ -109,8 +152,16 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in _119">
-    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in _119">
+    <configuration name="All in _119" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDBTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="_119" />
       <extension name="coverage">
         <pattern>
@@ -121,22 +172,6 @@
       <option name="PACKAGE_NAME" value="ProductDB" />
       <option name="MAIN_CLASS_NAME" value="ProductDB.ProductDBTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductDBTest.JsonLoadDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProductDB.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProductDB" />
-      <option name="MAIN_CLASS_NAME" value="ProductDB.ProductDBTest" />
-      <option name="METHOD_NAME" value="JsonLoadDataTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,18 +218,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in _119" />
         <item itemvalue="JUnit.java in _119" />
         <item itemvalue="JUnit.ProductDBTest.OperationTest" />
         <item itemvalue="JUnit.ProductDBTest" />
         <item itemvalue="JUnit.ProductDBTest.XmlLoadDataTest" />
-        <item itemvalue="JUnit.ProductDBTest.JsonLoadDataTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4093d164-259a-49de-a693-0c61c15462d6" name="Changes" comment="build" />
+      <changelist id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="" />
       <created>1682490372924</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -298,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685028745136</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: ProductDB testing and fix">
+      <created>1685086951773</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685086951773</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -330,7 +372,8 @@
     <MESSAGE value="fix: membership" />
     <MESSAGE value="feat: TransactionDB" />
     <MESSAGE value="fix: Annotation misplace" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Annotation misplace" />
+    <MESSAGE value="fix: ProductDB testing and fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ProductDB testing and fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,21 +387,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/History/TransactionHistoryTest.java</url>
           <line>29</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -374,12 +402,12 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Products.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/IF2210_TB2_119$java_in__119.ic" NAME="java in _119 Coverage Results" MODIFIED="1685086332122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/IF2210_TB2_119$java_in__119.ic" NAME="java in _119 Coverage Results" MODIFIED="1685086823998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/IF2210_TB2_119$ProductDBTest.ic" NAME="ProductDBTest Coverage Results" MODIFIED="1685085481348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ProductDB.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Products.*</FILTER>
     </SUITE>
   </component>
 </project>

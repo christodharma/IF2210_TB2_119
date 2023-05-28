@@ -2,7 +2,7 @@ package GUI.Call;
 
 import App.Main;
 import Memberships.Member;
-import _119Exception.NoSuchEntryException;
+import Exception.Database.NoSuchEntryException;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

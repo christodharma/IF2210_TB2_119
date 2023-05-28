@@ -3,7 +3,7 @@ package Customers;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.ObjService;
 import Memberships.CustomerCounter;
-import _119Exception.ExtensionException;
+import Exception.Database.ExtensionException;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
