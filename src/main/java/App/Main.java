@@ -3,9 +3,9 @@ package App;
 import Database.DatabaseService.*;
 import Database.Memberships.MemberDB;
 import Database.Product.ProductDB;
+import Exception.Database.ExtensionException;
 import GUI.MainGUI;
 import Model.Memberships.CustomerCounter;
-import Exception.Database.ExtensionException;
 import lombok.NonNull;
 
 import java.io.IOException;

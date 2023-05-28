@@ -2,9 +2,9 @@ package Database.Memberships;
 
 import Database.Database;
 import Database.DatabaseOperations;
-import Model.Memberships.Member;
 import Database.MappingFromID;
 import Exception.Database.NoSuchEntryException;
+import Model.Memberships.Member;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -38,6 +39,7 @@ public class XmlService extends DatabaseType implements ServiceAdapter {
             writer.writeStartDocument("UTF-8", "1.0");
             XmlMapper mapper = new XmlMapper();
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            mapper.registerModule(new JavaTimeModule());
             mapper.writeValue(new File(DestPath), data);
         } catch (JsonMappingException | XMLStreamException exec) {
             exec.printStackTrace();
@@ -58,6 +60,7 @@ public class XmlService extends DatabaseType implements ServiceAdapter {
                 }
             }
             XmlMapper mapper = new XmlMapper();
+            mapper.registerModule(new JavaTimeModule());
             data = mapper.readValue(target, _class);
         } catch (JsonParseException exec) {
             exec.printStackTrace();

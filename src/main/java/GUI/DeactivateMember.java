@@ -1,8 +1,8 @@
 package GUI;
 
+import Exception.Database.NoSuchEntryException;
 import GUI.Call.DeactivateMemberAction;
 import Model.Memberships.Member;
-import Exception.Database.NoSuchEntryException;
 
 import javax.swing.*;
 import java.awt.*;

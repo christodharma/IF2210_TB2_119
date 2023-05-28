@@ -1,8 +1,8 @@
 package GUI.Call;
 
 import App.Main;
-import Model.Memberships.Member;
 import Exception.Database.NoSuchEntryException;
+import Model.Memberships.Member;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

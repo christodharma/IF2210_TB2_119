@@ -1,10 +1,10 @@
-package ProductDB;
+package Products;
 
 import Database.DatabaseService.*;
 import Exception.Database.ExtensionException;
 import Model.Product.Product;
 import Database.Product.ProductDB;
-import Model.Product.Price;
+
 import Exception.Database.NoSuchEntryException;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -13,25 +13,10 @@ import org.junit.jupiter.api.TestMethodOrder;
 
 import java.io.IOException;
 
+import static TestUtils.TestFunctions.templateProductDB;
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ProductDBTest {
-    ProductDB templateProductDB() throws NoSuchEntryException {
-        ProductDB testDB = new ProductDB();
-        Product built = Product.builder(
-                        "1",
-                        "Indomilk",
-                        5000,
-                        4900,
-                        "Food")
-                .Quantity(0).build();
-        testDB.insert(built);
-        testDB.insert(built.toBuilder().ID("2").BuyPrice(new Price(4900.5)).build());
-        testDB.insert(built.toBuilder().ID("3").build());
-        testDB.insert(built.toBuilder().ID("4").Quantity(7357).build());
-        testDB.insert(built.toBuilder().ID("5").Name("Metal Pipe").build());
-        return testDB;
-    }
     @Test
     @Order(1)
     void saveDataTest() throws IOException, ExtensionException, NoSuchEntryException {

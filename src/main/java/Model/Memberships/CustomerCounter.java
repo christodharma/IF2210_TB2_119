@@ -13,8 +13,7 @@ public class CustomerCounter implements Serializable {
     }
 
     public static String setID(){
-        String ret = String.valueOf(count);
         addCount();
-        return ret;
+        return String.valueOf(count);
     }
 }

@@ -12,7 +12,7 @@ import java.util.Map;
 public class Bill{
     private HashMap<Product, Integer> cart = new HashMap<>();
     public boolean addToCart(Product added, Integer amount) {
-        if (added.subtractQuantity(amount)){
+        if (added.subtractQuantity(amount) && amount > 0){
             cart.put(added, amount);
             return true;
         } else {
@@ -30,6 +30,10 @@ public class Bill{
             // barang yang dikeluarkan terlalu banyak
             return false;
         }
+    }
+
+    public void emptyCart() {
+        cart.clear();
     }
 
     public FixedBill checkout() {

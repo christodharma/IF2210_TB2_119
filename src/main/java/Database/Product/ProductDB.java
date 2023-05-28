@@ -2,9 +2,9 @@ package Database.Product;
 
 import Database.Database;
 import Database.DatabaseOperations;
-import Model.Product.Product;
-import Exception.Database.NoSuchEntryException;
 import Database.MappingFromID;
+import Exception.Database.NoSuchEntryException;
+import Model.Product.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.NoArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 @NoArgsConstructor
-@JsonRootName("ProductDB")
+@JsonRootName("Products")
 public class ProductDB extends Database<Product> implements Serializable, DatabaseOperations<Product>, MappingFromID<Product> {
     private static final long serialVersionUID = 11L;
     @JsonProperty("contents")

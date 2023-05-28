@@ -1,8 +1,8 @@
 package GUI;
 
 import App.Main;
-import Model.Product.Product;
 import Exception.Database.NoSuchEntryException;
+import Model.Product.Product;
 
 import javax.swing.*;
 import java.awt.*;

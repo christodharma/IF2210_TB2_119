@@ -31,9 +31,9 @@ public class Plugin1 implements BasePlugin {
         }
     
         if (products == null) {
-            System.out.println("ProductDB is null");
+            System.out.println("Products is null");
         } else {
-            System.out.println("ProductDB is not null");
+            System.out.println("Products is not null");
         }
 
         assert products != null;
