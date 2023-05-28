@@ -1,6 +1,5 @@
 package Model.Memberships;
 
-import Database.Memberships.VIPDB;
 import Model.HaveID;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
