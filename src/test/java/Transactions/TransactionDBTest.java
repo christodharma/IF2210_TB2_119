@@ -79,9 +79,10 @@ class TransactionDBTest {
 
     @Test
     @Order(2)
-    void select() throws ExtensionException, IOException {
+    void select() throws ExtensionException, IOException, NoSuchEntryException {
         DatabaseService dbs = new DatabaseService(new JsonService(TransactionDB.class), DatabasePath+"TransactionDB.json");
         testDB = (TransactionDB) dbs.loadData();
+        assertDoesNotThrow(() -> testDB.select("120230528"));
     }
 
     @Test
