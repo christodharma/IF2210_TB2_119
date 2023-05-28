@@ -1,7 +1,7 @@
 package GUI;
 
 import GUI.Call.DaftarMemberAction;
-import Memberships.Member;
+import Model.Memberships.Member;
 
 import javax.swing.*;
 import java.awt.*;

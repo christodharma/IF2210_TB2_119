@@ -1,22 +1,28 @@
 package Database.Memberships;
 
+import Database.Database;
 import Database.DatabaseOperations;
-import Memberships.Member;
+import Model.Memberships.Member;
 import Exception.Database.NoSuchEntryException;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.util.HashSet;
 
-@Getter
-@Setter
-public class VIPDB implements Serializable, DatabaseOperations<Member> {
-    private HashSet<Member> VIPs = new HashSet<>();
+public class VIPDB extends Database<Member> implements Serializable, DatabaseOperations<Member> {
+
+    @JsonProperty("contents")
+    private HashSet<Member> getSet() {
+        return contents;
+    }
 
     @Override
-    public void insert(Member element) {
-        VIPs.add(element);
+    public void insert(Member element) throws NoSuchEntryException {
+        if (contents.add(element)){
+            return;
+        } else {
+            throw new NoSuchEntryException("element exists");
+        }
     }
 
     @Override
@@ -24,16 +30,16 @@ public class VIPDB implements Serializable, DatabaseOperations<Member> {
         if (keyword.getClass().equals(String.class)) {
             if (((String) keyword).matches("\\d+")){
                 // keyword is ID string
-                return VIPs.stream().filter(
+                return contents.stream().filter(
                         member -> member.getID().contains((String) keyword))
                         .findFirst().orElseThrow(NoSuchEntryException::new);
             } else {
                 // keyword is Name field
-                return VIPs.stream().filter(
+                return contents.stream().filter(
                         member -> member.getName().contains((String) keyword)
                 ).findFirst().orElseThrow(NoSuchEntryException::new);
             }
-        } else if (keyword.getClass().equals(Member.class) && VIPs.contains(keyword)) {
+        } else if (keyword.getClass().equals(Member.class) && contents.contains(keyword)) {
             return (Member) keyword;
         } else {
             throw new NoSuchEntryException();
@@ -44,14 +50,13 @@ public class VIPDB implements Serializable, DatabaseOperations<Member> {
     @SuppressWarnings("unchecked")
     public void update(Object keyword) throws NoSuchEntryException {
         if (keyword.getClass().equals(VIPDB.class)){
-            setVIPs(((VIPDB) keyword).getVIPs());
+            contents = ((VIPDB) keyword).contents;
         } else if (keyword.getClass().equals(HashSet.class)) {
             HashSet<?> keywordSet = (HashSet<?>) keyword;
             for (Object i :
                     keywordSet) {
                 if (i.getClass().equals(Member.class)){
-                    HashSet<Member> VIPSet = (HashSet<Member>) keywordSet;
-                    setVIPs(VIPSet);
+                    contents = (HashSet<Member>) keywordSet;
                     break;
                 }
                 break;
@@ -64,11 +69,10 @@ public class VIPDB implements Serializable, DatabaseOperations<Member> {
     @Override
     public Member delete(Object keyword) throws NoSuchEntryException {
         Member deleted = select(keyword);
-        VIPs.remove(deleted);
+        contents.remove(deleted);
         return deleted;
     }
-
     public boolean isVIP(Member member) {
-        return VIPs.contains(member);
+        return contents.contains(member);
     }
 }

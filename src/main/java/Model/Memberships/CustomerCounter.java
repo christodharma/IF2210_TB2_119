@@ -1,4 +1,4 @@
-package Memberships;
+package Model.Memberships;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
 

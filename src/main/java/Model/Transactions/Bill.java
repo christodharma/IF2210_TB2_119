@@ -1,7 +1,7 @@
-package Transactions;
+package Model.Transactions;
 
-import Memberships.CustomerCounter;
-import Product.Product;
+import Model.Memberships.CustomerCounter;
+import Model.Product.Product;
 import lombok.Getter;
 
 import java.util.ArrayList;

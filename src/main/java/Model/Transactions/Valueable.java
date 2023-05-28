@@ -1,4 +1,4 @@
-package Transactions;
+package Model.Transactions;
 
 /**
  * Interface for classes that are valueable

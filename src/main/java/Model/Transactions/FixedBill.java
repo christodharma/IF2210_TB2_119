@@ -1,4 +1,4 @@
-package Transactions;
+package Model.Transactions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;

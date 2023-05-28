@@ -1,6 +1,6 @@
-package Transactions;
+package Model.Transactions;
 
-import Product.Product;
+import Model.Product.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Getter;

@@ -2,31 +2,36 @@ package Database.Product;
 
 import Database.Database;
 import Database.DatabaseOperations;
-import Product.Product;
+import Model.Product.Product;
 import Exception.Database.NoSuchEntryException;
+import Database.MappingFromID;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.HashSet;
 
 @NoArgsConstructor
 @JsonRootName("ProductDB")
-public class ProductDB extends Database<Product> implements Serializable, DatabaseOperations<Product> {
+public class ProductDB extends Database<Product> implements Serializable, DatabaseOperations<Product>, MappingFromID<Product> {
     private static final long serialVersionUID = 11L;
     @JsonProperty("contents")
-    @JsonSerialize(keyUsing = ProductDBSerializer.class)
-    public HashMap<String,Product> getHashMap(){
+    public HashSet<Product> getSet(){
         return contents;
     }
+
+    @JsonIgnore
+    private HashMap<String,Product> ProductMap = toMap(contents);
+
     @Override
     public void insert(Product element) throws NoSuchEntryException {
-        if (contents.containsValue(element)){
-            throw new NoSuchEntryException("element exists");
+        if (contents.add(element)){
+            ProductMap.put(element.getID(), element);
         } else {
-            contents.put(element.getID(), element);
+            throw new NoSuchEntryException("element exists");
         }
     }
 
@@ -34,19 +39,19 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     public Product select(Object keyword) throws NoSuchEntryException {
         if (keyword.getClass().equals(Product.class)){
             // keyword is product object
-            return contents.get(((Product) keyword).getID());
+            return ProductMap.get(((Product) keyword).getID());
         } else if (keyword.getClass().equals(String.class)) {
             if (((String) keyword).matches("\\d+")) {
                 // keyword is product ID string
-                if (contents.containsKey(keyword)){
-                    return contents.get(keyword);
+                if (ProductMap.containsKey(keyword)){
+                    return ProductMap.get(keyword);
                 } else {
                     throw new NoSuchEntryException();
                 }
             } else {
                 // keyword is product name
                 // will return the first occasion of select condition
-                return contents.values().stream().filter(
+                return ProductMap.values().stream().filter(
                                 member -> member.getName().contains((String) keyword))
                         .findFirst().orElseThrow(() -> new NoSuchEntryException(keyword + " name not found"));
             }
@@ -58,7 +63,7 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     @Override
     public void update(Object keyword) throws NoSuchEntryException {
         if (keyword.getClass().equals(Product.class)) {
-            contents.replace(select(keyword).getID(), (Product) keyword);
+            ProductMap.replace(select(keyword).getID(), (Product) keyword);
         } else {
             throw new NoSuchEntryException("Wrong Class");
         }
@@ -78,7 +83,8 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     @Override
     public Product delete(Object keyword) throws NoSuchEntryException {
         Product ret = select(keyword);
-        contents.remove(select(keyword).getID());
+        contents.remove(ret);
+        ProductMap.remove(select(keyword).getID());
         return ret;
     }
 }

@@ -1,6 +1,7 @@
-package Memberships;
+package Model.Memberships;
 
 import Database.Memberships.VIPDB;
+import Model.HaveID;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -15,7 +16,7 @@ import java.io.Serializable;
 @Setter
 @JsonPropertyOrder({"id","name", "status", "phone", "point"})
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Member implements Serializable {
+public class Member extends HaveID implements Serializable {
     private static final long serialVersionUID = 2L;
 @JsonProperty("id")
     private final String ID;
@@ -30,6 +31,8 @@ public class Member implements Serializable {
 @JsonProperty("status")
     private boolean Status = true;
 
+
+
     public Member(String ID, @NonNull String Name, @NonNull String Phone){
         this.ID = ID;
         this.Name = Name;
@@ -41,10 +44,6 @@ public class Member implements Serializable {
     }
     public void resetPoint() {
         setPoint(0);
-    }
-
-    public boolean isVIP(VIPDB where) {
-        return where.isVIP(this);
     }
 
     @JsonCreator

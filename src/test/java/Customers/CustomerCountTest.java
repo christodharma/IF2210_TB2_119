@@ -2,7 +2,7 @@ package Customers;
 
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.ObjService;
-import Memberships.CustomerCounter;
+import Model.Memberships.CustomerCounter;
 import Exception.Database.ExtensionException;
 import org.junit.jupiter.api.*;
 

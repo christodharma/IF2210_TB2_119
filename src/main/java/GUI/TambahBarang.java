@@ -1,7 +1,7 @@
 package GUI;
 
 import App.Main;
-import Product.Product;
+import Model.Product.Product;
 import Exception.Database.NoSuchEntryException;
 
 import javax.swing.*;

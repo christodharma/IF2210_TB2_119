@@ -1,6 +1,7 @@
-package Product;
+package Model.Product;
 
-import Transactions.Valueable;
+import Model.HaveID;
+import Model.Transactions.Valueable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,8 +18,8 @@ import java.util.Objects;
 @Builder(builderMethodName = "internalBuilder", toBuilder = true)
 @JsonDeserialize(builder = Product.ProductBuilder.class)
 @Getter @Setter
-@JsonRootName("Product")
-public class Product implements Serializable, Valueable {
+@JsonRootName("Model")
+public class Product extends HaveID implements Serializable, Valueable {
 
     private static final long serialVersionUID = 1L;
     @JsonProperty("id")

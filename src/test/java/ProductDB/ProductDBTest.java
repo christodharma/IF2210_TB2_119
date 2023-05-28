@@ -2,9 +2,9 @@ package ProductDB;
 
 import Database.DatabaseService.*;
 import Exception.Database.ExtensionException;
-import Product.Product;
+import Model.Product.Product;
 import Database.Product.ProductDB;
-import Product.Price;
+import Model.Product.Price;
 import Exception.Database.NoSuchEntryException;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

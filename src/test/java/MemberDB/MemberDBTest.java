@@ -1,7 +1,7 @@
 package MemberDB;
 
-import Memberships.CustomerCounter;
-import Memberships.Member;
+import Model.Memberships.CustomerCounter;
+import Model.Memberships.Member;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.JsonService;
 import Database.DatabaseService.ObjService;

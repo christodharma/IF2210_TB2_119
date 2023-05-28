@@ -5,56 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: ProductDB testing and fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/Database/NoSuchEntryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Database/MappingFromID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/HaveID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/App/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/Bill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/FixedBill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Bill/FixedBillEntry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/CustomerDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/MemberDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/Membership.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Customers/MembershipDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/DatabaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/DatabaseType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/JsonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/ObjService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/ServiceAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/DatabaseService/XmlService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Exception/ExtensionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Exception/_119Exception.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/History/TransactionHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Products/Product$ProductBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Products/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Products/ProductCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Products/ProductDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/bin/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ObjService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ObjService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ServiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/ServiceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/MainGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/DatabaseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/ExtensionException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/NoSuchEntryException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/_119Exception/_119Exception.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Memberships/CustomerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Memberships/CustomerCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Memberships/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Memberships/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product/Price.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/FixedBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/FixedBillEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBillEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/Valueable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/Valueable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MemberDB/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MemberDB/MemberDBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -110,10 +90,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;revision/christo&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/62815/OneDrive - Institut Teknologi Bandung/OOP/tubes 2/IF2210_TB2_119&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/62815/OneDrive - Institut Teknologi Bandung/OOP/tubes 2/IF2210_TB2_119/src/main/java/Model&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.packagesearch.PackageSearchGeneralConfigurable&quot;
   }
 }</component>
