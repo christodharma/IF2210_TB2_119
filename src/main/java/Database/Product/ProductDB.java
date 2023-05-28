@@ -5,7 +5,6 @@ import Database.DatabaseOperations;
 import Model.Product.Product;
 import Exception.Database.NoSuchEntryException;
 import Database.MappingFromID;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.NoArgsConstructor;
@@ -23,13 +22,10 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
         return contents;
     }
 
-    @JsonIgnore
-    private HashMap<String,Product> ProductMap = toMap(contents);
-
     @Override
     public void insert(Product element) throws NoSuchEntryException {
-        if (contents.add(element)){
-            ProductMap.put(element.getID(), element);
+        if (!contents.contains(element)){
+            contents.add(element);
         } else {
             throw new NoSuchEntryException("element exists");
         }
@@ -37,6 +33,7 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
 
     @Override
     public Product select(Object keyword) throws NoSuchEntryException {
+        HashMap<String, Product> ProductMap = toMap(contents);
         if (keyword.getClass().equals(Product.class)){
             // keyword is product object
             return ProductMap.get(((Product) keyword).getID());
@@ -63,7 +60,8 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     @Override
     public void update(Object keyword) throws NoSuchEntryException {
         if (keyword.getClass().equals(Product.class)) {
-            ProductMap.replace(select(keyword).getID(), (Product) keyword);
+            contents.remove(select(keyword));
+            contents.add((Product) keyword);
         } else {
             throw new NoSuchEntryException("Wrong Class");
         }
@@ -84,7 +82,6 @@ public class ProductDB extends Database<Product> implements Serializable, Databa
     public Product delete(Object keyword) throws NoSuchEntryException {
         Product ret = select(keyword);
         contents.remove(ret);
-        ProductMap.remove(select(keyword).getID());
         return ret;
     }
 }

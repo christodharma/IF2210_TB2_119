@@ -71,9 +71,14 @@ public class Product extends HaveID implements Serializable, Valueable {
     }
     @Override
     public boolean equals(Object o) {
-        if (o instanceof Product){
-            return Objects.equals(((Product) o).ID, this.ID);
+        if (o.getClass().equals(Product.class)){
+            return this.ID.equals(((Product) o).ID);
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID);
     }
 }

@@ -5,7 +5,6 @@ import Database.DatabaseOperations;
 import Model.Memberships.Member;
 import Database.MappingFromID;
 import Exception.Database.NoSuchEntryException;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
@@ -18,12 +17,10 @@ public class MemberDB extends Database<Member> implements DatabaseOperations<Mem
     public HashSet<Member> getSet(){
         return contents;
     }
-    @JsonIgnore
-    private HashMap<String, Member> MemberMap = toMap(contents);
     @Override
     public void insert(Member element){
-        if (contents.add(element)){
-            MemberMap.put(element.getID(), element);
+        if (!contents.contains(element)){
+            contents.add(element);
         } else {
             throw new IllegalArgumentException("Member already exists");
         }
@@ -31,6 +28,7 @@ public class MemberDB extends Database<Member> implements DatabaseOperations<Mem
 
     @Override
     public Member select(Object keyword) throws NoSuchEntryException {
+        HashMap<String, Member> MemberMap = toMap(contents);
         if (keyword.getClass().equals(Member.class)){
             // keyword is member object
             return MemberMap.get(((Member) keyword).getID());
@@ -52,7 +50,8 @@ public class MemberDB extends Database<Member> implements DatabaseOperations<Mem
     @Override
     public void update(Object keyword) throws NoSuchEntryException {
         if (keyword.getClass().equals(Member.class)) {
-            MemberMap.replace(select(keyword).getID(), (Member) keyword);
+            contents.remove(select(keyword));
+            contents.add((Member) keyword);
         } else {
             throw new NoSuchEntryException("Wrong Class");
         }
@@ -61,7 +60,6 @@ public class MemberDB extends Database<Member> implements DatabaseOperations<Mem
     @Override
     public Member delete(Object keyword) throws NoSuchEntryException {
         Member ret = select(keyword);
-        MemberMap.remove(ret.getID());
         contents.remove(ret);
         return ret;
     }

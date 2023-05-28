@@ -105,15 +105,17 @@ class ProductDBTest {
         ProductDB testDB = templateProductDB();
         // testDB has template members
         // basic insert is already covered by templateProductDB
+        Product insertTest = Product.builder(
+                        "1",
+                        "Indomie",
+                        3000,
+                        2900,
+                        "Food")
+                .build();
+        assertTrue(testDB.getSet().contains(insertTest), "should be true because insertTest has a similar ID");
         assertThrows(NoSuchEntryException.class,() ->
                 testDB.insert(
-                        Product.builder(
-                                "1",
-                                "Indomie",
-                                3000,
-                                2900,
-                                "Food")
-                                .build()),
+                        insertTest),
                 "database overwritten");
 
         // select operation

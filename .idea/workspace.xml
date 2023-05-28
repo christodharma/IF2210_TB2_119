@@ -4,38 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: ProductDB testing and fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Database/MappingFromID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/HaveID.java" afterDir="false" />
+    <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: optimize imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DaftarMemberAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/DeactivateMemberAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/JualBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/ManajemenBarangGudang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/PendaftaranMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/UpdateMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Memberships/CustomerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Memberships/CustomerCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Memberships/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Memberships/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product/Price.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/FixedBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/FixedBillEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBillEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transactions/Valueable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/Valueable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Customers/CustomerCountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MemberDB/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MemberDB/MemberDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Product/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,8 +178,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in _119" />
-        <item itemvalue="JUnit.java in _119" />
         <item itemvalue="JUnit.ProductDBTest.OperationTest" />
+        <item itemvalue="JUnit.java in _119" />
         <item itemvalue="JUnit.ProductDBTest" />
         <item itemvalue="JUnit.ProductDBTest.XmlLoadDataTest" />
       </list>
@@ -321,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685086951773</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: Database implementing set for atomic values">
+      <created>1685245565456</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685245565456</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: Database implementing set for atomic values">
+      <created>1685245646379</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685245646379</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,7 +346,8 @@
     <MESSAGE value="feat: TransactionDB" />
     <MESSAGE value="fix: Annotation misplace" />
     <MESSAGE value="fix: ProductDB testing and fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: ProductDB testing and fix" />
+    <MESSAGE value="fix: optimize imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: optimize imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -18,8 +18,8 @@ public class VIPDB extends Database<Member> implements Serializable, DatabaseOpe
 
     @Override
     public void insert(Member element) throws NoSuchEntryException {
-        if (contents.add(element)){
-            return;
+        if (!contents.contains(element)){
+            contents.add(element);
         } else {
             throw new NoSuchEntryException("element exists");
         }
