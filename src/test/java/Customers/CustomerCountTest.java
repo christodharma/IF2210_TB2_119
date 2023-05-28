@@ -2,8 +2,8 @@ package Customers;
 
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.ObjService;
-import Model.Memberships.CustomerCounter;
 import Exception.Database.ExtensionException;
+import Model.Memberships.CustomerCounter;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;

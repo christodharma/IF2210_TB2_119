@@ -4,36 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: gitignore .idea">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestUtils/TestFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Transactions/TransactionDBTest.java" afterDir="false" />
+    <list default="true" id="72cbf642-1be9-4cfa-8f5a-54743dd54543" name="Changes" comment="fix: fixedbill deserialize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/JsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/DatabaseService/XmlService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/MemberDBSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Memberships/VIPDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Product/ProductDBSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Database/Transactions/TransactionDBSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Call/UpdateMemberAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/DeactivateMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/Perbarui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/TambahBarang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Memberships/CustomerCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Memberships/CustomerCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Transactions/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBillEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Transactions/FixedBillEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Plugin/Plugin1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MemberDB/MemberDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Members/MemberDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductDB/ProductDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Products/ProductDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MembersTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Transactions/TransactionDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Transactions/TransactionDBTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +108,7 @@
       <recent name="Customers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TransactionDBTest.insert">
+  <component name="RunManager" selected="JUnit.MemberDBTest">
     <configuration name="All in _119" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_119" />
       <option name="PACKAGE_NAME" value="" />
@@ -155,22 +128,6 @@
       <option name="PACKAGE_NAME" value="Members" />
       <option name="MAIN_CLASS_NAME" value="Members.MemberDBTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductDBTest.OperationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_119" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProductDB.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProductDB" />
-      <option name="MAIN_CLASS_NAME" value="ProductDB.ProductDBTest" />
-      <option name="METHOD_NAME" value="OperationTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,13 +163,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransactionDBTest.select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_119" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Transactions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Transactions" />
+      <option name="MAIN_CLASS_NAME" value="Transactions.TransactionDBTest" />
+      <option name="METHOD_NAME" value="select" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TransactionDBTest.insert" />
-        <item itemvalue="JUnit.TransactionDBTest" />
         <item itemvalue="JUnit.MemberDBTest" />
         <item itemvalue="JUnit.All in _119" />
-        <item itemvalue="JUnit.ProductDBTest.OperationTest" />
+        <item itemvalue="JUnit.TransactionDBTest" />
+        <item itemvalue="JUnit.TransactionDBTest.insert" />
+        <item itemvalue="JUnit.TransactionDBTest.select" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +324,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685250044520</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: TransactionDB insert testing&#10;fix: FixedBill datetime serializing&#10;feat: Test utility functions">
+      <created>1685255456872</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685255456872</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: fixedbill deserialize">
+      <created>1685256298574</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685256298574</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,7 +373,9 @@
     <MESSAGE value="fix: ProductDB testing and fix" />
     <MESSAGE value="fix: optimize imports" />
     <MESSAGE value="fix: gitignore .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gitignore .idea" />
+    <MESSAGE value="feat: TransactionDB insert testing&#10;fix: FixedBill datetime serializing&#10;feat: Test utility functions" />
+    <MESSAGE value="fix: fixedbill deserialize" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixedbill deserialize" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,6 +408,7 @@
     <SUITE FILE_PATH="coverage/IF2210_TB2_119$ProductDBTest.ic" NAME="ProductDBTest Coverage Results" MODIFIED="1685085481348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ProductDB.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/IF2210_TB2_119$All_in__119.ic" NAME="All in _119 Coverage Results" MODIFIED="1685256266518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/_119$ProductTest_ProductIntoXML.ic" NAME="ProductTest.ProductIntoXML Coverage Results" MODIFIED="1683109698888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Products.*</FILTER>
     </SUITE>

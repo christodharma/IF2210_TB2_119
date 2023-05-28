@@ -1,13 +1,13 @@
 package Members;
 
-import Model.Memberships.CustomerCounter;
-import Model.Memberships.Member;
 import Database.DatabaseService.DatabaseService;
 import Database.DatabaseService.JsonService;
 import Database.DatabaseService.ObjService;
 import Database.DatabaseService.XmlService;
 import Database.Memberships.MemberDB;
 import Exception.Database.ExtensionException;
+import Model.Memberships.CustomerCounter;
+import Model.Memberships.Member;
 import org.junit.jupiter.api.*;
 
 import java.io.File;

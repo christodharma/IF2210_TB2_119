@@ -11,7 +11,10 @@ import Exception.Database.ExtensionException;
 import Exception.Database.NoSuchEntryException;
 import Model.Memberships.CustomerCounter;
 import Model.Transactions.Bill;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
