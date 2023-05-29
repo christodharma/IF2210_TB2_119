@@ -87,7 +87,6 @@ class TransactionDBTest {
     void selectTest() throws ExtensionException, IOException{
         loadDB();
 //        insertTest();
-        //TODO: json and xml has no creator
         DatabaseService dbs = new DatabaseService(new XmlService(TransactionDB.class), DatabasePath+"TransactionDB.xml");
         testDB = (TransactionDB) dbs.loadData();
         assertDoesNotThrow(() -> testDB.select("120230529135859"));
