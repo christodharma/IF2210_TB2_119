@@ -22,8 +22,7 @@ class TransactionDBTest {
     static ProductDB productDB;
     static MemberDB memberDB;
     static String DatabasePath = "src/test/resources/data/";
-    @BeforeAll
-    static void setUp() throws ExtensionException, IOException {
+    static void loadDB() throws ExtensionException, IOException {
         DatabaseService dbs = new DatabaseService(new XmlService(ProductDB.class), DatabasePath+"Product.xml");
         try {
             productDB = (ProductDB) dbs.loadData();
@@ -37,11 +36,14 @@ class TransactionDBTest {
         } catch (IOException io) {
             System.out.println("File isn't found, try running MemberDB test first");
         }
+    }
+
+    static void setUp() {
         testDB = new TransactionDB();
     }
 
-    @AfterEach
-    void wrapUp() throws ExtensionException, IOException {
+
+    static void wrapUp() throws ExtensionException, IOException {
         DatabaseService dbs = new DatabaseService(new XmlService(ProductDB.class), DatabasePath+"Product_AfterTransaction.xml");
         dbs.saveData(productDB);
         dbs.setDBPath(DatabasePath + "TransactionDB.xml");
@@ -57,7 +59,9 @@ class TransactionDBTest {
 
     @Test
     @Order(1)
-    void insertTest() throws NoSuchEntryException {
+    void insertTest() throws NoSuchEntryException, ExtensionException, IOException {
+        loadDB();
+        setUp();
         Bill cart = new Bill();
         assertFalse(cart.addToCart(productDB.select("1"), 1), "addToCart added 0 quantity product");
         cart.addToCart(productDB.select("4"), 350);
@@ -75,15 +79,19 @@ class TransactionDBTest {
 
         cart.addToCart(productDB.select("4"), 7);
         testDB.insert(cart.checkout(memberDB.select("1").getID()));
+        wrapUp();
     }
 
     @Test
     @Order(2)
     void selectTest() throws ExtensionException, IOException, NoSuchEntryException {
-        insertTest();
-        DatabaseService dbs = new DatabaseService(new JsonService(TransactionDB.class), DatabasePath+"TransactionDB.json");
+        loadDB();
+//        insertTest();
+        //TODO: json and xml has no creator
+        DatabaseService dbs = new DatabaseService(new ObjService(TransactionDB.class), DatabasePath+"TransactionDB.obj");
         testDB = (TransactionDB) dbs.loadData();
-        assertDoesNotThrow(() -> testDB.select("120230528140412"));
+        assertDoesNotThrow(() -> testDB.select("120230529122949"));
+//        wrapUp();
     }
 
     @Test

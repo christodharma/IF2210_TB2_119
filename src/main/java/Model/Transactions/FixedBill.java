@@ -21,27 +21,26 @@ public class FixedBill implements Serializable {
     private final String buyerID;
     @JsonProperty("items")
     private final ArrayList<FixedBillEntry> items;
-    @JsonProperty("datetime") @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
-    private final ZonedDateTime dateTime;
+//    @JsonProperty("datetime") @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
     @JsonIgnore
+    private final LocalDateTime dateTime;
+    @JsonProperty("id")
     public String getID() {
-        DateTimeFormatter CUSTOM_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
-        LocalDateTime ldt = LocalDateTime.now();
-        String formatteddatetime = ldt.format(CUSTOM_FORMATTER);
+        String formatteddatetime = dateTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
         return buyerID + formatteddatetime;
     }
 
     public FixedBill(String buyerID, ArrayList<FixedBillEntry> items) {
         this.buyerID = buyerID;
         this.items = items;
-        this.dateTime = ZonedDateTime.now();
+        this.dateTime = LocalDateTime.now();
     }
 
     @JsonCreator
     public FixedBill JacksonCreate(
             @JsonProperty("buyerID") String id,
             @JsonProperty("items") ArrayList<FixedBillEntry> items,
-            @JsonProperty("datetime") ZonedDateTime dt
+            @JsonProperty("datetime") LocalDateTime dt
     ){
         return new FixedBill(id, items, dt);
     }

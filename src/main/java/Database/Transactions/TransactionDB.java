@@ -7,6 +7,7 @@ import Model.Transactions.FixedBill;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -31,7 +32,7 @@ public class TransactionDB extends Database<FixedBill> implements Serializable, 
             String datetimeMaybe = keywordString.substring(keywordString.length()-14);
             DateTimeFormatter CUSTOM_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
             try {
-                ZonedDateTime datetime = ZonedDateTime.parse(datetimeMaybe, CUSTOM_FORMATTER);
+                LocalDateTime datetime = LocalDateTime.parse(datetimeMaybe, CUSTOM_FORMATTER);
                 // keywordString ends with datetime
                 // check normally as ID
                 return contents.stream().filter(
