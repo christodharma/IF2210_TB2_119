@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
@@ -20,11 +20,11 @@ public class FixedBill implements Serializable {
     @JsonProperty("buyerID")
     private final String buyerID;
     @JsonProperty("items")
+    @JsonSerialize(contentAs = FixedBillEntry.class)
     private final ArrayList<FixedBillEntry> items;
-//    @JsonProperty("datetime") @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
-    @JsonIgnore
+    @JsonProperty("datetime") @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
     private final LocalDateTime dateTime;
-    @JsonProperty("id")
+    @JsonIgnore
     public String getID() {
         String formatteddatetime = dateTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
         return buyerID + formatteddatetime;
@@ -37,7 +37,7 @@ public class FixedBill implements Serializable {
     }
 
     @JsonCreator
-    public FixedBill JacksonCreate(
+    public static FixedBill JacksonCreate(
             @JsonProperty("buyerID") String id,
             @JsonProperty("items") ArrayList<FixedBillEntry> items,
             @JsonProperty("datetime") LocalDateTime dt

@@ -84,21 +84,25 @@ class TransactionDBTest {
 
     @Test
     @Order(2)
-    void selectTest() throws ExtensionException, IOException, NoSuchEntryException {
+    void selectTest() throws ExtensionException, IOException{
         loadDB();
 //        insertTest();
         //TODO: json and xml has no creator
-        DatabaseService dbs = new DatabaseService(new ObjService(TransactionDB.class), DatabasePath+"TransactionDB.obj");
+        DatabaseService dbs = new DatabaseService(new XmlService(TransactionDB.class), DatabasePath+"TransactionDB.xml");
         testDB = (TransactionDB) dbs.loadData();
-        assertDoesNotThrow(() -> testDB.select("120230529122949"));
+        assertDoesNotThrow(() -> testDB.select("120230529135859"));
 //        wrapUp();
     }
 
     @Test
     void update() {
+        assertTrue(true);
+        System.out.println("TransactionDB Update is not tested");
     }
 
     @Test
     void delete() {
+        assertTrue(true);
+        System.out.println("TransactionDB Delete is not tested");
     }
 }
