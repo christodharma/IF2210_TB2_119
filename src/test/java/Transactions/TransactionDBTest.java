@@ -11,6 +11,7 @@ import Exception.Database.ExtensionException;
 import Exception.Database.NoSuchEntryException;
 import Model.Memberships.CustomerCounter;
 import Model.Transactions.Bill;
+import Model.Transactions.FixedBill;
 import org.junit.jupiter.api.*;
 
 import java.io.IOException;
@@ -22,7 +23,7 @@ class TransactionDBTest {
     static ProductDB productDB;
     static MemberDB memberDB;
     static String DatabasePath = "src/test/resources/data/";
-    static void loadDB() throws ExtensionException, IOException {
+    static void loadDB() throws ExtensionException {
         DatabaseService dbs = new DatabaseService(new XmlService(ProductDB.class), DatabasePath+"Product.xml");
         try {
             productDB = (ProductDB) dbs.loadData();
@@ -78,18 +79,19 @@ class TransactionDBTest {
         cart.emptyCart();
 
         cart.addToCart(productDB.select("4"), 7);
-        testDB.insert(cart.checkout(memberDB.select("1").getID()));
+        testDB.insert(cart.checkout(memberDB.select("2").getID()));
         wrapUp();
     }
 
     @Test
     @Order(2)
     void selectTest() throws ExtensionException, IOException{
-        loadDB();
+//        loadDB();
 //        insertTest();
         DatabaseService dbs = new DatabaseService(new XmlService(TransactionDB.class), DatabasePath+"TransactionDB.xml");
         testDB = (TransactionDB) dbs.loadData();
-        assertDoesNotThrow(() -> testDB.select("120230529135859"));
+        FixedBill selectTest = testDB.toArrayList().get(0);
+        assertDoesNotThrow(() -> testDB.select(selectTest));
 //        wrapUp();
     }
 
